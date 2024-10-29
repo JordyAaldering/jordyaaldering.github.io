@@ -1,6 +1,6 @@
 # Jordy Aaldering
 
-PhD student at the Radboud University, [Department of Software Science](https://sws.cs.ru.nl/).
+PhD candidate at the Radboud University, [Department of Software Science](https://sws.cs.ru.nl/).
 
 - [ACM](https://dl.acm.org/profile/99661241184)
 - [ORCiD](https://orcid.org/0009-0001-3018-5152)
@@ -63,7 +63,7 @@ Flattening Combinations of Arrays and Records
 A new semantics for array programming languages; how to introduce some laziness without being lazy
 
 ```
-@mastersthesis{aaldering2021new,
+@mastersthesis{sac-lazy-semantics,
   type={Bachelor's thesis},
   author={Aaldering, Jordy and Scholz, Sven-Bodo and Koopman, Pieter},
   title={A new semantics for array programming languages; how to introduce some laziness without being lazy},
