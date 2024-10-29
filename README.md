@@ -16,9 +16,10 @@ Flattening Combinations of Arrays and Records
   editor={Chang, Stephen and Hemann, Jason},
   publisher={Springer},
   address={},
-  year={2024},
   series={TFP '24},
-  location={South Orange, USA},
+  location={South Orange, NJ, USA},
+  year={2024},
+  month={},
   articleno={},
   numpages={32},
   isbn={(accepted for publication)},
@@ -38,9 +39,10 @@ Type Patterns: Pattern Matching on Shape-Carrying Array Types
   booktitle={Proceedings of the 35th Symposium on Implementation and Application of Functional Languages},
   publisher={Association for Computing Machinery},
   address={New York, NY, USA},
-  year={2024},
   series={IFL '23},
   location={Braga, Portugal},
+  year={2024},
+  month={June},
   articleno={11},
   numpages={14},
   isbn={9798400716317},
@@ -48,5 +50,22 @@ Type Patterns: Pattern Matching on Shape-Carrying Array Types
   url={https://doi.org/10.1145/3652561.3652572},
   abstract={In this paper we present type patterns: a notation for shape-carrying array types that enables the specification of dependent type signatures while maintaining flexibility and a high level of code readability. Similar notations pre-exist, but we extend them to support rank-polymorphism and specifications of arbitrarily complex constraints between values and types. Furthermore, we enable type patterns to double as a pattern matching mechanism against shapes and shape-components of array arguments, making those values directly available in the corresponding function bodies. While this notation could be used as a basis for a dependently typed language, in our prototypical implementation in the context of SaC we do not require all dependencies to be resolved statically. Instead, we follow a hybrid approach: we map the proposed type patterns into the pre-existing type system of SaC, and we generate additional constraints which we try to statically resolve as far as possible by means of partial evaluation. Any remaining constraints are checked at run-time. We outline our implementation in the context of the SaC ecosystem, and present several examples demonstrating the effectiveness of this hybrid approach based on partial evaluation.},
   keywords={Array Programming, Dependent Types, Hybrid Types, Partial Evaluation, Pattern Matching, Rank-Polymorphism, Shape Pattern, Single assignment C, Type Constraints, Type Pattern}
+}
+```
+
+### 2021 (Bachelor's thesis)
+
+A new semantics for array programming languages; how to introduce some laziness without being lazy
+
+```
+@mastersthesis{aaldering2021new,
+  type={Bachelor's thesis},
+  author={Aaldering, Jordy and Scholz, Sven-Bodo and Koopman, Pieter},
+  title={A new semantics for array programming languages; how to introduce some laziness without being lazy},
+  school={Radboud University},
+  address={Nijmegen, Netherlands},
+  year={2021},
+  month={March},
+  abstract={Array programming languages are often used in mathematical and engineering applications with very large and complicated equations. In these languages all values are represented as arrays, these arrays can usually be multi-dimensional. These multi-dimensional arrays have a shape vector which describes the length of each of its dimensions. The separation of knowledge of these arrays allows programs to potentially be rewritten according to the required level of information of an array, reducing the computational load by only requiring the shape or dimensionality of that array. This paper defines a way to infer this required level of information and delivers rules for rewriting programs in a way that requires a lower level of information without losing strictness, finding a balance between lazy and strict evaluation. Along with this paper also comes a prototype language, created in a strict functional programming language, which implements these rules. This language will show how to implement these rules in the real world and will be used to validate and benchmark the results.}
 }
 ```
