@@ -2,9 +2,14 @@
 
 PhD student at the Radboud University, [Department of Software Science](https://sws.cs.ru.nl/).
 
-## Publications
+- [ACM](https://dl.acm.org/profile/99661241184)
+- [ORCiD](https://orcid.org/0009-0001-3018-5152)
 
-### 2024
+---
+
+# Publications
+
+## 2024
 
 Flattening Combinations of Arrays and Records
 
@@ -30,7 +35,7 @@ Flattening Combinations of Arrays and Records
 }
 ```
 
-Type Patterns: Pattern Matching on Shape-Carrying Array Types
+[Type Patterns: Pattern Matching on Shape-Carrying Array Types](https://doi.org/10.1145/3652561.3652572)
 
 ```
 @inproceedings{type-patterns,
@@ -53,7 +58,7 @@ Type Patterns: Pattern Matching on Shape-Carrying Array Types
 }
 ```
 
-### 2021 (Bachelor's thesis)
+## 2021 (Bachelor's thesis)
 
 A new semantics for array programming languages; how to introduce some laziness without being lazy
 
@@ -70,7 +75,9 @@ A new semantics for array programming languages; how to introduce some laziness 
 }
 ```
 
-## Talks
+---
+
+# Talks
 
 An introduction to SaC: parallel performance made easy
  - [Institute for Programming research and Algorithmics (IPA) Course: Software Technology](https://ipa.win.tue.nl/?event=course-software-technology)
