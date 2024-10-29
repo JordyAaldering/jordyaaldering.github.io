@@ -1,5 +1,7 @@
 # Jordy Aaldering
 
+PhD student at the Radboud University, [Department of Software Science](https://sws.cs.ru.nl/).
+
 ## Publications
 
 ### 2024
