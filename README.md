@@ -4,6 +4,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 - [ACM](https://dl.acm.org/profile/99661241184)
 - [ORCiD](https://orcid.org/0009-0001-3018-5152)
+- [LinkedIn](https://www.linkedin.com/in/jordy-aaldering-884512174/)
 
 ---
 
@@ -63,7 +64,7 @@ Flattening Combinations of Arrays and Records
 A new semantics for array programming languages; how to introduce some laziness without being lazy
 
 ```
-@mastersthesis{sac-lazy-semantics,
+@mastersthesis{lazy-array-semantics,
   type={Bachelor's thesis},
   author={Aaldering, Jordy and Scholz, Sven-Bodo and Koopman, Pieter},
   title={A new semantics for array programming languages; how to introduce some laziness without being lazy},
@@ -74,6 +75,17 @@ A new semantics for array programming languages; how to introduce some laziness 
   abstract={Array programming languages are often used in mathematical and engineering applications with very large and complicated equations. In these languages all values are represented as arrays, these arrays can usually be multi-dimensional. These multi-dimensional arrays have a shape vector which describes the length of each of its dimensions. The separation of knowledge of these arrays allows programs to potentially be rewritten according to the required level of information of an array, reducing the computational load by only requiring the shape or dimensionality of that array. This paper defines a way to infer this required level of information and delivers rules for rewriting programs in a way that requires a lower level of information without losing strictness, finding a balance between lazy and strict evaluation. Along with this paper also comes a prototype language, created in a strict functional programming language, which implements these rules. This language will show how to implement these rules in the real world and will be used to validate and benchmark the results.}
 }
 ```
+
+---
+
+# Team
+
+- [Peter Achten](https://www.cs.ru.nl/P.Achten/)
+- [Bernard van Gastel](https://sustainablesoftware.info)
+- [Niek Janssen]()
+- [Thomas Koopman]()
+- [Mart Lubbers](https://martlubbers.net)
+- [Sven-Bodo Scholz](https://thielescholz.eu/doku.php)
 
 ---
 
