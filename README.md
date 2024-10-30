@@ -77,6 +77,13 @@ A new semantics for array programming languages; how to introduce some laziness 
 
 ---
 
+# Cooperation
+
+ - ODC Noord - Data centre visit, sustainability cooperation
+ - Tweede Golf - Nea energy benchmarks
+
+---
+
 # Talks
 
 An introduction to SaC: parallel performance made easy
