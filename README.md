@@ -21,7 +21,7 @@ Flattening Combinations of Arrays and Records
   booktitle={Trends in  Functional Programming},
   editor={Chang, Stephen and Hemann, Jason},
   publisher={Springer},
-  address={},
+  address={New York, NY},
   series={TFP '24},
   location={South Orange, NJ, USA},
   year={2024},
@@ -44,7 +44,7 @@ Flattening Combinations of Arrays and Records
   title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
   booktitle={Proceedings of the 35th Symposium on Implementation and Application of Functional Languages},
   publisher={Association for Computing Machinery},
-  address={New York, NY, USA},
+  address={New York, NY},
   series={IFL '23},
   location={Braga, Portugal},
   year={2024},
@@ -91,13 +91,17 @@ A new semantics for array programming languages; how to introduce some laziness 
 
 # Cooperation
 
- - ODC Noord - Data centre visit, sustainability cooperation
- - Tweede Golf - Nea energy benchmarks
+- ODC Noord - Data centre visit, sustainability cooperation
+- Tweede Golf - Nea energy benchmarks
 
 ---
 
 # Talks
 
+Ethics and Sustainability of Data Science
+- [Alliander](https://www.ru.nl/en/about-us/organisation/partners-and-networks/alliander) winter school
+- 20 November 2024
+
 An introduction to SaC: parallel performance made easy
- - [Institute for Programming research and Algorithmics (IPA) Course: Software Technology](https://ipa.win.tue.nl/?event=course-software-technology)
- - 15 May 2024
+- [Institute for Programming research and Algorithmics (IPA) Course: Software Technology](https://ipa.win.tue.nl/?event=course-software-technology)
+- 15 May 2024
