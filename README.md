@@ -12,25 +12,27 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 ## 2024
 
-Flattening Combinations of Arrays and Records
+[Flattening Combinations of Arrays and Records](https://doi.org/10.1007/978-3-031-74558-4_10)
 
 ```
 @inproceedings{sac-records,
   author={Huijben, Reg and Aaldering, Jordy and Achten, Peter and Scholz, Sven-Bodo},
   title={Flattening Combinations of Arrays and Records},
-  booktitle={Trends in  Functional Programming},
+  booktitle={International Symposium on Trends in Functional Programming},
   editor={Chang, Stephen and Hemann, Jason},
-  publisher={Springer},
-  address={New York, NY},
+  organization={Springer},
+  publisher={Springer Nature Switzerland},
+  address={Cham},
   series={TFP '24},
   location={South Orange, NJ, USA},
-  year={2024},
-  month={},
-  articleno={},
-  numpages={32},
-  isbn={(accepted for publication)},
-  doi={},
-  url={},
+  year={2025},
+  month=jan,
+  articleno={10},
+  pages={220--240},
+  numpages={21},
+  isbn={978-3-031-74558-4},
+  doi={10.1007/978-3-031-74558-4_10},
+  url={https://doi.org/10.1007/978-3-031-74558-4_10},
   abstract={Flattening is known to be a performance-boosting technique to orchestrate parallel computations on arbitrarily deeply nested arrays. In this paper, we propose a flattening transformation that deals with nested data structures that are composed of combinations of arrays and records. We choose the functional array programming language SaC as basis for this work, as it already supports flattening of homogeneously nested arrays, i.e. arrays in which all elements have the same shape. We propose an extension of SaC's syntax for records that allows records and arrays to be used in homogeneously nested form, and provide an implementation of this record transformation in the SaC compiler. Based on that extension, we show how any legal program that operates with such data structures can be transformed into an equivalent one that does not require any records at runtime.},
   keywords={Nested Data Structures, Records, Array Programming, Program Transformation}
 }
@@ -48,7 +50,7 @@ Flattening Combinations of Arrays and Records
   series={IFL '23},
   location={Braga, Portugal},
   year={2024},
-  month={June},
+  month=jun,
   articleno={11},
   numpages={14},
   isbn={9798400716317},
@@ -71,7 +73,7 @@ A new semantics for array programming languages; how to introduce some laziness 
   school={Radboud University},
   address={Nijmegen, Netherlands},
   year={2021},
-  month={March},
+  month=mar,
   abstract={Array programming languages are often used in mathematical and engineering applications with very large and complicated equations. In these languages all values are represented as arrays, these arrays can usually be multi-dimensional. These multi-dimensional arrays have a shape vector which describes the length of each of its dimensions. The separation of knowledge of these arrays allows programs to potentially be rewritten according to the required level of information of an array, reducing the computational load by only requiring the shape or dimensionality of that array. This paper defines a way to infer this required level of information and delivers rules for rewriting programs in a way that requires a lower level of information without losing strictness, finding a balance between lazy and strict evaluation. Along with this paper also comes a prototype language, created in a strict functional programming language, which implements these rules. This language will show how to implement these rules in the real world and will be used to validate and benchmark the results.}
 }
 ```
