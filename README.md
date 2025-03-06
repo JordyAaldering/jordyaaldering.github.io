@@ -94,13 +94,6 @@ A new semantics for array programming languages; how to introduce some laziness 
 
 ---
 
-# Cooperation
-
-- ODC Noord - Data centre visit, sustainability cooperation
-- Tweede Golf - Nea energy benchmarks
-
----
-
 # Collaboration
 
 Power consumption of an experimental webserver
@@ -114,4 +107,3 @@ Ethics and Sustainability of Data Science
 An introduction to SaC: parallel performance made easy
 - [Institute for Programming research and Algorithmics (IPA) Course: Software Technology](https://ipa.win.tue.nl/?event=course-software-technology)
 - 15 May 2024
-
