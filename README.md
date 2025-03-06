@@ -65,7 +65,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 ## 2021
 
-A new semantics for array programming languages; how to introduce some laziness without being lazy
+[A new semantics for array programming languages; how to introduce some laziness without being lazy](https://www.cs.ru.nl/bachelors-theses/2021/Jordy_Aaldering___1004292___A_new_semantics_for_array_programming_languages_-_how_to_introduce_some_laziness_without_being_lazy.pdf)
 
 ```
 @mastersthesis{lazy-array-semantics,
