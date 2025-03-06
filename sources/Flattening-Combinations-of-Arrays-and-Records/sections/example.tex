@@ -1,0 +1,56 @@
+
+\section{Example}\label{sec:example}
+
+As a running real-world example we consider the \textit{naive n-body problem}, which is concerned with predicting the individual motions of a group of celestial bodies.
+We define a record \texttt{Body} to keep track of these celestial bodies, as well as a \texttt{Vector3} record for the position of this body.
+Using these we define a function that computes the acceleration one body imposes on another, along with a function that computes the acceleration imposed on each body by all other bodies.
+%
+\begin{lstlisting}
+struct Vector3 {
+    double x;
+    double y;
+    double z;
+};
+
+struct Body {
+    struct Vector3 pos;
+    double mass;
+};
+
+struct Vector3
+acc(struct Body b1, struct Body b2)
+{
+    dir = b2.pos - b1.pos;
+    factor = l2norm(dir) == 0.0
+        ? 0.0 : b2.mass / pow3(l2norm(dir));
+    return factor * dir;
+}
+
+struct Body[n]
+acc_v(struct Body[n] bodies)
+{
+    return { [i] -> rsum(1, { [j] -> acc(bodies[i], bodies[j])
+                            | [j] < shape(bodies) })
+           | [i] < shape(bodies) };
+}
+\end{lstlisting}
+%
+With these acceleration functions we can define a function that computes the updated positions of all bodies after some given delta time \texttt{dt}.
+For this each body additionally requires a velocity field, which we can add to the record without requiring modifications to the acceleration function, highlighting one of the benefits of using records.
+%
+\begin{lstlisting}
+struct Body {
+    struct Vector3 pos;
+    double[3] vel;
+    double mass;
+};
+
+struct Body[n]
+timestep(struct Body[n] bodies, double dt)
+{
+    acceleration = acc_v(bodies);
+    bodies.pos += bodies.vel * dt;
+    bodies.vel += acceleration * dt;
+    return bodies;
+}
+\end{lstlisting}

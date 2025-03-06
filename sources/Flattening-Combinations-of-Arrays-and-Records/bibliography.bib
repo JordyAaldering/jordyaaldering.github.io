@@ -1,0 +1,374 @@
+
+%
+% SaC
+%
+
+@inbook{sac,
+author={Grelck, Clemens},
+title={Single Assignment {C} ({SaC}) High Productivity Meets High Performance},
+bookTitle={Central European Functional Programming School: 4th Summer School, CEFP 2011, Budapest, Hungary, June 14-24, 2011, Revised Selected Papers},
+year={2012},
+publisher={Springer Berlin Heidelberg},
+address={Berlin, Heidelberg},
+pages={207-278},
+isbn={978-3-642-32096-5},
+doi={10.1007/978-3-642-32096-5}
+}
+
+@article{sac2,
+author={Grelck, Clemens and Scholz, Sven-Bodo},
+title={{SaC} -- {A} Functional Array Language for Efficient Multi-threaded Execution},
+journal={International Journal of Parallel Programming},
+year={2006},
+month={Aug},
+day={01},
+volume={34},
+number={4},
+pages={383-427},
+issn={1573-7640},
+doi={10.1007/s10766-006-0018-x}
+}
+
+@inproceedings{sac-tensor,
+author={Scholz, Sven-Bodo and \v{S}inkarovs, Artjoms},
+title={Tensor Comprehensions in {SaC}},
+booktitle={Proceedings of the 31st Symposium on Implementation and Application of Functional Languages},
+year={2021},
+isbn={9781450375627},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+doi={10.1145/3412932.3412947},
+articleno={15},
+numpages={13},
+location={Singapore, Singapore},
+series={IFL '19}
+}
+
+@inproceedings{sac-scan,
+author={\v{S}inkarovs, Artjoms and Scholz, Sven-Bodo},
+title={Parallel scan as a multidimensional array problem},
+year={2022},
+isbn={9781450392693},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+doi={10.1145/3520306.3534500},
+booktitle={Proceedings of the 8th ACM SIGPLAN International Workshop on Libraries, Languages and Compilers for Array Programming},
+pages={1–11},
+numpages={11},
+keywords={algorithms, array languages, functional programming, parallelism, prefix sum, rank polymorphism},
+location={San Diego, CA, USA},
+series={ARRAY 2022}
+}
+
+@misc{sac-records,
+author={Luyat, Hraban},
+title={A Lightweight Implementation of Records in Functional Array Language {SaC}},
+note={Bachelor thesis, University of Amsterdam},
+school={University of Amsterdam},
+year={2009}
+}
+
+@inproceedings{sac-typepattern,
+author={Aaldering, Jordy and Scholz, Sven-Bodo and Van Gastel, Bernard},
+title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+booktitle={Proceedings of the 35st Symposium on Implementation and Application of Functional Languages},
+series={IFL '23},
+year={2024},
+doi={10.1145/3652561.3652572},
+keywords={Array Programming, Single assignment C, Rank-Polymorphism, Hybrid Types, Dependent Types, Type Constraints, Partial Evaluation, Pattern Matching, Shape Pattern, Type Pattern}
+}
+
+%
+% Other array languages
+%
+
+@article{futhark,
+author={Henriksen, Troels and Serup, Niels G. W. and Elsman, Martin and Henglein, Fritz and Oancea, Cosmin E.},
+title={Futhark: Purely Functional {GPU}-Programming with Nested Parallelism and in-Place Array Updates},
+year={2017},
+issue_date={June 2017},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+volume={52},
+number={6},
+issn={0362-1340},
+doi={10.1145/3140587.3062354},
+journal={SIGPLAN Not.},
+month={jun},
+pages={556–571},
+numpages={16},
+keywords={parallel, functional language, GPGPU, compilers},
+location={Barcelona, Spain},
+series={PLDI 2017}
+}
+
+@article{koka,
+title={Koka: Programming with Row Polymorphic Effect Types},
+volume={153},
+ISSN={2075-2180},
+doi={10.4204/eptcs.153.8},
+journal={Electronic Proceedings in Theoretical Computer Science},
+publisher={Open Publishing Association},
+author={Leijen, Daan},
+year={2014},
+month={jun},
+pages={100–126}
+}
+
+@article{kokamem,
+author={Lorenzen, Anton and Leijen, Daan and Swierstra, Wouter},
+title={{FP\textsuperscript{2}}: Fully in-Place Functional Programming},
+year={2023},
+issue_date={August 2023},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+volume={7},
+number={ICFP},
+doi={10.1145/3607840},
+journal={Proc. ACM Program. Lang.},
+month={aug},
+articleno={198},
+numpages={30},
+keywords={FBIP, Tail Recursion Modulo Cons}
+}
+
+@inproceedings{accelerate,
+author={Chakravarty, Manuel M.T. and Keller, Gabriele and Lee, Sean and McDonell, Trevor L. and Grover, Vinod},
+title={Accelerating {H}askell Array Codes with Multicore {GPU}s},
+year={2011},
+isbn={9781450304863},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+doi={10.1145/1926354.1926358},
+pages={3–14},
+numpages={12},
+keywords={data parallelism, haskell, dynamic compilation, skeletons, gpgpu, arrays},
+location={Austin, Texas, USA},
+series={DAMP '11}
+}
+
+%
+% Garbage collection
+%
+
+@article{mark-and-sweep,
+author={Dijkstra, Edsger W. and Lamport, Leslie and Martin, A. J. and Scholten, C. S. and Steffens, E. F. M.},
+title={On-the-Fly Garbage Collection: An Exercise in Cooperation},
+year={1978},
+issue_date={Nov. 1978},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+volume={21},
+number={11},
+issn={0001-0782},
+doi={10.1145/359642.359655},
+journal={Commun. ACM},
+month={nov},
+pages={966–975},
+numpages={10},
+keywords={fine-grained interleaving, cooperation bet. sequential processes w/ minimized mutual ex, garbage collection, program correctness for multiprogramming tasks, multiprocessing}
+}
+
+@article{generational-gc,
+author={Lieberman, Henry and Hewitt, Carl},
+title={A Real-Time Garbage Collector Based on the Lifetimes of Objects},
+year={1983},
+issue_date={June 1983},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+volume={26},
+number={6},
+issn={0001-0782},
+doi={10.1145/358141.358147},
+journal={Commun. ACM},
+month={jun},
+pages={419–429},
+numpages={11},
+keywords={object-oriented programming, LISP, lisp, real-time garbage collection, virtual memory, languages, performance, reference counting, algorithms, parallel processing}
+}
+
+%
+% Functional Records
+%
+
+@article{functional-records,
+author={Hudak, Paul},
+title={Conception, evolution, and application of functional programming languages},
+year={1989},
+issue_date={Sep. 1989},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+volume={21},
+number={3},
+issn={0360-0300},
+doi={10.1145/72551.72554},
+journal={ACM Comput. Surv.},
+month={sep},
+pages={359–411},
+numpages={53}
+}
+
+@misc{homogeneousness,
+author={Herhut, Stephan and Scholz, Sven-Bodo},
+title={Generic Programming on the Structure of Homogeneously Nested Arrays},
+address={University of Nottingham},
+year={2006},
+url={https://sac-home.org/_media/publications:pdf:gpotsohna.pdf}
+}
+
+%
+% Array of Records to Record or Arrays
+%
+
+@article{SoA,
+title={{SoAx}: A generic {C++} Structure of Arrays for handling particles in {HPC} codes},
+journal={Computer Physics Communications},
+volume={224},
+pages={325-332},
+year={2018},
+issn={0010-4655},
+doi={10.1016/j.cpc.2017.11.015},
+author={Holger Homann and Francois Laenen},
+keywords={C++, Heterogeneous data, Template metaprogramming, Generic programming}
+}
+
+@inproceedings{AoSoA,
+author={Jubertie, Sylvain and Masliah, Ian and Falcou, Joel},
+booktitle={2018 International Conference on High Performance Computing \& Simulation (HPCS)}, 
+title={Data Layout and {SIMD} Abstraction Layers: Decoupling Interfaces from Implementations}, 
+year={2018},
+pages={531-538},
+keywords={Layout;Libraries;Containers;C++ languages;Arrays;Program processors},
+doi={10.1109/HPCS.2018.00089}
+}
+
+@inproceedings{AoSoA2,
+author={Kofler, Klaus and Cosenza, Biagio and Fahringer, Thomas},
+editor={Tr{\"a}ff, Jesper Larsson and Hunold, Sascha and Versaci, Francesco},
+title={Automatic Data Layout Optimizations for {GPU}s},
+booktitle={Euro-Par 2015: Parallel Processing},
+year={2015},
+publisher={Springer Berlin Heidelberg},
+address={Berlin, Heidelberg},
+pages={263--274},
+doi={10.1007/978-3-662-48096-0_21},
+isbn={978-3-662-48096-0}
+}
+
+%
+% Record to Array libraries and DSLs
+%
+
+@incollection{record-library,
+title={Thrust: A Productivity-Oriented Library for {CUDA}},
+editor={Wen-mei W. Hwu},
+booktitle={GPU Computing Gems Jade Edition},
+publisher={Morgan Kaufmann},
+address={Boston},
+pages={359-371},
+year={2012},
+series={Applications of GPU Computing Series},
+isbn={978-0-12-385963-1},
+doi={10.1016/B978-0-12-385963-1.00026-5},
+author={Nathan Bell and Jared Hoberock}
+}
+
+@incollection{record-library2,
+title={Abstraction for {AoS} and {SoA} Layout in {C++}},
+editor={Wen-mei W. Hwu},
+booktitle={GPU Computing Gems Jade Edition},
+publisher={Morgan Kaufmann},
+address={Boston},
+pages={429-441},
+year={2012},
+series={Applications of GPU Computing Series},
+isbn={978-0-12-385963-1},
+doi={10.1016/B978-0-12-385963-1.00031-9},
+author={Robert Strzodka}
+}
+
+@inproceedings{record-dsl,
+author={Springer, Matthias and Masuhara, Hidehiko},
+title={Ikra-Cpp: A {C++}/{CUDA} {DSL} for Object-Oriented Programming with Structure-of-Arrays Layout},
+year={2018},
+isbn={9781450356466},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+doi={10.1145/3178433.3178439},
+booktitle={Proceedings of the 2018 4th Workshop on Programming Models for SIMD/Vector Processing},
+articleno={6},
+numpages={9},
+keywords={Template Metaprogramming, Structure of Arrays, SIMD, Object-oriented Programming, CUDA, C++},
+location={Vienna, Austria},
+series={WPMVP'18}
+}
+
+%
+% Data-Oriented Design
+%
+
+@inproceedings{dod,
+author={Bayliss, Jessica D.},
+title={Developing games with data-oriented design},
+year={2022},
+isbn={9781450392938},
+publisher={Association for Computing Machinery},
+address={New York, NY, USA},
+doi={10.1145/3524494.3527626},
+booktitle={Proceedings of the 6th International ICSE Workshop on Games and Software Engineering: Engineering Fun, Inspiration, and Motivation},
+pages={30–36},
+numpages={7},
+keywords={game software design, game development, data-oriented design},
+location={Pittsburgh, Pennsylvania},
+series={GAS '22}
+}
+
+@InProceedings{SA-mycroft,
+author={Mycroft, Alan},
+editor={Robinet, Bernard},
+title={The theory and practice of transforming call-by-need into call-by-value},
+booktitle={International Symposium on Programming},
+year={1980},
+publisher={Springer Berlin Heidelberg},
+address={Berlin, Heidelberg},
+pages={269--281},
+doi={10.1007/3-540-09981-6_19},
+isbn={978-3-540-39233-0}
+}
+
+@inproceedings{SA-wadler,
+author={Wadler, Philip and Hughes, R. J. M.},
+title={Projections for strictness analysis},
+year={1987},
+doi={10.1007/3-540-18317-5_21},
+isbn={3540183175},
+publisher={Springer-Verlag},
+address={Berlin, Heidelberg},
+booktitle={Proceedings of the Functional Programming Languages and Computer Architecture},
+pages={385–407},
+numpages={23}
+}
+
+@book{AhoSethUllm86,
+author={A.V. Aho and R. Sethi and J.D. Ullman},
+title={Compilers -- Principles, Techniques, and Tools},
+publisher={Addison-Wesley},
+year={1986},
+note={ISBN 0-201-10194-7},
+contents={Standard publication on that topic},
+topics={Compiler Optimization Surveys}
+}
+
+@article{slicing,
+author={Weiser, Mark},
+journal={IEEE Transactions on Software Engineering}, 
+title={Program Slicing}, 
+year={1984},
+volume={SE-10},
+number={4},
+pages={352-357},
+keywords={Trajectory;Data mining;Probability density function;Merging;Program processors;Debugging;Algorithms;Data flow analysis;debugging;human factors;parallel processing;program maintenance;program metrics;slicing;software tools},
+doi={10.1109/TSE.1984.5010248}
+}

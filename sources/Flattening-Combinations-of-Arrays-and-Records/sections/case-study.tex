@@ -1,0 +1,52 @@
+
+\section{Runtime Performance}\label{sec:case}
+
+We investigate whether the record flattening transformation introduces any significant overhead compared to hand-optimised code by benchmarking two implementations of the n-body algorithm: a hand-optimised version without records, and a version that makes use of records.
+In order to make optimal use of vectorization, the hand-optimised version operates on seven distinct arrays; three arrays for the x, y, and z coordinates, three arrays for the x, y, and z velocities, and a single array for the masses.
+
+The record implementation from the example already does this through the use of the \texttt{Vector3} record, which highlights how without much effort we can play around with the memory layout.
+We do however modify the velocity field to also use a \texttt{Vector3} instead of a \texttt{double[3]}.
+The only necessary change then is to replace occurrences of \texttt{double[3]} types for velocities by \texttt{Vector3} types.
+
+We benchmark these two implementations on 50,000 bodies, applying the timestep iteration 10 times.
+These benchmarks are repeated ten times on a Dell PowerEdge R7525 rack server containing two AMD EPYC 7313 CPUs, which have 16 cores running at 3.7GHz.
+Figure~\ref{fig:benchmark} plots the results of these benchmarks, which shows that the record version with \texttt{Vector3}s performs similarly to the hand-optimised version.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{tikzpicture}
+        \begin{semilogxaxis}[
+            xlabel=Threads,
+            ylabel=Gflops/s,
+            legend pos=north west,
+            xticklabel style={/pgf/number format/fixed},
+            yticklabel style={/pgf/number format/fixed},
+            xtick={1,2,4,8,16,32},
+            xticklabels={1,2,4,8,16,32},
+        ]
+            \addplot+[
+                error bars/.cd,
+                y explicit,
+                y dir=both,
+            ] table [
+                x=p,
+                y=mean,
+                y error plus expr=\thisrow{stddev},
+                y error minus expr=\thisrow{stddev},
+            ] {data/orig.csv};
+            \addplot+[
+                error bars/.cd,
+                y explicit,
+                y dir=both,
+            ] table [
+                x=p,
+                y=mean,
+                y error plus expr=\thisrow{stddev},
+                y error minus expr=\thisrow{stddev},
+            ] {data/vec.csv};
+            \legend{Hand-optimised,Vector3}
+        \end{semilogxaxis}
+    \end{tikzpicture}
+    \caption{Compute rate in GFLOP/s.}
+    \label{fig:benchmark}
+\end{figure}

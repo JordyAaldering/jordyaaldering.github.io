@@ -1,0 +1,114 @@
+\documentclass[runningheads]{llncs}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+
+\usepackage{color}
+\usepackage{xcolor}
+\definecolor{red}{cmyk}{0,1,0.9,0.3}
+\definecolor{green}{cmyk}{0.9,0,0.7,0.5}
+
+\usepackage{url}
+\usepackage{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\urlstyle{rm}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\pgfkeys{/pgf/number format/.cd,fixed,precision=0}
+\pgfplotstableset{col sep=comma}
+
+\usepackage{listings}
+\lstdefinelanguage{red}[]{}{%
+    keywords={},
+    otherkeywords={},
+    basicstyle=\color{red}\fontsize{8}{8}\selectfont\ttfamily
+}
+\lstdefinelanguage{SaC}[]{}{%
+    keywords={typedef,char,byte,int,float,double,bool,inline,return,dim,shape,take,drop,floor,sqrt,pow3,rsum,struct,class,temperature,Vector3,Body,reverse,reshape,dummy},
+    otherkeywords={?,:},%->,<,<=,>,>=,+,-,*,/,^,+=,-=,*=,/=,==},
+    moredelim=[s][\color{green}]{/*}{*/},
+    morecomment=[s]{Body[}{]},
+    morecomment=[s]{double[}{]},
+    morecomment=[s]{[:}{]},
+    morecomment=[s]{type}{]}
+}
+\lstset{%
+    language=SaC,
+    basicstyle=\fontsize{8}{8}\selectfont\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{blue},
+    showstringspaces=false,
+}
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newcommand{\subb}[1]{{\color{blue}\sub{#1}}}
+
+% ----------------------------------------------------------------------
+
+\newcommand{\sac}{SaC}
+
+% Highlight a piece of text into a gray block
+\definecolor{highlight}{cmyk}{0,0,0,0.12}
+\newcommand{\highlight}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+
+%
+% A bunch of commands to make the translation formulas consistent and easier to change
+%
+
+\newcommand{\recordtype}[1]{\text{struct #1}}
+\newcommand{\recorddecl}[2]{\recordtype{#1}\ \{\,#2\,\};}
+\newcommand{\recordvar}[2]{\recordtype{#1}\ #2}
+
+\newcommand{\idN}[2][field]{\textit{#1}_{#2}}
+\newcommand{\typeN}[1]{\textit{type}_{#1}[\textit{shp}_{#1}]}
+\newcommand{\fieldN}[2][field]{\typeN{#2}\ \idN[#1]{#2}}
+
+\newcommand{\us}{\ensuremath{\mathunderscore{}}}
+\newcommand{\rtCon}{\text{\us{}rt\us{}constr\us{}}}
+\newcommand{\rtGet}[2][]{\text{\us{}rt\us{}get\us{}#2\textsubscript{#1}\us{}}}
+\newcommand{\rtSet}[2][]{\text{\us{}rt\us{}set\us{}#2\textsubscript{#1}\us{}}}
+
+\newcommand{\denest}[2][\sigma]{\texttt{Denest}(#2,\ #1)}
+\newcommand{\denestRT}[2][\sigma]{\texttt{Denest\textsubscript{rt}}(#2,\ #1)}
+\newcommand{\expand}[2]{\texttt{expand}(#1,\ #2)}
+\newcommand{\envsub}[1]{\ensuremath{\sigma_{\text{#1}}}}
+\newcommand{\envid}[2][]{\text{#2\textsubscript{#1}:}\;}
+\newcommand{\makeenv}[1]{\{\,#1\,\}}
+
+% ----------------------------------------------------------------------
+
+\title{Flattening Combinations of Arrays and Records}
+
+\author{Reg Huijben
+   \and Jordy Aaldering\orcidID{0009-0001-3018-5152}
+   \and Peter Achten\orcidID{0000-0002-3585-7165}
+   \and Sven-Bodo Scholz\orcidID{0000-0002-8663-1043}}
+
+\institute{Radboud University, Nijmegen, Netherlands \\
+\email{\{Reg.Huijben,Jordy.Aaldering,Peter.Achten,SvenBodo.Scholz\}@ru.nl}}
+
+\begin{document}
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/sac}
+\input{sections/syntax}
+\input{sections/example}
+\input{sections/key-idea}
+\input{sections/transformation}
+\input{sections/uar}
+\input{sections/urr}
+\input{sections/case-study}
+\input{sections/related}
+\input{sections/conclusions}
+
+\section*{Acknowledgements}
+The authors thank Thomas Koopman for his help with optimising and benchmarking the record implementation in the \sac{} compiler, and the anonymous reviewers for their constructive feedback.
+
+\bibliographystyle{splncs04}
+\bibliography{bibliography}
+
+\end{document}

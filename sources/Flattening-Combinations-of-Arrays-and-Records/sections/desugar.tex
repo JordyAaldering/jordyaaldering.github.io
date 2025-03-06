@@ -1,0 +1,77 @@
+
+\subsection{Constructors, Accessors, and Mutators}
+
+The first step in transforming programs with records into programs without records is to replace record constructors, accessors, and mutators by generated function definitions.
+For each record type in a program we generate a full constructor and a default constructor function, as well as accessor and mutator functions for every field of that record.
+Any record constructors, accessors, and mutators in the program are then replaced by applications of the corresponding generated functions.
+
+\subsubsection{Accessors and Mutators}
+
+Normally an infix dot symbol is used to access or mutate the field of a record type, e.g. \texttt{bodies.pos}.
+In order to access or mutate a nested field, multiple accessors or mutators may be chained.
+However after programs have been transformed there will no longer be any records, and such a selection is no longer applicable.
+Instead we generate accessor and mutator functions for every field occurring in a record type.
+To access and mutate the position field of the body record, for example, these would be \verb|body_set_pos| and \verb|body_get_pos| respectively.
+For a record type with $n$ fields, we generate an accessor and a mutator function for every field $i\in[1,n]$:
+%
+\begin{lstlisting}[escapechar=$]
+type$\subb{1}$[shp$\subb{1}$], ..., type$\subb{n}$[shp$\subb{n}$]
+rt_get_id$\sub{i}$(type$\subb{1}$[shp$\subb{1}$] id$\sub{1}$, ..., typen[shp$\subb{n}$] id$\sub{n}$)
+{
+    return id$\sub{i}$;
+}
+
+type$\subb{1}$[shp$\subb{1}$], ..., type$\subb{n}$[shp$\subb{n}$]
+rt_set_id$\sub{i}$(type$\subb{i}$[shp$\subb{i}$] value, type$\subb{1}$[shp$\subb{1}$] id$\sub{1}$, ..., type$\subb{n}$[shp$\subb{n}$] id$\sub{n}$)
+{
+    return (id$\sub{1}$, ..., id$\sub{i-1}$, value, id$\sub{i+1}$, ..., id$\sub{n}$);
+}
+\end{lstlisting}
+%
+Note that the argument and return types in these generated functions can still be records at this point.
+We expand these records at a later step, along with the expansion of records in user-defined functions.
+
+Accessors and mutators through field selection can now be replaced by applications of these generated functions.
+For a field selection \verb|id = x.y| on the right-hand-side of a let-expression we apply the accessor function \verb|id = rt_get_y(x)|, whereas if on the left-hand-side there occurs a field selection \verb|x.y = expr|, the mutator function is applied \verb|rt_set_y(expr, x)|.
+
+\subsubsection{Constructors}
+
+Syntactically there are three kinds of record constructors:
+a full constructor that expects a value for each field in order,
+a default constructor that takes no arguments and assigns a default (zero) value to each field,
+and an explicit constructor with only the values for some fields explicitly defined.
+For every record type \texttt{rt} in the program we generate a new function definition for both the full and the default constructor:
+%
+\begin{lstlisting}[escapechar=$]
+type$\subb{1}$[shp$\subb{1}$], ..., type$\subb{n}$[shp$\subb{n}$]
+new_rt(type$\subb{1}$[shp$\subb{1}$] id$\sub{1}$, ..., type$\subb{n}$[shp$\subb{n}$] id$\sub{n}$)
+{
+    return (id$\sub{1}$, ..., id$\sub{n}$);
+}
+
+type$\subb{1}$[shp$\subb{1}$], ..., type$\subb{n}$[shp$\subb{n}$]
+zero(type$\subb{1}$[*] id$\sub{1}$, ..., type$\subb{n}$[*] id$\sub{n}$)
+{
+    return new_rt(genarray([shp$\sub{1}$], zero([:type$\subb{1}$])
+                  ...
+                  genarray([shp$\sub{n}$], zero([:type$\subb{n}$]));
+}
+\end{lstlisting}
+%
+Where \texttt{[:type]} is an empty array of the given type.
+This ensures that the correct overload of the \texttt{zero} function is applied, returning the default value for that type.
+
+Now whenever we encounter a full constructor of the form \texttt{rt\{expr\sub{1}, ..., expr\sub{n}\}} we replace it by \texttt{new\_rt(expr\sub{1}, ..., expr\sub{n})}, and whenever we encounter a default constructor of the form \texttt{rt\{\}} we replace it by \texttt{zero([:rt])}.
+Finally, if we encounter an explicit constructor of the form
+%
+\begin{lstlisting}[escapechar=$]
+rt{.field$\sub{q}$ = value$\sub{q}$, ..., .field$\sub{r}$ = value$\sub{r}$}
+\end{lstlisting}
+%
+we first apply the default constructor, followed by a chain of mutator functions for the explicitly given fields.
+%
+\begin{lstlisting}[escapechar=$]
+rt_set_id$\sub{r}$(value$\sub{r}$,
+    ...
+        rt_set_id$\sub{q}$(value$\sub{q}$, zero([:rt]));
+\end{lstlisting}

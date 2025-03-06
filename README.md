@@ -10,7 +10,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 # Publications
 
-## 2024
+## 2025
 
 [Flattening Combinations of Arrays and Records](https://doi.org/10.1007/978-3-031-74558-4_10)
 
@@ -38,6 +38,8 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 }
 ```
 
+## 2024
+
 [Type Patterns: Pattern Matching on Shape-Carrying Array Types](https://doi.org/10.1145/3652561.3652572)
 
 ```
@@ -61,7 +63,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 }
 ```
 
-## 2021 (Bachelor's thesis)
+## 2021
 
 A new semantics for array programming languages; how to introduce some laziness without being lazy
 
@@ -87,6 +89,7 @@ A new semantics for array programming languages; how to introduce some laziness 
 - [Niek Janssen]()
 - [Thomas Koopman]()
 - [Mart Lubbers](https://martlubbers.net)
+- [Benedikt Rips]()
 - [Sven-Bodo Scholz](https://thielescholz.eu/doku.php)
 
 ---
@@ -98,7 +101,11 @@ A new semantics for array programming languages; how to introduce some laziness 
 
 ---
 
-# Talks
+# Collaboration
+
+Power consumption of an experimental webserver
+- [Tweede Golf](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver)
+- 18 December 2024
 
 Ethics and Sustainability of Data Science
 - [Alliander](https://www.ru.nl/en/about-us/organisation/partners-and-networks/alliander) winter school
@@ -107,3 +114,4 @@ Ethics and Sustainability of Data Science
 An introduction to SaC: parallel performance made easy
 - [Institute for Programming research and Algorithmics (IPA) Course: Software Technology](https://ipa.win.tue.nl/?event=course-software-technology)
 - 15 May 2024
+

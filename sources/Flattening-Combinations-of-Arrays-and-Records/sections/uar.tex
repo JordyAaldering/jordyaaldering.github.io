@@ -1,0 +1,35 @@
+
+\section{Unused Argument Removal}\label{sec:uar}
+
+After applying the record transformation to the acceleration function from the running example, the fields of all record arguments are expanded into separate arguments, which leads to the following intermediate function definition:
+%
+\begin{lstlisting}
+double[n], double[n], double[n]
+acc_v(double[n] xs, double[n] ys, double[n] zs,
+      double[n,3] vels, double[n] masses)
+{
+    return { [i] -> rsum(1, { [j] -> acc(xs[i], ys[i], zs[i],
+                                         xs[j], ys[j], zs[j],
+                                         masses[j])
+                            | [j] < [n] })
+           | [i] < [n] };
+}
+\end{lstlisting}
+%
+However the velocity field is not used within the body of this function.
+Typically the number of arguments quickly explodes when expanding records, which has a negative effect on the compilation time of programs, this would especially be the case for the timestep function for example.
+Furthermore, calling sites of these functions are not able to apply optimisations such as dead code removal on these unused arguments, limiting further optimisation potential.
+Removing these unused arguments from function signatures and corresponding function applications would not only improve compilation times, but also opens the door to better optimisation of those calling sites.
+In certain cases this may make it possible to remove some flattened fields entirely, avoiding the need for unnecessary memory allocation of those unused fields.
+
+After applying this unused argument removal optimisation any calling sites of the accelerate function will only pass the required arguments instead of also including the velocity field, and the function signature becomes:
+%
+\begin{lstlisting}
+double, double, double
+double[n], double[n], double[n]
+acc_v(double[n] xs, double[n] ys, double[n] zs, double[n] masses)
+\end{lstlisting}
+%
+Naively applying this unused argument removal optimisation only once is not sufficient.
+After applying the optimisation once, it may expose additional arguments that have become unused.
+Therefore this optimisation is applied iteratively in the optimisation cycle, which repeatedly applies a suite of program optimisations.

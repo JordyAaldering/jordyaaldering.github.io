@@ -1,0 +1,32 @@
+
+\section{Conclusion}\label{sec:conclusion}
+
+This paper proposes an extensions of the array language \sac{} by records.
+As with any other basic type in \sac{}, all records are implicitly n-dimensional arrays of records; a scalar record has dimensionality 0 and an empty shape.
+As records are normal expressions, all array constructing operations of \sac{} can be applied to records as well.
+
+The key contribution of this paper is a transformation that systematically transforms 
+all arrays of records into records of arrays.
+As a consequence, any non-recursive nesting of arrays and records can be transformed into records that appear as scalar records on the top level only and, thus, can be replaced by their fields entirely.
+Meaning that there is no need to support records at runtime at all.
+This not only reduces the implementation effort but it also avoids the overhead of nested memory allocations entirely.
+
+The price that needs to be paid for getting rid of all records at runtime is an increase in function arguments and return values.
+To counter this effect, we also propose two optimisations that identify those arguments and return values that do not contribute to the actual computations within functions that operate on records.
+This reduces the increase of function signatures that results from our transformation to the necessary minimum.
+
+To be able to perform the proposed transformation in all cases, we need to impose two restrictions.
+Firstly, we have to restrict arrays in record fields to be of a fixed shape.
+This restriction is a consequence of \sac{}'s limitation to homogeneously nested arrays.
+In array languages without this restriction, arbitrarily shaped record fields would be directly possible, using the same transformation scheme as proposed in the paper.
+
+Secondly, we have to restrict records to be defined in a non-recursive manner.
+This is a fundamental limitation of the proposed flattening approach.
+As the memory size of flattened arrays needs to be known prior to computing array values, recursively defined records cannot be flattened away as proposed in the paper.
+However, for most compute intensive applications such recursion is not needed.
+Language support for such recursion surely is possible and would constitute an extension of the language capabilities of \sac{}, but it would be orthogonal to the transformation work presented here.
+Our current implementation in the \sac{} compiler at \url{www.sac-home.org} does not support such recursion.
+
+While our records do not support methods as part of the records, the function overloading of \sac{} provides the programmer with the opportunity to define record-type-specific functionalities.
+Even though no subtyping relation between record types is supported in \sac{}, it does support subtyping in array types~\cite{homogeneousness} in general.
+Extending this to records as they are suggested in this paper might be interesting future work.

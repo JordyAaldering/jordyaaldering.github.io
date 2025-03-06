@@ -1,0 +1,39 @@
+
+\section{Unused Return Removal}
+
+Typically when a function expects a record and returns a modified version of that record, only some of the fields of that record will actually have been changed.
+This occurs in the \texttt{timestep} function from the running example, which returns a modified lists of bodies without changing their masses.
+%
+\begin{lstlisting}
+double[n], double[n], double[n], double[n,3], double[n]
+timestep(double[n] x, double[n] y, double[n] z, double[n,3] vel,
+         double[n] mass, double dt)
+{
+    ...
+    return (x, y, z, vel, mass);
+}
+\end{lstlisting}
+%
+Here only the positions and velocities of the given bodies are changed, whereas the mass remains unchanged and is still equal to the value of the given argument after returning.
+Ideally, we would remove this mass from the return type to increase the potential for further optimisations.
+I.e., after removing the mass from the return types unused argument removal is able to remove this mass from the arguments as well, which as discussed previously opens the door for other optimisations.
+
+Because overloaded functions must always have the same number of return types, we require a different approach compared to unused argument removal.
+This restriction however actually leads to a very simple implementation.
+During the optimisation cycle we annotate return types that remain unchanged with respect to one of the arguments, similarly to the annotation done by unused argument removal.
+However since we cannot change the return types of this function, we instead update calling sites of this function during the optimisation cycle.
+If we encounter an application that assigns an identifier whose corresponding return type is marked as unchanged, we replace any following occurrences of that identifier by the argument instead.
+%
+\begin{lstlisting}
+x2, y2, z2, vel2, mass2 = timestep(x, y, z, vel, mass, dt);
+x3, y3, z3, vel3, mass3 = timestep(x2, y2, z2, vel2, mass2, dt);
+x4, y4, z4, vel4, mass4 = timestep(x3, y3, z3, vel3, mass3, dt);
+\end{lstlisting}
+%
+Since \texttt{timestep} does not change the value of \texttt{mass}, the returned value is thrown away and all following occurrences of \texttt{mass2} and \texttt{mass3} are replaced by \texttt{mass}.
+%
+\begin{lstlisting}
+x2, y2, z2, vel2, _ = timestep(x, y, z, vel, mass, dt);
+x3, y3, z3, vel3, _ = timestep(x2, y2, z2, vel2, mass, dt);
+x4, y4, z4, vel4, _ = timestep(x3, y3, z3, vel3, mass, dt);
+\end{lstlisting}

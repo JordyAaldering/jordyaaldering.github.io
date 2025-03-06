@@ -1,0 +1,10 @@
+
+\begin{abstract}
+Flattening is known to be a performance-boosting technique to orchestrate parallel computations on arbitrarily deeply nested arrays.
+In this paper, we propose a flattening transformation that deals with nested data structures that are composed of combinations of arrays and records.
+We choose the functional array programming language \sac{} as basis for this work, as it already supports flattening of homogeneously nested arrays, i.e. arrays in which all elements have the same shape.
+We propose an extension of \sac{}'s syntax for records that allows records and arrays to be used in homogeneously nested form, and provide an implementation of this record transformation in the \sac{} compiler.
+Based on that extension, we show how any legal program that operates with such data structures can be transformed into an equivalent one that does not require any records at runtime.
+
+\keywords{nested data structures \and records \and array programming \and program transformation}
+\end{abstract}

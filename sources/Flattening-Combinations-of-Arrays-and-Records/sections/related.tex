@@ -1,0 +1,35 @@
+
+\section{Related Work}
+
+This work expands upon previous work in the context of \sac{}~\cite{sac-records}, which explores how records can be added to the language.
+We extend on that work to fully support arbitrary non-recursive nesting of arrays and records, including all array operations on records as well as on tensor comprehensions and with-loops for constructing arrays of records.
+
+The idea of converting the nesting structure of records and arrays is by no means new.
+Several papers investigate the performance gains of such rearrangements. 
+In particular the performance benefits from records of arrays over arrays of records are well established.
+It has manifested itself in various software design strategies as, for example, 
+the data-oriented design, which is applied in the context of game development~\cite{dod}.
+
+However, it is also widely recognised that arrays of records for many application areas quite naturally lend themselves  for specifying algorithms.
+For example, Homann et al.~\cite{SoA} discuss this ambiguity: they show the specificational benefits of arrays of records and demonstrate the performance benefits of converting arrays of records into records of arrays.
+As a potential solution, they propose a new data structure based on C++ templates that provides a programming interface similar to arrays of records yet results in code with records of arrays. 
+Jubertie et al.~\cite{AoSoA} and Kofler et al.~\cite{AoSoA2} further improve on that idea.
+They suggest a more flexible interface that enables a decoupling of data specification and the layout that ultimately is being generated for the execution.
+
+The main differences between that line of research and ours is that in our work the conversion from arrays of records is fully compiler-driven.
+There is no need for the programmer to create any specific scaffolding or to make decisions about the layout. There is not even a need for the programmer to be aware of the conversion.
+By converting all records to arrays, our approach goes even one step further: the resulting programs no longer contain any records. 
+
+Further related work suggests library~\cite{record-library,record-library2} or DSL~\cite{record-dsl} based approaches for converting records to arrays.
+Similar to the template-based approaches, these require developers to actively consider the performance of their programs.
+By instead making this transformation a core part of the \sac{} language, we allow developers to focus on the ``what'' of their program instead of on the ``how''.
+
+The two new optimisations this paper proposes, unused argument removal and unused return removal, bear quite some relation to standard optimisations found in the context of functional programming languages as well as optimising compilers in general.
+Unused Argument Removal can be seen as a dual to strictness analysis~\cite{SA-mycroft,SA-wadler}.
+Instead of identifying function arguments that are guaranteed to be evaluated, we identify arguments that are guaranteed not to be needed.
+This allows us to eliminate these arguments, effectively avoiding the corresponding beta-reductions when applying the functions. 
+Unused Return Removal also avoids redexes by forwarding values within the calling context.
+This can be seen as a special form of variable propagation, a standard optimisation in compilers (e.g.~\cite{AhoSethUllm86}).
+The main difference here is that we propagate the arguments to functions where we statically find out that the correponding parameter is directly propagated into one of the results.
+The identification of such functions, by itself, can be seen as a special form of program slicing~\cite{slicing}.
+However, instead of computing the slices, we only identify these trivial slices for applying the propagation.
