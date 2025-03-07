@@ -12,6 +12,56 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 ## 2025
 
+Empowering Embedded Systems Developers to Meet Energy Consumption Requirements
+
+```
+@inproceedings{empowering-embedded,
+  author={Rietvelt, Mark and Aaldering, Jordy and van Gastel, Bernard and Keuning, Hieke},
+  title={Empowering Embedded Systems Developers to Meet Energy Consumption Requirements},
+  booktitle={},
+  editor={},
+  publisher={},
+  address={},
+  series={ICT4S '25},
+  location={},
+  year={},
+  month={},
+  articleno={},
+  pages={},
+  numpages={11},
+  isbn={},
+  doi={},
+  url={},
+  abstract={Embedded systems, in which external components are managed through software, have become seamlessly integrated into modern society. These systems are ubiquitous in our daily lives. Their environmental impact encompasses not only the direct energy consumption required to operate the device itself, but also the indirect environmental footprint associated with the resources consumed by external components and the ecological consequences of manufacturing these components. As software controls these components, software decisions influence the energy impact of these embedded devices. There is a need for embedded systems to become more environmentally friendly, in part because governments impose increasingly stringent regulations on sustainability. This imperative forms the core focus of this article: we examine the information requirements of developers who are working to optimise energy usage and reduce greenhouse gas emissions. Although there are multiple tools for analysing energy consumption, an examination of their effectiveness has not been done before. Using a mixed-methods approach that includes an observational study, a semi-structured interview, and a questionnaire, we identify existing practices that guide embedded system software developers in achieving energy-efficiency. Our research reveals opportunities for hardware vendors to support this process. We highlight how developers prefer energy measurements to be collected and visualized, offering valuable insights for researchers and tool developers to create more effective tools and frameworks to advance sustainable software development.},
+  keywords={Embedded Devices, Visualisation, Feedback, Software Engineering, Energy Consumption, Green Software}
+}
+```
+
+Energy-Aware Dynamic Adaptation of Runtime Systems
+
+```
+@inproceedings{dynamic-adaptation,
+  author={Aaldering, Jordy and van Gastel, Bernard and Scholz, Sven-Bodo},
+  title={Energy-Aware Dynamic Adaptation of Runtime Systems},
+  booktitle={},
+  editor={},
+  publisher={Springer Nature},
+  address={Cham},
+  series={TFP '25},
+  location={Oxford, UK},
+  year={},
+  month={},
+  articleno={},
+  pages={},
+  numpages={24},
+  isbn={},
+  doi={},
+  url={},
+  abstract={In recent years the energy-efficiency of software has become a key focus for both researchers and software developers, aiming to reduce greenhouse-gas emissions and operational costs. Despite this growing awareness, developers still lack effective strategies to improve the energy-efficiency of their programs beyond the well-established approaches that optimise for runtime performance. In this paper we present a dynamic adaptation algorithm that uses energy consumption feedback to optimise the energy-efficiency of data-parallel applications, by steering the level of parallelism during runtime through external control. This approach is especially suited to functional languages, whose side-effect-free nature and strong semantic guarantees allow for easier code generation and straightforward scalability of the parallelism of programs. Through a series of experiments we evaluate the effectiveness of this approach. We measure how well the adaptation algorithm adapts to runtime changes, and we evaluate its effectiveness compared to a hypothesised oracle that knows the optimal level of parallelism, as well as a runtime-optimising-based approach. We show that in a fixed-workload scenario we approach the theoretical best energy-efficiency, and that in changing workload scenarios the adaptation algorithm converges towards an optimal level of parallelism that minimises energy consumption.},
+  keywords={Dynamic Adaptation, Runtime Systems, Energy-Efficiency, High-Performance Computing, Parallel Programming}
+}
+```
+
 [Flattening Combinations of Arrays and Records](https://doi.org/10.1007/978-3-031-74558-4_10)
 
 ```
@@ -20,8 +70,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
   title={Flattening Combinations of Arrays and Records},
   booktitle={International Symposium on Trends in Functional Programming},
   editor={Chang, Stephen and Hemann, Jason},
-  organization={Springer},
-  publisher={Springer Nature Switzerland},
+  publisher={Springer Nature},
   address={Cham},
   series={TFP '24},
   location={South Orange, NJ, USA},
@@ -44,7 +93,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 ```
 @inproceedings{type-patterns,
-  author={Aaldering, Jordy and Scholz, Sven-Bodo and Gastel, Bernard van},
+  author={Aaldering, Jordy and Scholz, Sven-Bodo and van Gastel, Bernard},
   title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
   booktitle={Proceedings of the 35th Symposium on Implementation and Application of Functional Languages},
   publisher={Association for Computing Machinery},
@@ -86,10 +135,10 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 - [Peter Achten](https://www.cs.ru.nl/P.Achten/)
 - [Bernard van Gastel](https://sustainablesoftware.info)
-- [Niek Janssen]()
-- [Thomas Koopman]()
+- [Niek Janssen](https://www.ru.nl/en/people/janssen-n-j-a)
+- [Thomas Koopman](https://www.ru.nl/personen/koopman-t)
 - [Mart Lubbers](https://martlubbers.net)
-- [Benedikt Rips]()
+- [Benedikt Rips](https://www.ru.nl/en/people/rips-b)
 - [Sven-Bodo Scholz](https://thielescholz.eu/doku.php)
 
 ---
