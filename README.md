@@ -14,7 +14,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 Empowering Embedded Systems Developers to Meet Energy Consumption Requirements
 
-```
+```bibtex
 @inproceedings{empowering-embedded,
   author={Rietvelt, Mark and Aaldering, Jordy and van Gastel, Bernard and Keuning, Hieke},
   title={Empowering Embedded Systems Developers to Meet Energy Consumption Requirements},
@@ -39,7 +39,7 @@ Empowering Embedded Systems Developers to Meet Energy Consumption Requirements
 
 Energy-Aware Dynamic Adaptation of Runtime Systems
 
-```
+```bibtex
 @inproceedings{dynamic-adaptation,
   author={Aaldering, Jordy and van Gastel, Bernard and Scholz, Sven-Bodo},
   title={Energy-Aware Dynamic Adaptation of Runtime Systems},
@@ -64,7 +64,7 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 [Flattening Combinations of Arrays and Records](https://doi.org/10.1007/978-3-031-74558-4_10)
 
-```
+```bibtex
 @inproceedings{sac-records,
   author={Huijben, Reg and Aaldering, Jordy and Achten, Peter and Scholz, Sven-Bodo},
   title={Flattening Combinations of Arrays and Records},
@@ -74,7 +74,7 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
   address={Cham},
   series={TFP '24},
   location={South Orange, NJ, USA},
-  year={2025},
+  year=2025,
   month=jan,
   articleno={10},
   pages={220--240},
@@ -89,9 +89,21 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ## 2024
 
+[Power Consumption of an Experimental Webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver)
+
+```bibtex
+@misc{nea-energy,
+  title={Power Consumption of an Experimental Webserver},
+  author={Aaldering, Jordy and de Vries, Folkert},
+  year=2024,
+  month=dec,
+  url={https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver}
+}
+```
+
 [Type Patterns: Pattern Matching on Shape-Carrying Array Types](https://doi.org/10.1145/3652561.3652572)
 
-```
+```bibtex
 @inproceedings{type-patterns,
   author={Aaldering, Jordy and Scholz, Sven-Bodo and van Gastel, Bernard},
   title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
@@ -100,7 +112,7 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
   address={New York, NY},
   series={IFL '23},
   location={Braga, Portugal},
-  year={2024},
+  year=2024,
   month=jun,
   articleno={11},
   numpages={14},
@@ -116,14 +128,14 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 [A new semantics for array programming languages; how to introduce some laziness without being lazy](https://www.cs.ru.nl/bachelors-theses/2021/Jordy_Aaldering___1004292___A_new_semantics_for_array_programming_languages_-_how_to_introduce_some_laziness_without_being_lazy.pdf)
 
-```
+```bibtex
 @mastersthesis{lazy-array-semantics,
   type={Bachelor's thesis},
   author={Aaldering, Jordy and Scholz, Sven-Bodo and Koopman, Pieter},
   title={A new semantics for array programming languages; how to introduce some laziness without being lazy},
   school={Radboud University},
   address={Nijmegen, Netherlands},
-  year={2021},
+  year=2021,
   month=mar,
   abstract={Array programming languages are often used in mathematical and engineering applications with very large and complicated equations. In these languages all values are represented as arrays, these arrays can usually be multi-dimensional. These multi-dimensional arrays have a shape vector which describes the length of each of its dimensions. The separation of knowledge of these arrays allows programs to potentially be rewritten according to the required level of information of an array, reducing the computational load by only requiring the shape or dimensionality of that array. This paper defines a way to infer this required level of information and delivers rules for rewriting programs in a way that requires a lower level of information without losing strictness, finding a balance between lazy and strict evaluation. Along with this paper also comes a prototype language, created in a strict functional programming language, which implements these rules. This language will show how to implement these rules in the real world and will be used to validate and benchmark the results.}
 }
