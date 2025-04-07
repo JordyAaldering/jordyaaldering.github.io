@@ -12,11 +12,10 @@ repetitions of the same parallel computation. This behaviour allows dynamic adap
 parallelism between such repetitions~\cite{sac-mtdynamic}. Our adaptation algorithm monitors changes
 in the energy consumption from one repetition to the next, and periodically adjusts the recommended
 thread-count to find the thread-count with the lowest energy consumption. Based on measured changes
-in energy consumption, using power meters built in to the processor, the algorithm determines
-whether to increase or decrease the thread count for the next iteration, and by what amount. The
-hypothesis is that with this approach, we can adapt the thread-count during runtime in
-correspondence to changes in energy consumption, converging to a (local) optimum for
-energy-efficiency.
+in energy consumption, using meters built in to the processor, the algorithm determines whether to
+increase or decrease the thread count for the next iteration, and by what amount. The hypothesis is
+that with this approach, we can adapt the thread-count during runtime in correspondence to changes
+in energy consumption, converging to a (local) optimum for energy-efficiency.
 
 The algorithm recomputes the recommended thread-count at a fixed interval; waiting for a fixed
 amount of energy measurements to arrive. Each of these energy measurements is the energy consumed
@@ -52,10 +51,10 @@ for $\beta$ results in smaller changes to the step size. For our benchmarks we f
 $0.85$ for $\beta$ works well.
 
 Eventually the step size reaches zero, and the thread-count will stagnate. In an attempt to escape
-potential local optima, and to adapt to subtle changes to the energy consumption pattern of a
-program, the step size is reset to half the maximum number of threads when it becomes less than
-$\gamma$. The lower the value of $\gamma$, the more iterations are required until the step size is
-reset. Given our choice for $\beta$, a value of $0.155$ for $\gamma$ works well for our benchmarks.
+potential local optima, the step size is reset to half the maximum number of threads when it becomes
+less than $\gamma$. The lower the value of $\gamma$, the more iterations are required until the step
+size is reset. Given our choice for $\beta$, a value of $0.155$ for $\gamma$ works well for our
+benchmarks.
 
 A formal definition of this algorithm is described in Algorithm~\ref{alg:controller}.
 
@@ -91,9 +90,9 @@ A formal definition of this algorithm is described in Algorithm~\ref{alg:control
     \label{alg:controller}
 \end{algorithm}
 
-A drawback of this approach is that it contains manually tuned variables, which might need
-reconfiguration in different contexts. The main difficulty lies in the variation in
-energy-efficiency between hardware systems, and in run-to-run variance due to input-dependent
-behaviour and changes to the software environment. In future work we aim to investigate whether,
-within this context, a control theory-driven design technique can help mitigate this
-drawback~\cite{control-theory}.
+A limitation of this approach are its manually tuned variables, which may require reconfiguration in
+different contexts. The main challenge arises from variations in energy-efficiency across hardware,
+and run-to-run fluctuations due to input-dependent behaviour and changes in the software
+environment. While control theory~\cite{control-theory} appears promising, it is not easily
+applicable to discrete values like thread-count, as it is designed for continuous systems. We
+believe genetic algorithms may be more suitable, which we plan to explore in future work.
