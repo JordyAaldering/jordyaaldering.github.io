@@ -8,31 +8,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 
 ---
 
-# Publications
-
 ## 2025
-
-Empowering Embedded Systems Developers to Meet Energy Consumption Requirements
-
-```bibtex
-@inproceedings{empowering-embedded,
-  author={Rietvelt, Mark and Aaldering, Jordy and van Gastel, Bernard and Keuning, Hieke},
-  title={Empowering Embedded Systems Developers to Meet Energy Consumption Requirements},
-  booktitle={},
-  editor={},
-  publisher={},
-  address={},
-  series={ICT4S '25},
-  location={},
-  year={},
-  month={},
-  articleno={},
-  pages={},
-  numpages=11,
-  isbn={},
-  doi={}
-}
-```
 
 Energy-Aware Dynamic Adaptation of Runtime Systems
 
@@ -157,19 +133,3 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 - [Mart Lubbers](https://martlubbers.net)
 - [Benedikt Rips](https://www.ru.nl/en/people/rips-b)
 - [Sven-Bodo Scholz](https://thielescholz.eu/doku.php)
-
----
-
-# Collaboration
-
-Power consumption of an experimental webserver
-- [Tweede Golf](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver)
-- 18 December 2024
-
-Ethics and Sustainability of Data Science
-- [Alliander](https://www.ru.nl/en/about-us/organisation/partners-and-networks/alliander) winter school
-- 20 November 2024
-
-An introduction to SaC: parallel performance made easy
-- [Institute for Programming research and Algorithmics (IPA) Course: Software Technology](https://ipa.win.tue.nl/?event=course-software-technology)
-- 15 May 2024
