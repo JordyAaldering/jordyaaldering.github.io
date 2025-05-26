@@ -69,14 +69,32 @@ the thread-count with minimal energy consumption.
     \begin{minipage}[c]{0.49\linewidth}
         \centering
         \captionsetup{width=0.9\linewidth}
-        \includegraphics[width=\linewidth]{images/adapt_nbody.png}
+        \includegraphics[width=\linewidth,alt={
+            Line chart showing the number of threads used during program runtime against of the
+            N-body simulation. The x-axis represents the number of elements, labeled as $10000$,
+            $25000$, and $40000$. The y-axis shows the number of threads, ranging from 1 to 16. An
+            orange dashed line represents the optimal thread count, and a blue line indicates the
+            actual thread count. When the input size changes the blue line oscillates a lot for a few
+            iterations. Afterwards it oscillates by less than one thread around the optimum at the
+            orange line.
+        }]{images/adapt_nbody.png}
         \caption{Adaptation quality on the \sac{} implementation of the N-body simulation.}
         \label{fig:adapt-nbody}
     \end{minipage}%
     \begin{minipage}[c]{0.49\linewidth}
         \centering
         \captionsetup{width=0.9\linewidth}
-        \includegraphics[width=\linewidth]{images/adapt_matmul.png}
+        \includegraphics[width=\linewidth,alt={
+            Line chart showing the number of threads used during program runtime of the matrix
+            multiplication algorithm. The x-axis represents matrix size, labeled as $500 \times
+            500$, $1000 \times 1000$, and $1500 \times 1500$. The y-axis shows the number of
+            threads, ranging from 1 to 16. An orange dashed line represents the optimal thread
+            count, and a blue line indicates the actual thread count. When the input size changes
+            the blue line oscillates a lot for a few iterations. Afterwards, for the $500 \times 500$
+            input, it oscillates by less than one thread around the optimum at the orange line. For
+            the other two input sizes it converges to four threads, instead of the optimum at the
+            orange line at eight threads.
+        }]{images/adapt_matmul.png}
         \caption{Adaptation quality on the \sac{} implementation of the matrix multiplication
         algorithm.}
         \label{fig:adapt-matmul}
@@ -115,14 +133,32 @@ algorithm disables threads in a contiguous order, resulting in a poor thread pin
     \begin{minipage}[c]{0.49\linewidth}
         \centering
         \captionsetup{width=0.9\linewidth}
-        \includegraphics[width=\linewidth]{images/adapt_stencil.png}
+        \includegraphics[width=\linewidth,alt={
+            Line chart showing the number of threads used during program runtime of the nine-point
+            stencil operation. The x-axis represents matrix size, labeled as $10000 \times 10000$,
+            $25000 \times 25000$, and $40000 \times 40000$. The y-axis shows the number of threads,
+            ranging from 1 to 16. An orange dashed line represents the optimal thread count, and a
+            blue line indicates the actual thread count. When the input size changes the blue line
+            oscillates a lot for a few iterations. Afterwards it oscillates by less than one thread
+            around the optimum at the orange line. For the $40000 \times 4000$ input it converges to
+            ten threads, instead of the optimum at the orange line at twelve threads.
+        }]{images/adapt_stencil.png}
         \caption{Adaptation quality on the \sac{} implementation of the nine-point stencil operation.}
         \label{fig:adapt-stencil}
     \end{minipage}%
     \begin{minipage}[c]{0.49\linewidth}
         \centering
         \captionsetup{width=0.9\linewidth}
-        \includegraphics[width=\linewidth]{images/adapt_rust.png}
+        \includegraphics[width=\linewidth,alt={
+            Line chart showing the number of threads used during program runtime of the Rust
+            implementation of the matrix multiplication algorithm. The x-axis represents matrix
+            size, labeled as $500 \times 500$, $1000 \times 1000$, and $1500 \times 1500$. The
+            y-axis shows the number of threads, ranging from 1 to 16. An orange dashed line
+            represents the optimal thread count, and a blue line indicates the actual thread count.
+            When the input size changes the blue line oscillates a lot for a few iterations.
+            Afterwards it oscillates by
+            less than one thread around the optimum at the orange line.
+        }]{images/adapt_rust.png}
         \caption{Adaptation quality on the Rust implementation of the matrix multiplication algorithm.}
         \label{fig:adapt-rust}
     \end{minipage}%

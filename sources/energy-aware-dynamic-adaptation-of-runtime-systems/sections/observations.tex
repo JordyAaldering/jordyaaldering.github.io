@@ -21,17 +21,41 @@ clock of 2.60GHz. The CPU has 16MB of level three cache, and the system itself p
 \begin{figure*}[!ht]
     \centering
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/nbody_10000.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at two threads, and steadily
+            decreases until roughly eight threads, after which it plateaus and reaches a minimum at
+            16 threads. Runtime peaks at two threads, and gradually decreases until it reaches the
+            minimum at 16 threads.
+        }]{images/nbody_10000.png}
         \caption{$10000$ elements.}
         \label{fig:nbody1}
     \end{subfigure}%
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/nbody_25000.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at one thread, and steadily
+            decreases until roughly eight threads, after which it plateaus and reaches a minimum at
+            14 threads. Runtime peaks at one thread, and gradually decreases until it plateaus
+            around 14 threads.
+        }]{images/nbody_25000.png}
         \caption{$25000$ elements.}
         \label{fig:nbody2}
     \end{subfigure}%
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/nbody_40000.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at one thread, and steadily
+            decreases until roughly eight threads, after which it plateaus and reaches a minimum at
+            12 threads. Runtime peaks at one thread, and gradually decreases until it plateaus
+            around 12 threads.
+        }]{images/nbody_40000.png}
         \caption{$40000$ elements.}
         \label{fig:nbody3}
     \end{subfigure}%
@@ -90,17 +114,41 @@ performance has diminishing returns for decreasing energy consumption.
 \begin{figure*}[!ht]
     \centering
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/stencil_10000.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at two threads, and steadily
+            decreases until roughly eight threads, after which it plateaus and reaches a minimum at
+            16 threads. Runtime peaks at two threads, and gradually decreases until it reaches the
+            minimum at 16 threads.
+        }]{images/stencil_10000.png}
         \caption{$10000 \times 10000$ points.}
         \label{fig:stencil1}
     \end{subfigure}%
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/stencil_25000.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at two threads, and steadily
+            decreases until roughly eight threads, after which it plateaus and reaches a minimum at
+            14 threads. Runtime peaks at two threads, and gradually decreases until it plateaus
+            around 14 threads.
+        }]{images/stencil_25000.png}
         \caption{$25000 \times 25000$ points.}
         \label{fig:stencil2}
     \end{subfigure}%
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/stencil_40000.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at two threads, and steadily
+            decreases until roughly eight threads, after which it plateaus and reaches a minimum at
+            12 threads. Runtime peaks at two threads, and gradually decreases until it plateaus
+            around 12 threads.
+        }]{images/stencil_40000.png}
         \caption{$40000 \times 40000$ points.}
         \label{fig:stencil3}
     \end{subfigure}%
@@ -141,17 +189,43 @@ decreases.
 \begin{figure*}[!ht]
     \centering
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/matmul_500.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at one threads and gradually
+            decreases from one to eight threads, after which it starts noticeably fluctuating.
+            Reaching a minimum at 14 threads, with an energy consumption roughly equal to that of
+            eight threads. Runtime follows a similar pattern, albeit being more pronounced.
+        }]{images/matmul_500.png}
         \caption{$500 \times 500$ matrix.}
         \label{fig:matmul1}
     \end{subfigure}%
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/matmul_1000.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption gradually decreases from one to
+            eight threads, reaching a minimum at eight threads. Going to nine threads there is a
+            significant jump in energy consumption, peaking at nine threads and gradually decreasing
+            until 16 threads. The energy consumption of 16 threads is above that of one thread.
+            Runtime follows a similar pattern, albeit being more pronounced.
+        }]{images/matmul_1000.png}
         \caption{$1000 \times 1000$ matrix.}
         \label{fig:matmul2}
     \end{subfigure}%
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/matmul_1500.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption gradually decreases from one to
+            eight threads, reaching a minimum at eight threads. Going to nine threads there is a
+            significant jump in energy consumption, peaking at nine threads and gradually decreasing
+            until 16 threads. The energy consumption of 16 threads is above that of one thread.
+            Runtime follows a similar pattern, albeit being more pronounced.
+        }]{images/matmul_1500.png}
         \caption{$1500 \times 1500$ matrix.}
         \label{fig:matmul3}
     \end{subfigure}%
@@ -201,17 +275,38 @@ even a single-threaded approach.
 \begin{figure*}[!ht]
     \centering
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/rust_500.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at one threads, and steadily
+            decreases until roughly eight threads, after which it plateaus and reaches a minimum at
+            16 threads. Runtime follows the same pattern.
+        }]{images/rust_500.png}
         \caption{$500 \times 500$ matrix.}
         \label{fig:rust1}
     \end{subfigure}%
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/rust_1000.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at one threads, and steadily
+            decreases until roughly eight threads, after which it plateaus and reaches a minimum at
+            15 threads. Runtime follows the same pattern.
+        }]{images/rust_1000.png}
         \caption{$1000 \times 1000$ matrix.}
         \label{fig:rust2}
     \end{subfigure}%
     \begin{subfigure}{0.33\linewidth}
-        \includegraphics[width=\linewidth]{images/rust_1500.png}
+        \includegraphics[width=\linewidth,alt={
+            Chart showing energy consumption and runtime across different numbers of threads. The
+            x-axis represents the number of threads from 1 to 16. The left y-axis shows bars
+            indicating energy consumption in joules. The right y-axis shows an orange line
+            indicating the runtime in seconds. Energy consumption peaks at one threads, and steadily
+            decreases until it reaches a minimum at eight threads, after which energy consumption
+            starts gradually increasing again. Runtime follows the same pattern.
+        }]{images/rust_1500.png}
         \caption{$1500 \times 1500$ matrix.}
         \label{fig:rust3}
     \end{subfigure}%
