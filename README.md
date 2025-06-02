@@ -35,8 +35,10 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 - `2025-may-21` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at CompSys'25.
 - `2025-mar-31` Dutch Ministry of Defence worksop 'IT voor de toekomst'.
 - `2024-dec-18` Collaborated with Tweede Golf on [Power consumption of an experimental webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver).
+- `2024-sep-25` ODC-Noord data centre visit for rijksprogramma [Denk Doe Duurzaam](https://www.linkedin.com/company/denk-doe-duurzaam/?viewAsMember=true).
 - `2024-aug-26` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at IFL'24.
 - `2024-nov-20` Alliander winter school workshop 'Ethics and Sustainability of Data Science'.
+- `2024-jun-06` Jury member for the Winnovation Green Award at Windesheim Hogeschool.
 - `2024-may-15` IPA software technology workshop 'An introduction to SaC: parallel performance made easy'.
 - `2024-jan-11` Presented 'Flattening Combinations of Arrays and Records' at TFP'24.
 - `2023-aug-29` Presented 'Type Pattern: Pattern Matching on Shape-Carrying Array Types' at IFL'23.
@@ -49,10 +51,10 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @inproceedings{dynamic-adaptation,
+  title={Energy-Aware Dynamic Adaptation of Runtime Systems},
   author={Aaldering, Jordy
     and van Gastel, Bernard
     and Scholz, Sven-Bodo},
-  title={Energy-Aware Dynamic Adaptation of Runtime Systems},
   booktitle={Proceedings of the 26th International Symposium on Trends in Functional Programming},
   publisher={Springer Nature},
   series={TFP '25},
@@ -71,11 +73,11 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @inproceedings{sac-records,
+  title={Flattening Combinations of Arrays and Records},
   author={Huijben, Reg
     and Aaldering, Jordy
     and Achten, Peter
     and Scholz, Sven-Bodo},
-  title={Flattening Combinations of Arrays and Records},
   booktitle={Proceedings of the 25th International Symposium on Trends in Functional Programming},
   editor={Chang, Stephen and Hemann, Jason},
   publisher={Springer Nature},
@@ -110,10 +112,10 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @inproceedings{type-patterns,
+  title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
   author={Aaldering, Jordy
     and Scholz, Sven-Bodo
     and van Gastel, Bernard},
-  title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
   booktitle={Proceedings of the 35th International Symposium on Implementation of Functional Languages},
   publisher={ACM},
   address={New York, NY, USA},
@@ -134,11 +136,11 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @mastersthesis{lazy-array-semantics,
+  title={A new semantics for array programming languages;
+    how to introduce some laziness without being lazy},
   author={Aaldering, Jordy
     and Scholz, Sven-Bodo
     and Koopman, Pieter},
-  title={A new semantics for array programming languages;
-         how to introduce some laziness without being lazy},
   type={Bachelor's thesis},
   school={Radboud University},
   address={Nijmegen, Netherlands},
