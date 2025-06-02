@@ -129,7 +129,20 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 - [Peter Achten](https://www.cs.ru.nl/P.Achten/)
 - [Bernard van Gastel](https://sustainablesoftware.info)
 - [Niek Janssen](https://www.ru.nl/en/people/janssen-n-j-a)
-- [Thomas Koopman](https://www.ru.nl/personen/koopman-t)
+- [Thomas Koopman](https://thomaskoopman.eu/index.html)
 - [Mart Lubbers](https://martlubbers.net)
 - [Benedikt Rips](https://www.ru.nl/en/people/rips-b)
 - [Sven-Bodo Scholz](https://thielescholz.eu/doku.php)
+
+---
+
+# News
+
+- 2025-may-21: Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at CompSys'25.
+- 2025-mar-31: Dutch Ministry of Defence worksop 'IT voor de toekomst'.
+- 2024-dec-18: Collaborated with Tweede Golf on [Power consumption of an experimental webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver).
+- 2024-aug-26: Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at IFL'24.
+- 2024-nov-20: Alliander winter school workshop 'Ethics and Sustainability of Data Science'.
+- 2024-may-15: IPA software technology workshop 'An introduction to SaC: parallel performance made easy'.
+- 2024-jan-11: Presented 'Flattening Combinations of Arrays and Records' at TFP'24.
+- 2023-aug-29: Presented 'Type Pattern: Pattern Matching on Shape-Carrying Array Types' at IFL'23.
