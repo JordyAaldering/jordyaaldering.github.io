@@ -33,7 +33,7 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 ## News
 
 - `2025-may-21` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at CompSys'25.
-- `2025-mar-31` Dutch Ministry of Defence worksop 'IT voor de toekomst'.
+- `2025-mar-31` Dutch Ministry of Defence workshop 'IT voor de toekomst'.
 - `2024-dec-18` Collaborated with Tweede Golf on [Power consumption of an experimental webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver).
 - `2024-sep-25` ODC-Noord data centre visit for rijksprogramma [Denk Doe Duurzaam](https://www.linkedin.com/company/denk-doe-duurzaam/?viewAsMember=true).
 - `2024-aug-26` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at IFL'24.
