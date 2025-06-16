@@ -21,8 +21,8 @@ To reduce waste, we must write smarter software that better matches workloads to
 Modern computers are composed of many specialized components, designed to excel at specific tasks like 3D rendering or running AI models.
 While this boosts performance, it also makes it harder for developers to write software that runs efficiently across all hardware combinations.
 The reality is that software developers today face a dizzying mix of hardware types, as well as unpredictable factors like ambient temperature and other competing processes.
-Although many developers are eager to write greener code, they often lack the tools and knowledge to do so in practice.
 
+Although many developers are eager to write greener code, they often lack the tools and knowledge to do so in practice.
 That's why we believe the solution lies in automatic and adaptive software systems.
 These systems adjust how a program runs based on the specific hardware and the real-time conditions.
 This not only reduces the burden on developers, but also leads to smarter and more flexible software that can optimize itself.
@@ -32,6 +32,7 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 
 ## News
 
+- `2025-jun-13` I was featured in an [article](https://www.radboudrecharge.nl/en/article/what-do-scientists-say-about-sustainable-ict) on Radboud Recharge.
 - `2025-may-21` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at CompSys'25.
 - `2025-mar-31` Dutch Ministry of Defence workshop 'IT voor de toekomst'.
 - `2024-dec-18` Collaborated with Tweede Golf on [Power consumption of an experimental webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver).
@@ -51,10 +52,10 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @inproceedings{dynamic-adaptation,
-  title={Energy-Aware Dynamic Adaptation of Runtime Systems},
   author={Aaldering, Jordy
     and van Gastel, Bernard
     and Scholz, Sven-Bodo},
+  title={Energy-Aware Dynamic Adaptation of Runtime Systems},
   booktitle={Proceedings of the 26th International Symposium on Trends in Functional Programming},
   publisher={Springer Nature},
   series={TFP '25},
@@ -73,11 +74,11 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @inproceedings{sac-records,
-  title={Flattening Combinations of Arrays and Records},
   author={Huijben, Reg
     and Aaldering, Jordy
     and Achten, Peter
     and Scholz, Sven-Bodo},
+  title={Flattening Combinations of Arrays and Records},
   booktitle={Proceedings of the 25th International Symposium on Trends in Functional Programming},
   editor={Chang, Stephen and Hemann, Jason},
   publisher={Springer Nature},
@@ -99,9 +100,9 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @misc{nea-energy,
-  title={Power Consumption of an Experimental Webserver},
   author={Aaldering, Jordy
     and de Vries, Folkert},
+  title={Power Consumption of an Experimental Webserver},
   year=2024,
   month=dec,
   url={https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver}
@@ -112,10 +113,10 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @inproceedings{type-patterns,
-  title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
   author={Aaldering, Jordy
     and Scholz, Sven-Bodo
     and van Gastel, Bernard},
+  title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
   booktitle={Proceedings of the 35th International Symposium on Implementation of Functional Languages},
   publisher={ACM},
   address={New York, NY, USA},
@@ -136,11 +137,10 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
 @mastersthesis{lazy-array-semantics,
-  title={A new semantics for array programming languages;
-    how to introduce some laziness without being lazy},
   author={Aaldering, Jordy
     and Scholz, Sven-Bodo
     and Koopman, Pieter},
+  title={A new semantics for array programming languages; how to introduce some laziness without being lazy},
   type={Bachelor's thesis},
   school={Radboud University},
   address={Nijmegen, Netherlands},
