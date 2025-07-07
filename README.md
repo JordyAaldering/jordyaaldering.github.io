@@ -51,7 +51,7 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
-@inproceedings{dynamic-adaptation,
+@inproceedings{aaldering2025energy
   author={Aaldering, Jordy
     and van Gastel, Bernard
     and Scholz, Sven-Bodo},
@@ -73,7 +73,7 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 [Flattening Combinations of Arrays and Records](https://doi.org/10.1007/978-3-031-74558-4_10)
 
 ```bibtex
-@inproceedings{sac-records,
+@inproceedings{huijben2025flattening,
   author={Huijben, Reg
     and Aaldering, Jordy
     and Achten, Peter
@@ -99,7 +99,7 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 [Power Consumption of an Experimental Webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver)
 
 ```bibtex
-@misc{nea-energy,
+@misc{aaldering2024power,
   author={Aaldering, Jordy
     and de Vries, Folkert},
   title={Power Consumption of an Experimental Webserver},
@@ -112,7 +112,7 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 [Type Patterns: Pattern Matching on Shape-Carrying Array Types](https://doi.org/10.1145/3652561.3652572)
 
 ```bibtex
-@inproceedings{type-patterns,
+@inproceedings{aaldering2024type,
   author={Aaldering, Jordy
     and Scholz, Sven-Bodo
     and van Gastel, Bernard},
@@ -136,7 +136,7 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
 [A new semantics for array programming languages; how to introduce some laziness without being lazy](https://www.cs.ru.nl/bachelors-theses/2021/Jordy_Aaldering___1004292___A_new_semantics_for_array_programming_languages_-_how_to_introduce_some_laziness_without_being_lazy.pdf)
 
 ```bibtex
-@mastersthesis{lazy-array-semantics,
+@mastersthesis{aaldering2021semantics,
   author={Aaldering, Jordy
     and Scholz, Sven-Bodo
     and Koopman, Pieter},
