@@ -51,7 +51,7 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 Energy-Aware Dynamic Adaptation of Runtime Systems
 
 ```bibtex
-@inproceedings{aaldering2025energy
+@inproceedings{aaldering2025energy,
   author={Aaldering, Jordy
     and van Gastel, Bernard
     and Scholz, Sven-Bodo},
