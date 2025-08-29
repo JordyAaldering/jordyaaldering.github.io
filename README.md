@@ -42,7 +42,7 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 - `2024-jun-06` Jury member for the Winnovation Green Award at Windesheim Hogeschool.
 - `2024-may-15` IPA software technology workshop 'An introduction to SaC: parallel performance made easy'.
 - `2024-jan-11` Presented 'Flattening Combinations of Arrays and Records' at TFP'24.
-- `2023-aug-29` Presented 'Type Pattern: Pattern Matching on Shape-Carrying Array Types' at IFL'23.
+- `2023-aug-29` Presented 'Type Patterns: Pattern Matching on Shape-Carrying Array Types' at IFL'23.
 
 ---
 
