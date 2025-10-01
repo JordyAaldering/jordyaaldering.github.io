@@ -48,7 +48,7 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 
 ## 2025
 
-Energy-Aware Dynamic Adaptation of Runtime Systems
+[Energy-Aware Dynamic Adaptation of Runtime Systems](https://doi.org/10.1007/978-3-031-99751-8_19)
 
 ```bibtex
 @inproceedings{aaldering2025energy,
@@ -62,11 +62,10 @@ Energy-Aware Dynamic Adaptation of Runtime Systems
   location={Oxford, UK},
   year=2025,
   month=jan,
-  articleno={},
-  pages={},
+  pages={435--458},
   numpages={24},
-  isbn={},
-  doi={}
+  isbn={978-3-031-99751-8},
+  doi={10.1007/978-3-031-99751-8_19}
 }
 ```
 
