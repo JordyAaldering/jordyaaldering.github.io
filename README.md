@@ -48,6 +48,22 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 
 ## 2025
 
+[VQhull: a Fast Planar Quickhull](https://doi.org/10.48550/arXiv.2510.09417)
+
+```bibtex
+@article{koopman2025vqhull,
+  author={Koopman, Thomas
+    and Aaldering, Jordy
+    and van Gastel, Bernard
+    and Scholz, Sven-Bodo},
+  title={VQhull: A Fast Planar Quickhull},
+  journal={arXiv},
+  eprint={2510.09417},
+  year=2025,
+  doi={10.48550/arXiv.2510.09417}
+}
+```
+
 [Energy-Aware Dynamic Adaptation of Runtime Systems](https://doi.org/10.1007/978-3-031-99751-8_19)
 
 ```bibtex
