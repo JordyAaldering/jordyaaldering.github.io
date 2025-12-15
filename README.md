@@ -32,17 +32,18 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 
 ## News
 
-- `2025-nov-19` CHARGE III workshop 'Practical AI'.
+- `2025-nov-19` Helped out with the CHARGE III workshop 'Practical AI'.
 - `2025-jun-13` I was featured in an [article](https://www.radboudrecharge.nl/en/article/what-do-scientists-say-about-sustainable-ict) on Radboud Recharge.
 - `2025-may-21` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at CompSys'25.
 - `2025-mar-31` Dutch Ministry of Defence workshop 'IT voor de toekomst'.
 - `2024-dec-18` Collaborated with Tweede Golf on [Power consumption of an experimental webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver).
 - `2024-sep-25` ODC-Noord data centre visit for rijksprogramma [Denk Doe Duurzaam](https://www.linkedin.com/company/denk-doe-duurzaam/?viewAsMember=true).
 - `2024-aug-26` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at IFL'24.
-- `2024-nov-20` CHARGE I workshop 'Ethics and Sustainability of Data Science'.
+- `2024-nov-20` Helped out with the CHARGE I workshop 'Ethics and Sustainability of Data Science'.
 - `2024-jun-06` Jury member for the Winnovation Green Award at Windesheim Hogeschool.
 - `2024-may-15` IPA software technology workshop 'An introduction to SaC: parallel performance made easy'.
 - `2024-jan-11` Presented 'Flattening Combinations of Arrays and Records' at TFP'24.
+- `2023-oct-12` Attended the Bits & Chips Event 2023.
 - `2023-aug-29` Presented 'Type Patterns: Pattern Matching on Shape-Carrying Array Types' at IFL'23.
 
 ---
