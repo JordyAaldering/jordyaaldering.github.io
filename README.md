@@ -9,7 +9,7 @@ PhD candidate at the Radboud University, [Department of Software Science](https:
 ## About
 
 The carbon footprint of the ICT sector is easily overlooked.
-Its environmental impact is largely invisible -- we don’t see the emissions caused by streaming video, training AI models, or storing data in the cloud.
+Its environmental impact is largely invisible—we don’t see the emissions caused by streaming video, training AI models, or storing data in the cloud.
 Yet, the ICT sector is already responsible for more greenhouse gas emissions than the aviation industry.
 If current trends continue, it could account for 14% of global emissions by 2040.
 Clearly, the ICT sector has a major role in achieving climate goals.
@@ -32,6 +32,7 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 
 ## News
 
+- `2026-feb-18` I gave a lecture for the Green Software course about analysing energy measurements w.r.t. hardware–software interactions.
 - `2026-jan-28` Helped develop a brand-new course: [Green Software](https://ru.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=NWI-IMC076&collegejaar=2025).
 - `2025-nov-19` Helped out with the CHARGE III workshop [Practical AI](https://www.ru.nl/en/education/education-for-professionals/overview/charge-iii-practical-ai).
 - `2025-jun-13` I was featured in an [article](https://www.radboudrecharge.nl/en/article/what-do-scientists-say-about-sustainable-ict) on Radboud Recharge.
