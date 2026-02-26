@@ -171,6 +171,14 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 
 ---
 
+## Students I helped supervise
+
+- Nikita Kuprins: [Toward Sustainable Software Energy Strategies for Communication](https://www.cs.ru.nl/bachelors-theses/2025/Nikita_Kuprins___1080434___Toward_Sustainable_Software_Energy_Strategies_for_Communication.pdf)
+- Novi Liuther: [Impact Analysis of Refactoring Methods on Energy Consumption](https://www.cs.ru.nl/bachelors-theses/2025/Novi_Liuther___1084401___Impact_Analysis_of_Refactoring_Methods_on_Energy_Consumption.pdf)
+- Eline Stehouwer: [Measuring the energy overhead of computer language features](https://www.cs.ru.nl/bachelors-theses/2024/Eline_Stehouwer___1084507___Measuring_the_energy_overhead_of_computer_language_features.pdf)
+
+---
+
 ## Team
 
 - [Peter Achten](https://www.cs.ru.nl/P.Achten/)
@@ -180,3 +188,4 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 - [Mart Lubbers](https://martlubbers.net)
 - [Benedikt Rips](https://www.ru.nl/en/people/rips-b)
 - [Sven-Bodo Scholz](https://thielescholz.eu/doku.php)
+- [Victor Zudilin](https://www.cs.ru.nl/staff/Victor.Zudilin/)
