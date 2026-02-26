@@ -32,7 +32,7 @@ By building adaptive energy-aware software, we take a meaningful step toward a m
 
 ## News
 
-- `2026-feb-18` I gave a lecture for the Green Software course about analysing energy measurements w.r.t. hardware&ndash;software interactions.
+- `2026-feb-18` Gave a lecture for the Green Software course about analysing hardware&ndash;software energy interactions.
 - `2026-jan-28` Helped develop a brand-new course: [Green Software](https://ru.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=NWI-IMC076&collegejaar=2025).
 - `2025-nov-19` Helped out with the CHARGE III workshop [Practical AI](https://www.ru.nl/en/education/education-for-professionals/overview/charge-iii-practical-ai).
 - `2025-jun-13` I was featured in an [article](https://www.radboudrecharge.nl/en/article/what-do-scientists-say-about-sustainable-ict) on Radboud Recharge.
