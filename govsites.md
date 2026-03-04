@@ -5,10 +5,10 @@ title: Energieverbruik van Overheidswebsites
 Steeds meer overheidsdiensten zijn digitaal.
 Dat is handig voor burgers, maar elke website die bezocht word kost ook energie.
 Alhoewel de overheid samen met dienstverlenende instanties werkt aan duurzamere IT, blijft de impact van overheidswebsites vaak buiten beeld.
-Wij hebben het [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van alle 1150 websites doorgemeten.
-Hiermee brengen wij in kaart welke websites de meeste energie gebruiken, en waar winst te behalen is.
+Wij hebben het [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van alle 1150 overheidswebsites doorgemeten.
+Hiermee brengen wij in kaart welke websites veel energie gebruiken, en waar winst te behalen is.
 
-Deze doen wij in ons _Software Energie Lab_.
+Deze metingen doen wij in ons _Software Energie Lab_ op de Radboud Universiteit.
 ...
 
 [leuke foto van de Odroid? Of misschien die foto van ons die hier op de uni hangt?]
