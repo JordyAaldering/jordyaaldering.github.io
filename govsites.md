@@ -20,15 +20,14 @@ Zo'n honderd websites gebruiken 2 tot wel 10 keer zo veel energie als het gemidd
 
 Kijkende naar de top-10 is meteen duidelijk waar winst te behalen is: deze websites tonen een video of animatie zodra je de website laadt.
 Dat ziet er leuk uit, maar vraagt ook erg veel stroom van jouw computer of mobiel.
-Wel ? keer zo veel als de meest energiezuinige website die we getest hebben!
+Tot wel 10 keer zo veel als de gemiddelde website!
 
 [gifjes hier]
 
 In de top-10 zit ook een rare uitschieter: het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl/home).
-De website lijkt simpel, maar toch belandt deze op plek ? van alle 1150 websites!
-Als we door de homepage scrollen is al snel duidelijk waarom: onderaan de pagina staan meerdere YouTube videos en Spotify podcasts.
+De website lijkt simpel, maar toch belandt deze op plek 9 van alle 1150 websites!
+Als we door de homepagina kijken is al snel duidelijk waarom: onderaan de pagina staan meerdere YouTube videos en Spotify podcasts.
 Dit zorgt er niet alleen voor dat de pagina enkele seconden moet laden, maar verpilt ook veel energie aan iets wat de meeste mensen nieteens zullen zien.
-De **hele** pagina wordt in een keer geladen, ook wat je niet kan zien, wat wel enkele seconden kan duren.
 
 ![RAR](govsites/rar.png)
 
