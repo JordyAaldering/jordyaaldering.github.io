@@ -8,10 +8,13 @@ Alhoewel de overheid samen met dienstverlenende instanties werkt aan duurzamere 
 Wij hebben het [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van alle 1150 websites doorgemeten.
 Hiermee brengen wij in kaart welke websites de meeste energie gebruiken, en waar winst te behalen is.
 
-Dit doen wij op het _Software Energie Lab_.
+Deze doen wij in ons _Software Energie Lab_.
 ...
 
 [leuke foto van de Odroid? Of misschien die foto van ons die hier op de uni hangt?]
+
+De meeste websites gebruiken weinig energie, maar er zijn ook veel uitschieters.
+Zo'n honderd websites gebruiken 2 tot wel 10 keer zo veel energie als het gemiddelde.
 
 ![Ranking](govsites/ranking.png)
 
