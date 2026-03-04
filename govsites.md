@@ -9,7 +9,7 @@ Wij hebben het [Register van Overheidsorganisaties](https://organisaties.overhei
 Hiermee brengen wij in kaart welke websites veel energie gebruiken, en waar winst te behalen is.
 
 Deze metingen doen wij in ons _Software Energie Lab_ op de Radboud Universiteit.
-...
+[Korte uitleg over SEL...]
 
 [leuke foto van de Odroid? Of misschien die foto van ons die hier op de uni hangt?]
 
@@ -30,11 +30,11 @@ Als we door de homepage scrollen is al snel duidelijk waarom: onderaan de pagina
 Dit zorgt er niet alleen voor dat de pagina enkele seconden moet laden, maar verpilt ook veel energie aan iets wat de meeste mensen nieteens zullen zien.
 De **hele** pagina wordt in een keer geladen, ook wat je niet kan zien, wat wel enkele seconden kan duren.
 
-[screenshot hier]
+![RAR](govsites/rar.png)
 
 Het hoge energieverbruik van deze grootverbruikers is niet nodig, en erg zonde.
 Als deze websites hun energieverbruik verminderen, door animaties uit te zetten en onnodige features weg te halen, kan dit grote impact hebben.
-Stel [laten we berekenen hoe veel energie bespaard kan worden als de grootste energieslurpers hun websites verbeteren]
+[Berekenen hoe veel energie bespaard kan worden als de grootste energieslurpers hun websites verbeteren...]
 
 [Overheid Duurzaamheid](https://www.rvo.nl/onderwerpen/energie-besparen/energie-efficiente-overheid)
 [Logius Duurzaamheid](https://www.logius.nl/over-ons/duurzaamheid)
