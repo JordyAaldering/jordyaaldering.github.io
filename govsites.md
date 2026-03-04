@@ -22,14 +22,14 @@ Kijkende naar de top-10 is meteen duidelijk waar winst te behalen is: deze websi
 Dat ziet er leuk uit, maar vraagt ook erg veel stroom van jouw computer of mobiel.
 Tot wel 10 keer zo veel als de gemiddelde website!
 
-[gifjes hier]
+![https://vnggelderland.nl](govsites/vng.gif)
 
-In de top-10 zit ook een rare uitschieter: het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl/home).
+In de top-10 zit ook een rare uitschieter: het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
 De website lijkt simpel, maar toch belandt deze op plek 9 van alle 1150 websites!
 Als we door de homepagina kijken is al snel duidelijk waarom: onderaan de pagina staan meerdere YouTube videos en Spotify podcasts.
 Dit zorgt er niet alleen voor dat de pagina enkele seconden moet laden, maar verpilt ook veel energie aan iets wat de meeste mensen nieteens zullen zien.
 
-![RAR](govsites/rar.png)
+![https://regionaalarchiefrivierenland.nl](govsites/rar.png)
 
 Het hoge energieverbruik van deze grootverbruikers is niet nodig, en erg zonde.
 Als deze websites hun energieverbruik verminderen, door animaties uit te zetten en onnodige features weg te halen, kan dit grote impact hebben.
