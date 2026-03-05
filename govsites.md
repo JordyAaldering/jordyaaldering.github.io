@@ -5,10 +5,10 @@ title: Energieverbruik van Overheidswebsites
 Steeds meer overheidsdiensten worden digitaal aangeboden.
 Dat is prettig voor burgers: informatie is snel toegankelijk en veel processen verlopen efficiënter.
 Maar elke webpagina die wordt geladen verbruikt ook energie.
-Terwijl de overheid samen met dienstverlenende instanties werkt aan duurzamere IT‑voorzieningen, blijft de impact van overheidswebsites vaak buiten beeld.
+Terwijl de overheid samen met dienstverlenende instanties werkt aan duurzamere IT‑voorzieningen [^1-^7], blijft de impact van overheidswebsites nog buiten beeld.
 
 Om dit inzichtelijk te maken hebben wij het volledige [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van 1150 Nederlandse overheidswebsites doorgemeten.
-Hiermee brengen wij in kaart welke websites veel energie gebruiken, en waar winst te behalen is.
+Hiermee brengen wij in kaart welke websites veel energie gebruiken, om zo inzicht te krijgen waar winst te behalen is.
 Met deze metingen brengen we in kaart welke websites zuinig zijn, welke onnodig veel energie gebruiken, en waar de grootste kansen liggen om het digitale energieverbruik te verminderen.
 
 ### Hoe we meten
@@ -23,45 +23,53 @@ De meeste overheidswebsites blijken relatief energiezuinig.
 Dat is goed nieuws: veel sites zijn eenvoudig opgebouwd en bevatten weinig zware elementen zoals multimedia, scripts, of interactieve componenten.
 Toch zien we ook aanzienlijke uitschieters.
 Ongeveer honderd websites verbruiken tussen de 2 en 10 keer meer energie dan het gemiddelde.
+Vergeleken met de meest energiezuinige overheidswebsites kan dit verschil zelfs oplopen tot 100 keer zo veel!
 
 <p align="center" width="100%">
-  <img src="govsites/ranking.png" width="50%" />
+  <img src="govsites/ranking.png" width="75%" />
 </p>
 
-Wanneer we de top‑10 van meest energie-intensieve websites bekijken, wordt snel duidelijk wat deze websites gemeen hebben: ze starten direct bij het laden een video of een animatie.
+Wanneer we de top‑10 van meest energie-intensieve websites bekijken, wordt snel duidelijk wat deze websites gemeen hebben: ze starten direct bij het laden van de pagina een video of een animatie.
 Dat ziet er aantrekkelijk uit, maar het vraagt veel rekenkracht van de laptop of telefoon van de bezoeker.
-Dit is niet alleen zonde, maar zorgt er ook voor dat je apparaat sneller leeg is.
+Dit is niet alleen onnodig zonde, maar zorgt er ook voor dat je apparaat sneller leeg is.
 
 <p align="center" width="100%">
-  <img src="govsites/vng.gif" width="50%" />
+  <img src="govsites/vng.gif" width="75%" />
 </p>
 
 Opvallend in de top‑10 is het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
-De website oogt eenvoudig en bevat geen grote animaties, maar eindigt toch op plek 9.
-Een analyse van de homepage laat zien waarom: onderaan de pagina staan meerdere YouTube video’s en Spotify‑ podcasts.
+De website oogt eenvoudig en bevat geen grote animaties of zware componenten, maar eindigt toch op plek 9.
+Een analyse van de homepagina laat zien waarom: onderaan de pagina staan meerdere YouTube video's en Spotify podcasts.
 Dit betekent dat de pagina niet alleen merkbaar trager laadt, maar dat er ook voortdurend energie wordt verspild aan media‑elementen die veel bezoekers waarschijnlijk niet eens zien of gebruiken.
 
 <p align="center" width="100%">
-  <img src="govsites/rar.png" width="50%" />
+  <img src="govsites/rar.png" width="75%" />
 </p>
 
 Het hoge energieverbruik van deze websites is niet noodzakelijk.
-In veel gevallen kan met relatief eenvoudige aanpassingen grote winst worden behaald, zoals:
-* Animaties en video’s niet automatisch laten afspelen.
+In veel gevallen kan met relatief eenvoudige aanpassingen grote winst worden behaald, bijvoorbeeld:
+* Animaties en video's niet automatisch laten afspelen.
 * Media pas laden wanneer een gebruiker er actief op klikt.
 * Overbodige scripts, plug-ins, en trackers verwijderen.
 * Afbeeldingen optimaliseren of comprimeren.
 
-Door deze aanpassingen te doen kan het totale energieverbruik van deze websites substantieel omlaag.
+Door deze aanpassingen toe te passen kan het totale energieverbruik van deze websites substantieel omlaag.
 [Berekenen hoe veel energie bespaard kan worden als de grootste energieslurpers hun websites verbeteren...]
 
 ### Doe mee
 Het verduurzamen van overheidswebsites vraagt geen grote investeringen, maar vooral aandacht en bewuste keuzes op basis van metingen.
-Ben je zelf betrokken bij een overheidsorganisatie, of beheer je een website? Neem dan eens een kritische blik op de pagina’s die jij publiceert.
-Kleine aanpassingen kunnen al een merkbaar verschil maken in energieverbruik én gebruikservaring.
+Ben je zelf betrokken bij een overheidsorganisatie, of beheer je een website? Neem dan eens een kritische blik op de pagina's die jij publiceert.
+Laaghangend fruit en kleine aanpassingen kunnen al een merkbaar verschil maken in energieverbruik én gebruikservaring.
 
 Wil je weten hoe jouw website scoort, of wil je samen onderzoeken waar optimalisaties mogelijk zijn?
 Neem gerust contact met ons op via [...].
 
-[Overheid Duurzaamheid](https://www.rvo.nl/onderwerpen/energie-besparen/energie-efficiente-overheid)
-[Logius Duurzaamheid](https://www.logius.nl/over-ons/duurzaamheid)
+---
+
+[^1]: https://www.rvo.nl/onderwerpen/energie-besparen/energie-efficiente-overheid
+[^2]: https://www.rijksictdashboard.nl/duurzaamheid
+[^3]: https://coalitieduurzamedigitalisering.nl
+[^4]: https://www.ru.nl/onderzoek/onderzoeksthemas/duurzame-ict
+[^5]: https://www.tno.nl/nl/digitaal/digitale-infrastructuren/duurzame-ict
+[^6]: https://www.logius.nl/over-ons/duurzaamheid
+[^7]: https://www.nldigital.nl/thema/duurzaamheid
