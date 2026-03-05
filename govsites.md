@@ -2,6 +2,8 @@
 title: Energieverbruik van Overheidswebsites
 ---
 
+_10 minute read_
+
 Steeds meer overheidsdiensten worden digitaal aangeboden.
 Dat is prettig voor burgers en dienstverleners: informatie is snel toegankelijk en veel processen verlopen efficiënter.
 Maar elke webpagina die wordt geladen verbruikt ook energie.
