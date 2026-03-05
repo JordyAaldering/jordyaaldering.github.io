@@ -5,7 +5,7 @@ title: Energieverbruik van Overheidswebsites
 Steeds meer overheidsdiensten worden digitaal aangeboden.
 Dat is prettig voor burgers: informatie is snel toegankelijk en veel processen verlopen efficiënter.
 Maar elke webpagina die wordt geladen verbruikt ook energie.
-Terwijl de overheid samen met dienstverlenende instanties werkt aan duurzamere IT‑voorzieningen[^1], blijft de impact van overheidswebsites nog buiten beeld.
+Terwijl de overheid samen met dienstverlenende instanties werkt aan duurzamere IT‑voorzieningen,[^1] blijft de impact van overheidswebsites nog buiten beeld.
 
 Om dit inzichtelijk te maken hebben wij het volledige [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van 1150 Nederlandse overheidswebsites doorgemeten.
 Hiermee brengen wij in kaart welke websites veel energie gebruiken, om zo inzicht te krijgen waar winst te behalen is.
@@ -26,7 +26,7 @@ Ongeveer honderd websites verbruiken tussen de 2 en 10 keer meer energie dan het
 Vergeleken met de meest energiezuinige overheidswebsites kan dit verschil zelfs oplopen tot 100 keer zo veel!
 
 <p align="center" width="100%">
-  <img src="govsites/ranking.png" width="75%" />
+  <img src="govsites/rank.png" width="75%" />
 </p>
 
 Wanneer we de top‑10 van meest energie-intensieve websites bekijken, wordt snel duidelijk wat deze websites gemeen hebben: ze starten direct bij het laden van de pagina een video of een animatie.
