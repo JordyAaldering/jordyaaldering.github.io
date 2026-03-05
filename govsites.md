@@ -3,7 +3,7 @@ title: Energieverbruik van Overheidswebsites
 ---
 
 Steeds meer overheidsdiensten worden digitaal aangeboden.
-Dat is prettig voor burgers: informatie is snel toegankelijk en veel processen verlopen efficiënter.
+Dat is prettig voor burgers en dienstverleners: informatie is snel toegankelijk en veel processen verlopen efficiënter.
 Maar elke webpagina die wordt geladen verbruikt ook energie.
 Terwijl de overheid samen met dienstverlenende instanties werkt aan duurzamere IT‑voorzieningen,[^1] blijft de impact van overheidswebsites nog buiten beeld.
 
@@ -16,7 +16,9 @@ Deze metingen voeren wij uit in het _Software Energie Lab_ van de Radboud Univer
 In dit lab analyseren we het energieverbruik van software&mdash;van websites tot algorithmes en AI‑toepassingen&mdash;onder gecontroleerde omstandigheden.
 Dit doen we onder andere met fysieke meetapparatuur die kan vastleggen hoeveel energie de hele computer verbruikt bij het laden van een webpagina.
 
-[leuke foto van de Odroid? Of misschien die foto van ons die hier op de uni hangt?]
+<p align="center" width="100%">
+  <img src="govsites/strategies-nl.png" width="75%" />
+</p>
 
 ### Wat we vonden
 De meeste overheidswebsites blijken relatief energiezuinig.
