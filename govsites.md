@@ -2,44 +2,66 @@
 title: Energieverbruik van Overheidswebsites
 ---
 
-Steeds meer overheidsdiensten zijn digitaal.
-Dat is handig voor burgers, maar elke website die bezocht word kost ook energie.
-Terwijl de overheid samen met dienstverlenende instanties werkt aan duurzamere IT, blijft de impact van overheidswebsites vaak buiten beeld.
-Wij hebben het [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van alle 1150 overheidswebsites doorgemeten.
-Hiermee brengen wij in kaart welke websites veel energie gebruiken, en waar winst te behalen is.
+Steeds meer overheidsdiensten worden digitaal aangeboden.
+Dat is prettig voor burgers: informatie is snel toegankelijk en veel processen verlopen efficiënter.
+Maar elke webpagina die wordt geladen verbruikt ook energie.
+Terwijl de overheid samen met dienstverlenende instanties werkt aan duurzamere IT‑voorzieningen, blijft de impact van overheidswebsites vaak buiten beeld.
 
-Deze metingen doen wij in ons _Software Energie Lab_ op de Radboud Universiteit.
-[Korte uitleg over SEL...]
+Om dit inzichtelijk te maken hebben wij het volledige [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van 1150 Nederlandse overheidswebsites doorgemeten.
+Hiermee brengen wij in kaart welke websites veel energie gebruiken, en waar winst te behalen is.
+Met deze metingen brengen we in kaart welke websites zuinig zijn, welke onnodig veel energie gebruiken, en waar de grootste kansen liggen om het digitale energieverbruik te verminderen.
+
+### Hoe we meten
+Deze metingen voeren wij uit in het _Software Energie Lab_ van de Radboud Universiteit.
+In dit lab analyseren we het energieverbruik van software&mdash;van websites tot algorithmes en AI‑toepassingen&mdash;onder gecontroleerde omstandigheden.
+Dit doen we onder andere met fysieke meetapparatuur die kan vastleggen hoeveel energie de hele computer verbruikt bij het laden van een webpagina.
 
 [leuke foto van de Odroid? Of misschien die foto van ons die hier op de uni hangt?]
 
-De meeste overheidswebsites gebruiken al weinig energie, maar er zijn ook nog veel uitschieters.
-Zo'n honderd sites gebruiken 2 tot wel 10 keer zo veel energie als het gemiddelde.
+### Wat we vonden
+De meeste overheidswebsites blijken relatief energiezuinig.
+Dat is goed nieuws: veel sites zijn eenvoudig opgebouwd en bevatten weinig zware elementen zoals multimedia, scripts, of interactieve componenten.
+Toch zien we ook aanzienlijke uitschieters.
+Ongeveer honderd websites verbruiken tussen de 2 en 10 keer meer energie dan het gemiddelde.
 
-<p align="center" width="50%">
-  <img src="govsites/ranking.png" />
+<p align="center" width="100%">
+  <img src="govsites/ranking.png" width="50%" />
 </p>
 
-Als we kijken naar de websites in de top-10 is meteen duidelijk waar winst te behalen is: deze websites tonen een video of animatie zodra je de website laadt.
-Dat ziet er leuk uit, maar vraagt ook erg veel stroom van jouw laptop of mobiel.
-Tot wel 10 keer zo veel als de gemiddelde website!
+Wanneer we de top‑10 van meest energie-intensieve websites bekijken, wordt snel duidelijk wat deze websites gemeen hebben: ze starten direct bij het laden een video of een animatie.
+Dat ziet er aantrekkelijk uit, maar het vraagt veel rekenkracht van de laptop of telefoon van de bezoeker.
+Dit is niet alleen zonde, maar zorgt er ook voor dat je apparaat sneller leeg is.
 
-<p align="center" width="50%">
-  <img src="govsites/vng.gif" />
+<p align="center" width="100%">
+  <img src="govsites/vng.gif" width="50%" />
 </p>
 
-In de top-10 zit ook een rare uitschieter: het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
-De website lijkt simpel, maar toch belandt deze op plek 9 van alle 1150 websites!
-Als we door de homepagina kijken is al snel duidelijk waarom: onderaan de pagina staan meerdere YouTube videos en Spotify podcasts.
-Dit zorgt er niet alleen voor dat de pagina enkele seconden moet laden, maar verpilt ook veel energie aan iets wat de meeste mensen nieteens zullen zien.
+Opvallend in de top‑10 is het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
+De website oogt eenvoudig en bevat geen grote animaties, maar eindigt toch op plek 9.
+Een analyse van de homepage laat zien waarom: onderaan de pagina staan meerdere YouTube video’s en Spotify‑ podcasts.
+Dit betekent dat de pagina niet alleen merkbaar trager laadt, maar dat er ook voortdurend energie wordt verspild aan media‑elementen die veel bezoekers waarschijnlijk niet eens zien of gebruiken.
 
-<p align="center" width="50%">
-  <img src="govsites/rar.png" />
+<p align="center" width="100%">
+  <img src="govsites/rar.png" width="50%" />
 </p>
 
-Het hoge energieverbruik van deze grootverbruikers is niet nodig, en erg zonde.
-Als deze websites hun energieverbruik verminderen, door animaties uit te zetten en onnodige features weg te halen, kan dit grote impact hebben.
+Het hoge energieverbruik van deze websites is niet noodzakelijk.
+In veel gevallen kan met relatief eenvoudige aanpassingen grote winst worden behaald, zoals:
+* Animaties en video’s niet automatisch laten afspelen.
+* Media pas laden wanneer een gebruiker er actief op klikt.
+* Overbodige scripts, plug-ins, en trackers verwijderen.
+* Afbeeldingen optimaliseren of comprimeren.
+
+Door deze aanpassingen te doen kan het totale energieverbruik van deze websites substantieel omlaag.
 [Berekenen hoe veel energie bespaard kan worden als de grootste energieslurpers hun websites verbeteren...]
+
+### Doe mee
+Het verduurzamen van overheidswebsites vraagt geen grote investeringen, maar vooral aandacht en bewuste keuzes op basis van metingen.
+Ben je zelf betrokken bij een overheidsorganisatie, of beheer je een website? Neem dan eens een kritische blik op de pagina’s die jij publiceert.
+Kleine aanpassingen kunnen al een merkbaar verschil maken in energieverbruik én gebruikservaring.
+
+Wil je weten hoe jouw website scoort, of wil je samen onderzoeken waar optimalisaties mogelijk zijn?
+Neem gerust contact met ons op via [...].
 
 [Overheid Duurzaamheid](https://www.rvo.nl/onderwerpen/energie-besparen/energie-efficiente-overheid)
 [Logius Duurzaamheid](https://www.logius.nl/over-ons/duurzaamheid)
