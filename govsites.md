@@ -56,11 +56,11 @@ In veel gevallen kan met relatief eenvoudige aanpassingen grote winst worden beh
 * Afbeeldingen optimaliseren of comprimeren.
 
 Door deze aanpassingen toe te passen kan het totale energieverbruik van deze websites substantieel omlaag.
-Wij hebben ons meetproces herhaald met animaties en media uitgeschakeld, om zo een schatting te doen van de mogelijke nationale besparing op jaarbasis.
+Om dit te testen hebben wij ons meetproces herhaald met animaties en media uitgeschakeld, om zo een schatting te doen van de mogelijke impact.
 Niet elke website wordt evenveel bezocht.
 De belastingdienst en DUO trekken miljoenen gebruikers per jaar, kleine gemeentelijke of regionale websites duizenden.
 Voor onze ruwe schatting gaan we er van uit dat elke overheidswebsite gemiddeld 50.000 keer per jaar bezocht word.
-Op basis van deze schatting zien we dat, door deze eenvoudige aanpassingen toe te passen, wel voor 000 huishuidens aan jaarlijks elektriciteitsverbruik bespaard kan worden.
+Op basis van deze schatting zien we dat, alleen al door deze eenvoudige aanpassingen toe te passen, wel voor TODO huishuidens aan jaarlijks elektriciteitsverbruik bespaard kan worden.
 
 ### Een gezamelijke taal
 
