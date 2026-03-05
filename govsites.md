@@ -5,7 +5,7 @@ title: Energieverbruik van Overheidswebsites
 Steeds meer overheidsdiensten worden digitaal aangeboden.
 Dat is prettig voor burgers en dienstverleners: informatie is snel toegankelijk en veel processen verlopen efficiënter.
 Maar elke webpagina die wordt geladen verbruikt ook energie.
-Terwijl de overheid samen met dienstverlenende instanties werkt aan duurzamere IT‑voorzieningen,[^1] blijft de impact van overheidswebsites nog buiten beeld.
+Terwijl de overheid samen met dienstverlenende instanties [werkt aan duurzamere IT‑voorzieningen](https://www.rijksictdashboard.nl/duurzaamheid), blijft de impact van overheidswebsites nog buiten beeld.
 
 Om dit inzichtelijk te maken hebben wij het volledige [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van 1150 Nederlandse overheidswebsites doorgemeten.
 Hiermee brengen wij in kaart welke websites veel energie gebruiken, om zo inzicht te krijgen waar winst te behalen is.
@@ -38,7 +38,7 @@ Dit is niet alleen onnodig zonde, maar zorgt er ook voor dat je apparaat sneller
 </p>
 
 Opvallend in de top‑10 is het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
-De website oogt eenvoudig en bevat geen grote animaties of zware componenten, maar eindigt toch op plek 9.
+De website oogt eenvoudig en bevat geen grote animaties of zware componenten, maar eindigt toch op plek tien.
 Een analyse van de homepagina laat zien waarom: onderaan de pagina staan meerdere YouTube video's en Spotify podcasts.
 Dit betekent dat de pagina niet alleen merkbaar trager laadt, maar dat er ook voortdurend energie wordt verspild aan media‑elementen die veel bezoekers waarschijnlijk niet eens zien of gebruiken.
 
@@ -56,7 +56,13 @@ In veel gevallen kan met relatief eenvoudige aanpassingen grote winst worden beh
 * Afbeeldingen optimaliseren of comprimeren.
 
 Door deze aanpassingen toe te passen kan het totale energieverbruik van deze websites substantieel omlaag.
-[Berekenen hoe veel energie bespaard kan worden als de grootste energieslurpers hun websites verbeteren...]
+Wij hebben ons meetproces herhaald met animaties en media uitgeschakeld, om zo een schatting te doen van de mogelijke nationale besparing op jaarbasis.
+Niet elke website wordt evenveel bezocht.
+De belastingdienst en DUO trekken miljoenen gebruikers per jaar, kleine gemeentelijke of regionale websites duizenden.
+Voor onze ruwe schatting gaan we er van uit dat elke overheidswebsite gemiddeld 50.000 keer per jaar bezocht word.
+Op basis van deze schatting zien we dat, door deze eenvoudige aanpassingen toe te passen, wel voor 000 huishuidens aan jaarlijks elektriciteitsverbruik bespaard kan worden.
+
+### Een gezamelijke taal
 
 Om organisaties te helpen deze verbeteringen niet alleen technisch maar ook organisatorisch door te voeren, hebben we een [praatplaat](https://sustainablesoftware.info/strategies.page) ontwikkeld met concrete strategieën voor duurzame software.
 Deze praatplaat biedt een gemeenschappelijke taal die de communicatie bevordert tussen verschillende betrokkenen, zoals beleidsmakers, programmeurs, en leveranciers.
@@ -64,7 +70,7 @@ Door strategieën overzichtelijk te presenteren, wordt het eenvoudiger om intern
 Zo kunnen organisaties sneller en effectiever stappen zetten richting een energiezuinigere digitale overheid.
 
 <p align="center" width="100%">
-  <img src="govsites/strategies-nl.png" width="90%" />
+  <img src="govsites/strategies-nl.png" width="100%" />
 </p>
 
 ### Doe mee
@@ -75,7 +81,3 @@ Laaghangend fruit en kleine aanpassingen kunnen al een merkbaar verschil maken i
 
 Wil je weten hoe jouw website scoort, of wil je samen onderzoeken waar optimalisaties mogelijk zijn?
 Neem gerust contact met ons op via [...].
-
----
-
-[^1]: https://www.rvo.nl/onderwerpen/energie-besparen/energie-efficiente-overheid https://www.rijksictdashboard.nl/duurzaamheid https://coalitieduurzamedigitalisering.nl https://www.ru.nl/onderzoek/onderzoeksthemas/duurzame-ict https://www.tno.nl/nl/digitaal/digitale-infrastructuren/duurzame-ict https://www.logius.nl/over-ons/duurzaamheid https://www.nldigital.nl/thema/duurzaamheid
