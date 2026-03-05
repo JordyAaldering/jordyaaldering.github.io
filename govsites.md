@@ -16,26 +16,26 @@ Deze metingen doen wij in ons _Software Energie Lab_ op de Radboud Universiteit.
 De meeste overheidswebsites gebruiken al weinig energie, maar er zijn ook nog veel uitschieters.
 Zo'n honderd sites gebruiken 2 tot wel 10 keer zo veel energie als het gemiddelde.
 
-<div style="width: 50%; margin: auto;">
-  ![Ranking](govsites/ranking.png)
-</div>
+<p align="center" width="50%">
+  <img src="govsites/ranking.png" />
+</p>
 
 Als we kijken naar de websites in de top-10 is meteen duidelijk waar winst te behalen is: deze websites tonen een video of animatie zodra je de website laadt.
 Dat ziet er leuk uit, maar vraagt ook erg veel stroom van jouw laptop of mobiel.
 Tot wel 10 keer zo veel als de gemiddelde website!
 
-<div style="width: 50%; margin: auto;">
-  ![https://vnggelderland.nl](govsites/vng.gif)
-</div>
+<p align="center" width="50%">
+  <img src="govsites/vng.gif" />
+</p>
 
 In de top-10 zit ook een rare uitschieter: het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
 De website lijkt simpel, maar toch belandt deze op plek 9 van alle 1150 websites!
 Als we door de homepagina kijken is al snel duidelijk waarom: onderaan de pagina staan meerdere YouTube videos en Spotify podcasts.
 Dit zorgt er niet alleen voor dat de pagina enkele seconden moet laden, maar verpilt ook veel energie aan iets wat de meeste mensen nieteens zullen zien.
 
-<div style="width: 50%; margin: auto;">
-  ![https://regionaalarchiefrivierenland.nl](govsites/rar.png)
-</div>
+<p align="center" width="50%">
+  <img src="govsites/rar.png" />
+</p>
 
 Het hoge energieverbruik van deze grootverbruikers is niet nodig, en erg zonde.
 Als deze websites hun energieverbruik verminderen, door animaties uit te zetten en onnodige features weg te halen, kan dit grote impact hebben.
