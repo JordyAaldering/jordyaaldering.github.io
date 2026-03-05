@@ -13,7 +13,7 @@ Daarmee brengen we in kaart welke websites zuinig zijn, welke onnodig veel energ
 ### Hoe we meten
 
 Dit soort metingen voeren wij uit in ons [Software Energie Lab](https://gitlab.com/software-energy-lab) op de Radboud Universiteit.
-In dit lab onderzoeken we onder gecontroleerde omstandigheden het energieverbruik van software, van websites tot algorithmes en AI‑toepassingen.
+In dit lab onderzoeken we onder gecontroleerde omstandigheden het energieverbruik van software&mdash;van websites tot algorithmes en AI‑toepassingen.
 Dit doen we onder andere met gespecialiseerde meetapparatuur die precies vastlegt hoeveel energie een computer verbruikt, zoals bij het laden van een webpagina.
 Hierdoor kunnen we websites betrouwbaar met elkaar vergelijken.
 
@@ -21,15 +21,17 @@ Hierdoor kunnen we websites betrouwbaar met elkaar vergelijken.
 
 De meeste overheidswebsites blijken relatief energiezuinig.
 Dat is goed nieuws: veel sites zijn eenvoudig opgebouwd en bevatten weinig zware elementen zoals multimedia, scripts, of interactieve componenten.
-Toch zien we ook forse uitschieters: zo'n honderd websites verbruiken 2 tot 10 keer zo veel energie als het gemiddelde.
-Vergeleken met de zuinigste websites loopt dit verschil zelfs op tot factor 100.
+Toch zien we ook forse uitschieters.
+Zo'n honderd websites verbruiken 2 tot wel 10 keer zo veel energie als het gemiddelde.
+Vergeleken met de zuinigste websites loopt dit verschil zelfs op tot bijna factor 100.
+Er valt duidelijk nog veel te winnen.
 
 <p align="center" width="100%">
   <img src="govsites/rank.png" width="90%" />
 </p>
 
 Wanneer we de top‑10 van meest energie-intensieve websites bekijken, valt één ding direct op: bij het laden van deze pagina's start automatisch een video of animatie.
-Dat oogt misschien aantrekkelijk, maar het vraagt veel rekenkracht en energie van de laptop of telefoon van de bezoeker.
+Dat ziet misschien aantrekkelijk uit, maar het vraagt veel rekenkracht van de laptop of telefoon van de bezoeker.
 Dit leidt tot onnodig hoog energieverbruik, en zorgt er ook voor dat je batterij sneller leeg is.
 
 <p align="center" width="100%">
@@ -37,8 +39,8 @@ Dit leidt tot onnodig hoog energieverbruik, en zorgt er ook voor dat je batterij
 </p>
 
 Een opvallende uitschieter is het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
-De website oogt eenvoudig en bevat geen grote animaties of zware componenten, maar belandt toch in de top‑10.
-Als we door de homepagina kijken zien we snel waarom: onderaan de pagina staan meerdere ingesloten YouTube-video's en Spotify-podcasts.
+De website oogt eenvoudig en bevat op het eerste gezicht geen grote animaties of zware componenten, maar belandt toch in de top‑10.
+Als we verder door de homepagina kijken zien we snel waarom: onderaan de pagina staan meerdere ingesloten YouTube-video's en Spotify-podcasts.
 Dit betekent dat de pagina niet alleen merkbaar trager laadt, maar dat er ook voortdurend energie wordt verspild aan media-elementen die veel bezoekers waarschijnlijk niet eens zien of gebruiken.
 
 <p align="center" width="100%">
@@ -77,4 +79,4 @@ Ben je zelf betrokken bij een overheidsorganisatie, of beheer je een website? Ki
 Laaghangend fruit en kleine aanpassingen kunnen al een merkbaar verschil maken in energieverbruik én gebruikservaring.
 
 Wil je weten hoe jouw website scoort, of wil je samen onderzoeken waar optimalisaties mogelijk zijn?
-Neem gerust contact met ons op via [...].
+Neem gerust contact met ons op via TODO.
