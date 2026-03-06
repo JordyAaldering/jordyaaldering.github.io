@@ -2,7 +2,7 @@
 title: Energieverbruik van Overheidswebsites
 ---
 
-_10 minuten lezen_
+_10 minuten leesduur_
 
 Steeds meer overheidsdiensten worden digitaal aangeboden.
 Dat is prettig voor burgers en dienstverleners: informatie is snel toegankelijk en veel processen verlopen efficiënter.
@@ -53,7 +53,6 @@ Dit betekent dat de pagina niet alleen merkbaar trager laadt, maar dat er ook vo
 
 Het hoge energieverbruik van deze websites is niet noodzakelijk.
 In veel gevallen kunnen eenvoudige aanpassingen al grote winst opleveren, zoals:
-
 * Animaties en video's niet automatisch laten afspelen.
 * Media pas laden wanneer een gebruiker er actief op klikt.
 * Overbodige scripts, plug-ins, en trackers verwijderen.
@@ -63,14 +62,12 @@ In veel gevallen kunnen eenvoudige aanpassingen al grote winst opleveren, zoals:
 
 We zien dat ongeveer 400 websites een bovengemiddeld energieverbruik hebben.
 Dat roept de vraag op hoeveel energie er bespaard kan worden als deze websites efficiënter worden ingericht.
-
 Om daar een indruk van te krijgen maken we een schatting van het jaarlijkse energiegebruik van deze websites.
 Daarbij kijken we niet alleen naar het energieverbruik van één paginalading, maar ook naar hoe vaak en hoe lang websites worden bezocht.
 Voor een grove schatting gebruiken we daarom een aantal conservatieve aannames.
 We nemen aan dat een gemiddelde overheidswebsite ongeveer 50.000 bezoeken per jaar ontvangt en dat een bezoek gemiddeld vijf minuten duurt.
 
 Met deze aannames zien we dat eenvoudige optimalisaties bij deze 400 websites gezamenlijk kunnen leiden tot een besparing die overeenkomt met zo'n 130.000 keer het opladen van een mobiele telefoon.
-
 In deze berekening kijken we alleen naar het energieverbruik op het apparaat van de bezoeker.
 Het energiegebruik van servers en netwerkverkeer is hierin nog niet meegenomen.
 Wanneer we de volledige levenscyclus zouden meenemen, ligt de werkelijke impact aanzienlijk hoger.
