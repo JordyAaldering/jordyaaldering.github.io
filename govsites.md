@@ -80,7 +80,7 @@ Door strategieën overzichtelijk te presenteren wordt het eenvoudiger om interne
 Zo kunnen organisaties sneller en effectiever stappen zetten richting een energiezuinigere digitale overheid.
 
 <p align="center" width="100%">
-  <img src="govsites/strategies-nl.png" width="100%" />
+  <img src="govsites/strategies-nl.png" width="90%" />
 </p>
 
 ### Doe mee
