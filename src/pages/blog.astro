@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 const posts = Object.values(import.meta.glob('./blog/*.mdx', { eager: true }));
 
-posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+posts.sort((a, b) => b.frontmatter.date.valueOf() - a.frontmatter.date.valueOf());
 ---
 
 <Layout title="Blog">
