@@ -1,0 +1,195 @@
+# Jordy Aaldering
+
+PhD candidate at the Radboud University, [Department of Software Science](https://sws.cs.ru.nl/).
+
+- [ACM](https://dl.acm.org/profile/99661241184)
+- [ORCiD](https://orcid.org/0009-0001-3018-5152)
+- [LinkedIn](https://www.linkedin.com/in/jordy-aaldering-884512174/)
+
+## About
+
+The carbon footprint of the ICT sector is easily overlooked.
+Its environmental impact is largely invisible&mdash;we don’t see the emissions caused by streaming video, training AI models, or storing data in the cloud.
+Yet, the ICT sector is already responsible for more greenhouse gas emissions than the aviation industry.
+If current trends continue, it could account for 14% of global emissions by 2040.
+Clearly, the ICT sector has a major role in achieving climate goals.
+
+One way to reduce this impact is by using the computing resources we already have more efficiently.
+Recent studies show that in data centres, less than a fifth of available hardware is actually used, meaning vast amounts of energy are spent powering underutilized machines.
+To reduce waste, we must write smarter software that better matches workloads to available capacity.
+
+Modern computers are composed of many specialized components, designed to excel at specific tasks like 3D rendering or running AI models.
+While this boosts performance, it also makes it harder for developers to write software that runs efficiently across all hardware combinations.
+The reality is that software developers today face a dizzying mix of hardware types, as well as unpredictable factors like ambient temperature and other competing processes.
+
+Although many developers are eager to write greener code, they often lack the tools and knowledge to do so in practice.
+That's why we believe the solution lies in automatic and adaptive software systems.
+These systems adjust how a program runs based on the specific hardware and the real-time conditions.
+This not only reduces the burden on developers, but also leads to smarter and more flexible software that can optimize itself.
+By building adaptive energy-aware software, we take a meaningful step toward a more sustainable digital infrastructure that supports our growing reliance on technology.
+
+---
+
+## News
+
+- `2026-feb-18` Gave a lecture for the Green Software course about analysing hardware&ndash;software energy interactions.
+- `2026-jan-28` Helped develop a brand-new course: [Green Software](https://ru.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=NWI-IMC076&collegejaar=2025).
+- `2025-nov-19` Helped out with the CHARGE III workshop [Practical AI](https://www.ru.nl/en/education/education-for-professionals/overview/charge-iii-practical-ai).
+- `2025-jun-13` I was featured in an [article](https://www.radboudrecharge.nl/en/article/what-do-scientists-say-about-sustainable-ict) on Radboud Recharge.
+- `2025-may-21` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at CompSys'25.
+- `2025-mar-31` Dutch Ministry of Defence workshop 'IT voor de toekomst'.
+- `2024-dec-18` Collaborated with Tweede Golf on [Power consumption of an experimental webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver).
+- `2024-sep-25` ODC-Noord data centre visit for rijksprogramma [Denk Doe Duurzaam](https://www.linkedin.com/company/denk-doe-duurzaam/?viewAsMember=true).
+- `2024-aug-26` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at IFL'24.
+- `2024-nov-20` Helped out with the CHARGE I workshop [Ethics and Sustainability of Data Science](https://www.ru.nl/en/education/education-for-professionals/overview/three-day-course-charge).
+- `2024-jun-06` Jury member for the [Winnovation](https://www.linkedin.com/posts/hogeschool-windesheim-techniek_wat-een-dag-winnovation-2024-was-weer-activity-7207295039826243584-tswu/) Green Award at Windesheim Hogeschool.
+- `2024-may-15` IPA software technology workshop 'An introduction to SaC: parallel performance made easy'.
+- `2024-jan-11` Presented 'Flattening Combinations of Arrays and Records' at TFP'24.
+- `2023-oct-12` Attended the Bits & Chips Event 2023.
+- `2023-aug-29` Presented 'Type Patterns: Pattern Matching on Shape-Carrying Array Types' at IFL'23.
+
+---
+
+## 2025
+
+[VQhull: a Fast Planar Quickhull](https://doi.org/10.48550/arXiv.2510.09417)
+
+```bibtex
+@article{koopman2025vqhull,
+  author={Koopman, Thomas
+    and Aaldering, Jordy
+    and van Gastel, Bernard
+    and Scholz, Sven-Bodo},
+  title={VQhull: A Fast Planar Quickhull},
+  journal={arXiv},
+  eprint={2510.09417},
+  year=2025,
+  doi={10.48550/arXiv.2510.09417}
+}
+```
+
+[Energy-Aware Dynamic Adaptation of Runtime Systems](https://doi.org/10.1007/978-3-031-99751-8_19)
+
+```bibtex
+@inproceedings{aaldering2025energy,
+  author={Aaldering, Jordy
+    and van Gastel, Bernard
+    and Scholz, Sven-Bodo},
+  title={Energy-Aware Dynamic Adaptation of Runtime Systems},
+  booktitle={Proceedings of the 26th International Symposium on Trends in Functional Programming},
+  publisher={Springer Nature},
+  series={TFP '25},
+  location={Oxford, UK},
+  year=2025,
+  month=jan,
+  pages={435--458},
+  numpages={24},
+  isbn={978-3-031-99751-8},
+  doi={10.1007/978-3-031-99751-8_19}
+}
+```
+
+[Flattening Combinations of Arrays and Records](https://doi.org/10.1007/978-3-031-74558-4_10)
+
+```bibtex
+@inproceedings{huijben2025flattening,
+  author={Huijben, Reg
+    and Aaldering, Jordy
+    and Achten, Peter
+    and Scholz, Sven-Bodo},
+  title={Flattening Combinations of Arrays and Records},
+  booktitle={Proceedings of the 25th International Symposium on Trends in Functional Programming},
+  editor={Chang, Stephen and Hemann, Jason},
+  publisher={Springer Nature},
+  series={TFP '24},
+  location={South Orange, NJ, USA},
+  year=2025,
+  month=jan,
+  articleno=10,
+  pages={220--240},
+  numpages=21,
+  isbn={978-3-031-74558-4},
+  doi={10.1007/978-3-031-74558-4_10}
+}
+```
+
+## 2024
+
+[Power Consumption of an Experimental Webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver)
+
+```bibtex
+@misc{aaldering2024power,
+  author={Aaldering, Jordy
+    and de Vries, Folkert},
+  title={Power Consumption of an Experimental Webserver},
+  year=2024,
+  month=dec,
+  url={https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver}
+}
+```
+
+[Type Patterns: Pattern Matching on Shape-Carrying Array Types](https://doi.org/10.1145/3652561.3652572)
+
+```bibtex
+@inproceedings{aaldering2024type,
+  author={Aaldering, Jordy
+    and Scholz, Sven-Bodo
+    and van Gastel, Bernard},
+  title={Type Patterns: Pattern Matching on Shape-Carrying Array Types},
+  booktitle={Proceedings of the 35th International Symposium on Implementation of Functional Languages},
+  publisher={ACM},
+  address={New York, NY, USA},
+  series={IFL '23},
+  location={Braga, Portugal},
+  year=2024,
+  month=jun,
+  articleno=11,
+  numpages=14,
+  isbn={9798400716317},
+  doi={10.1145/3652561.3652572}
+}
+```
+
+## 2021
+
+[A new semantics for array programming languages; how to introduce some laziness without being lazy](https://www.cs.ru.nl/bachelors-theses/2021/Jordy_Aaldering___1004292___A_new_semantics_for_array_programming_languages_-_how_to_introduce_some_laziness_without_being_lazy.pdf)
+
+```bibtex
+@mastersthesis{aaldering2021semantics,
+  author={Aaldering, Jordy
+    and Scholz, Sven-Bodo
+    and Koopman, Pieter},
+  title={A new semantics for array programming languages; how to introduce some laziness without being lazy},
+  type={Bachelor's thesis},
+  school={Radboud University},
+  address={Nijmegen, Netherlands},
+  year=2021,
+  month=mar,
+  url={https://www.cs.ru.nl/bachelors-theses/2021/Jordy_Aaldering___1004292___A_new_semantics_for_array_programming_languages_-_how_to_introduce_some_laziness_without_being_lazy.pdf}
+}
+```
+
+---
+
+## Students I helped supervise
+
+- Nikita Kuprins: [Toward Sustainable Software Energy Strategies for Communication](https://www.cs.ru.nl/bachelors-theses/2025/Nikita_Kuprins___1080434___Toward_Sustainable_Software_Energy_Strategies_for_Communication.pdf)
+- Novi Liuther: [Impact Analysis of Refactoring Methods on Energy Consumption](https://www.cs.ru.nl/bachelors-theses/2025/Novi_Liuther___1084401___Impact_Analysis_of_Refactoring_Methods_on_Energy_Consumption.pdf)
+- Eline Stehouwer: [Measuring the Energy Overhead of Computer Language Features](https://www.cs.ru.nl/bachelors-theses/2024/Eline_Stehouwer___1084507___Measuring_the_energy_overhead_of_computer_language_features.pdf)
+
+---
+
+## Team
+
+- [Peter Achten](https://www.cs.ru.nl/P.Achten/)
+- [Bernard van Gastel](https://sustainablesoftware.info)
+- [Niek Janssen](https://www.ru.nl/en/people/janssen-n-j-a)
+- [Thomas Koopman](https://thomaskoopman.eu/index.html)
+- [Mart Lubbers](https://martlubbers.net)
+- [Benedikt Rips](https://www.ru.nl/en/people/rips-b)
+- [Sven-Bodo Scholz](https://thielescholz.eu/doku.php)
+- [Victor Zudilin](https://www.cs.ru.nl/staff/Victor.Zudilin/)
+
+---
+
+[Energy Consumption of Government Websites](govsites.md)
