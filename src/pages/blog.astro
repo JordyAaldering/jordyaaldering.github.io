@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const posts = Object.values(import.meta.glob('./blog/*.mdx', { eager: true }))
+const posts = Object.values(import.meta.glob('./blog/**/*.mdx', { eager: true }))
   .filter(item => 'date' in item.frontmatter);
 
 posts.sort((a, b) => b.frontmatter.date.valueOf() - a.frontmatter.date.valueOf());

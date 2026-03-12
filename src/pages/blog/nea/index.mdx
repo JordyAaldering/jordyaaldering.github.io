@@ -1,9 +1,16 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../../layouts/BlogLayout.astro
 title: Energy Consumption of an Experimental Webserver
 author: Jordy Aaldering and Folkert de Vries
 date: 2024-12-18
 ---
+
+import { Image } from 'astro:assets';
+
+import runtime from './runtime.svg'
+import energy from './energy.svg'
+import alloc_runtime from './alloc_runtime.svg'
+import alloc_energy from './alloc_energy.svg'
 
 Over the past couple of months, we teamed up with Folkert de Vries at Tweede Golf to measure nea's energy efficiency in our Software Energy Lab.
 
@@ -65,11 +72,19 @@ Results are averaged over 100 benchmark runs, with black bars representing the s
 First we determine at a glance whether there is any significant difference in the energy consumption pattern provided by the RAPL and INA energy measurements.
 Doing so we find that both measuring methods provide a similar energy consumption pattern, albeit with the INA chip reporting about 3 times higher energy consumption, because it measures the system as a whole.
 
-[fig]
+<p align="center">
+  <Image
+    src={runtime}
+    alt="Runtime results"
+    style="width: 50%; height: auto"
+  />
 
-[fig]
-
-[fig]
+  <Image
+    src={energy}
+    alt="Energy results"
+    style="width: 50%; height: auto"
+  />
+</p>
 
 Comparing the energy consumption and runtime we find that, typically, rust-tokio provides the best performance in terms of both runtime and energy-efficiency.
 Interestingly, for the send-static-file and varying-allocations benchmarks, rust-tokio perform significantly better in terms of energy consumption compared to the two nea variants, even though it has a similar runtime.
@@ -87,9 +102,19 @@ To validate that the increase in runtime performance of Go is due to its allocat
 Doing so we see that the runtime performance of the varying-allocations benchmark of rust-tokio-alloc is now indeed similar.
 Furthermore the energy consumption is now also lower, indicating that indeed the garbage collection introduces some energy consumption overhead.
 
-[fig]
+<p align="center">
+  <Image
+    src={alloc_runtime}
+    alt="Runtime results"
+    style="width: 50%; height: auto"
+  />
 
-[fig]
+  <Image
+    src={alloc_energy}
+    alt="Energy results"
+    style="width: 50%; height: auto"
+  />
+</p>
 
 To determine the competitiveness of Nea's energy consumption in practise, we compare the energy consumption metrics of the INA chip, because these numbers give the whole picture and not just the energy consumption of the CPU.
 In the worst case for rust-nea, which is the csv-svg-path benchmark, rust-nea consumes 17% more energy than rust-tokio for the 5000 requests.
