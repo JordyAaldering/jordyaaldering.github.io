@@ -6,10 +6,14 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout title={frontmatter.title}>
 
-	<h1>{frontmatter.title}</h1>
+  <h1>{frontmatter.title}</h1>
 
-    <p>Written by {frontmatter.author}</p>
+  <p>
+  <i>Written by {frontmatter.author}{frontmatter.dur && <i>;&ensp;{frontmatter.dur} read</i>}</i>
 
-    <slot />
+
+  </p>
+
+  <slot />
 
 </BaseLayout>
