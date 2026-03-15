@@ -5,6 +5,8 @@ title: About
 
 import DualLanguage from '../components/DualLanguage.astro';
 import DualSentence from '../components/DualSentence.astro';
+import Timeline from '../components/Timeline.astro';
+import TimelineItem from '../components/TimelineItem.astro';
 
 <DualLanguage>
 
@@ -41,7 +43,6 @@ Computers bestaan tegenwoordig uit veel gespecialiseerde componenten, ontworpen 
 Dat zorgt weliswaar voor betere prestaties, maar het maakt het tegelijkertijd voor ontwikkelaars moeilijker om software te schrijven die efficiënt draait op alle hardware-combinaties.
 De realiteit is dat softwareontwikkelaars tegenwoordig te maken hebben met een duizelingwekkende mix van hardware-types en onvoorspelbare factoren, zoals omgevingstemperatuur en andere concurrerende processen.
 
-
 Hoewel veel ontwikkelaars graag groenere code willen schrijven, ontbreekt het ze vaak aan de tools en kennis om deze in de praktijk te brengen.
 Automatische en adaptieve softwaresystemen kunnen de oplossing vormen.
 Dat zijn systemen die zich aanpassen aan hoe een programma draait, op basis van de specifieke hardware en de real-time omstandigheden.
@@ -56,22 +57,71 @@ Daarmee zetten we namelijk een belangrijke stap in de richting van een duurzamer
 
 ## News
 
-- `2026-feb-18` Gave a lecture for the Green Software course about analysing hardware&ndash;software energy interactions.
-- `2026-jan-28` Helped develop a brand-new course: [Green Software](https://ru.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=NWI-IMC076&collegejaar=2025).
-- `2025-nov-19` Helped out with the CHARGE III workshop [Practical AI](https://www.ru.nl/en/education/education-for-professionals/overview/charge-iii-practical-ai).
-- `2025-jun-13` I was featured in an [article](https://www.radboudrecharge.nl/en/article/what-do-scientists-say-about-sustainable-ict) on Radboud Recharge.
-- `2025-may-21` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at CompSys'25.
-- `2025-mar-31` Dutch Ministry of Defence workshop 'IT voor de toekomst'.
-- `2024-dec-18` Collaborated with Tweede Golf on [Power consumption of an experimental webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver).
-- `2024-sep-25` ODC-Noord data centre visit for rijksprogramma [Denk Doe Duurzaam](https://www.linkedin.com/company/denk-doe-duurzaam/?viewAsMember=true).
-- `2024-aug-26` Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at IFL'24.
-- `2024-nov-20` Helped out with the CHARGE I workshop [Ethics and Sustainability of Data Science](https://www.ru.nl/en/education/education-for-professionals/overview/three-day-course-charge).
-- `2024-jun-21` Our type patterns paper was showcased on the [ACM showcase on Kudos](https://www.growkudos.com/publications/10.1145%252F3652561.3652572)
-- `2024-jun-06` Jury member for the [Winnovation](https://www.linkedin.com/posts/hogeschool-windesheim-techniek_wat-een-dag-winnovation-2024-was-weer-activity-7207295039826243584-tswu/) Green Award at Windesheim Hogeschool.
-- `2024-may-15` IPA software technology workshop 'An introduction to SaC: parallel performance made easy'.
-- `2024-jan-11` Presented 'Flattening Combinations of Arrays and Records' at TFP'24.
-- `2023-oct-12` Attended the Bits & Chips Event 2023.
-- `2023-aug-29` Presented 'Type Patterns: Pattern Matching on Shape-Carrying Array Types' at IFL'23.
+<Timeline>
+  <TimelineItem squircle="18 Feb 2026">
+    Gave a lecture for the Green Software course about analysing hardware–software energy interactions.
+  </TimelineItem>
+
+  <TimelineItem squircle="28 Jan 2026">
+    Helped develop a brand-new course: [Green Software](https://ru.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=NWI-IMC076&collegejaar=2025).
+  </TimelineItem>
+
+  <TimelineItem squircle="19 Nov 2025">
+    Helped out with the CHARGE III workshop [Practical AI](https://www.ru.nl/en/education/education-for-professionals/overview/charge-iii-practical-ai).
+  </TimelineItem>
+
+  <TimelineItem squircle="13 Jun 2025">
+    I was featured in an [article](https://www.radboudrecharge.nl/en/article/what-do-scientists-say-about-sustainable-ict) on Radboud Recharge.
+  </TimelineItem>
+
+  <TimelineItem squircle="21 May 2025">
+    Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at CompSys'25.
+  </TimelineItem>
+
+  <TimelineItem squircle="31 Mar 2025">
+    Dutch Ministry of Defence workshop 'IT voor de toekomst'.
+  </TimelineItem>
+
+  <TimelineItem squircle="18 Dec 2024">
+    Collaborated with Tweede Golf on [Power consumption of an experimental webserver](https://tweedegolf.nl/en/blog/144/power-consumption-of-an-experimental-webserver).
+  </TimelineItem>
+
+  <TimelineItem squircle="25 Sep 2024">
+    ODC-Noord data centre visit for rijksprogramma [Denk Doe Duurzaam](https://www.linkedin.com/company/denk-doe-duurzaam/?viewAsMember=true).
+  </TimelineItem>
+
+  <TimelineItem squircle="26 Aug 2024">
+    Presented 'Energy-Aware Dynamic Adaptation of Runtime Systems' at IFL'24.
+  </TimelineItem>
+
+  <TimelineItem squircle="20 Nov 2024">
+    Helped out with the CHARGE I workshop [Ethics and Sustainability of Data Science](https://www.ru.nl/en/education/education-for-professionals/overview/three-day-course-charge).
+  </TimelineItem>
+
+  <TimelineItem squircle="21 Jun 2024">
+    Our type patterns paper was showcased on the [ACM showcase on Kudos](https://www.growkudos.com/publications/10.1145%252F3652561.3652572)
+  </TimelineItem>
+
+  <TimelineItem squircle="06 Jun 2024">
+    Jury member for the [Winnovation](https://www.linkedin.com/posts/hogeschool-windesheim-techniek_wat-een-dag-winnovation-2024-was-weer-activity-7207295039826243584-tswu/) Green Award at Windesheim Hogeschool.
+  </TimelineItem>
+
+  <TimelineItem squircle="15 May 2024">
+    IPA software technology workshop 'An introduction to SaC: parallel performance made easy'.
+  </TimelineItem>
+
+  <TimelineItem squircle="11 Jan 2024">
+    Presented 'Flattening Combinations of Arrays and Records' at TFP'24.
+  </TimelineItem>
+
+  <TimelineItem squircle="12 Oct 2023">
+    Attended the Bits & Chips Event 2023.
+  </TimelineItem>
+
+  <TimelineItem squircle="29 Aug 2023">
+    Presented 'Type Patterns: Pattern Matching on Shape-Carrying Array Types' at IFL'23.
+  </TimelineItem>
+</Timeline>
 
 ---
 

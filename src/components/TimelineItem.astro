@@ -1,0 +1,57 @@
+---
+import Squircle from './Squircle.astro';
+
+const { squircle, color = "#3DA542" } = Astro.props;
+---
+
+<li class="timeline-item">
+  <Squircle text={squircle} color={color} />
+  <div class="timeline-content">
+    <slot />
+  </div>
+</li>
+
+<style>
+.timeline-item {
+  display: flex;
+  align-items: center; /* center vertically on single-line content */
+  gap: 1rem;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content p {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.timeline-content a {
+  font-weight: 600;
+  color: #1f2933;
+  text-decoration: none;
+}
+
+.timeline-content a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Multi-line wrapping: keep text aligned at top for multiple lines */
+.timeline-item .timeline-content > *:first-child {
+  margin-top: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .timeline-item {
+    gap: 0.5rem;
+  }
+  .timeline-content a {
+    font-size: 1rem;
+  }
+}
+</style>

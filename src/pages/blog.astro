@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Timeline from '../components/Timeline.astro';
+import TimelineItem from '../components/TimelineItem.astro';
 
 const posts = Object.values(import.meta.glob('./blog/**/*.mdx', { eager: true }))
   .filter(item => 'date' in item.frontmatter);
@@ -22,67 +24,18 @@ const formatDate = (dateString: string) => {
 
 <h1>Blog</h1>
 
-<ul class="posts">
+<Timeline>
   {posts.map((post: any) => (
-    <li class="post">
-      <div class="date-squircle">{formatDate(post.frontmatter.date)}</div>
-
-      <div class="info">
-        <a class="title" href={post.url}>
-          {post.frontmatter.title}
-        </a>
-        {post.frontmatter.description && (
-          <p class="description">{post.frontmatter.description}</p>
-        )}
-      </div>
-    </li>
+    <TimelineItem squircle={formatDate(post.frontmatter.date)}>
+      <a class="title" href={post.url}>{post.frontmatter.title}</a>
+      {post.frontmatter.description && (
+        <p class="description">{post.frontmatter.description}</p>
+      )}
+    </TimelineItem>
   ))}
-</ul>
+</Timeline>
 
 <style>
-.posts {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.post {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Date squircle */
-.date-squircle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 72px; /* enough width to fit most dates on a single line */
-  height: 32px;    /* single line tall */
-
-  padding: 0 0.6rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: white;    /* readable on green */
-
-  background: #3DA542;
-  border-radius: 12px; /* squircle shape */
-
-  flex-shrink: 0;
-  text-align: center;
-  white-space: nowrap;
-}
-
-/* Post content */
-.info {
-  display: flex;
-  flex-direction: column;
-}
-
 .title {
   font-size: 1.1rem;
   font-weight: 600;
@@ -104,11 +57,6 @@ const formatDate = (dateString: string) => {
 
 /* Mobile adjustments */
 @media (max-width: 640px) {
-  .date-squircle {
-    min-width: 60px;
-    height: 28px;
-    font-size: 0.75rem;
-  }
   .title {
     font-size: 1rem;
   }
