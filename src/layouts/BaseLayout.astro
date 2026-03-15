@@ -19,6 +19,7 @@ const { title } = Astro.props;
   --border: #e5e7eb;
   --surface: #fafafa;
   --link: #1f2933;
+  --primary-green: #3da542;
   --link-hover: #3da542;
   /* Layout */
   --content-width: 72ch;
@@ -88,6 +89,29 @@ color:var(--link);
 
 .site-nav a:hover{
 color:var(--link-hover);
+}
+
+/* Language toggle */
+.language-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  gap: 0.6rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.language-toggle span {
+  color: #475569; /* inactive color */
+}
+
+.language-toggle span.active {
+  color: var(--primary-green);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /* Main */
@@ -279,21 +303,48 @@ flex-wrap:wrap;
 
 <div class="page">
 
-<header class="site-header">
-  <nav class="site-nav">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/research/">Research</a>
-    <a href="/teaching/">Teaching</a>
-    <a href="/blog/">Blog</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/research/">Research</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </header>
 
-<main class="prose">
-  <slot />
-</main>
+  <div class="language-toggle">
+    <span id="lang-en" class="active">EN</span>
+    <span id="lang-nl">NL</span>
+  </div>
+
+  <main class="prose">
+    <slot />
+  </main>
 
 </div>
 
+<script>
+  const body = document.body;
+  const enSpan = document.getElementById("lang-en");
+  const nlSpan = document.getElementById("lang-nl");
+
+  function setLanguage(lang) {
+    body.dataset.lang = lang;
+
+    if(lang === "en") {
+      enSpan.classList.add("active");
+      nlSpan.classList.remove("active");
+    } else {
+      nlSpan.classList.add("active");
+      enSpan.classList.remove("active");
+    }
+  }
+
+  enSpan.addEventListener("click", () => setLanguage("en"));
+  nlSpan.addEventListener("click", () => setLanguage("nl"));
+</script>
+
 </body>
+
 </html>

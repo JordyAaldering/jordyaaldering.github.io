@@ -1,0 +1,44 @@
+<div class="dual-language">
+  <slot />
+</div>
+
+<style>
+.dual-language .lang-en {
+  display: block;
+}
+
+.dual-language .lang-nl {
+  display: none;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.dual-language .lang-en {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+</style>
+
+<script>
+function updateDualLanguage() {
+  const lang = document.body.dataset.lang || 'en';
+  document.querySelectorAll('.dual-language').forEach(container => {
+    const enEls = container.querySelectorAll('.lang-en');
+    const nlEls = container.querySelectorAll('.lang-nl');
+    if(lang === 'en') {
+      enEls.forEach(el => el.style.display = 'block');
+      nlEls.forEach(el => el.style.display = 'none');
+    } else {
+      enEls.forEach(el => el.style.display = 'none');
+      nlEls.forEach(el => el.style.display = 'block');
+    }
+  });
+}
+
+// Initial render
+updateDualLanguage();
+
+// Observe global language changes
+const observer = new MutationObserver(updateDualLanguage);
+observer.observe(document.body, { attributes: true, attributeFilter: ['data-lang'] });
+</script>
