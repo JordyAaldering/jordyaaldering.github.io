@@ -4,120 +4,307 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{title}</title>
-    <style>
-      :root {
-        --text-color: #1F2933;
-        --link-color: #1F2933;
-      }
-
-      .site-nav {
-        display: flex;
-        justify-content: center;
-        border-bottom: 1px solid #A9A9A9;
-        padding: 1.2rem;
-        gap: 2.2rem;
-      }
-      .site-nav a {
-        color: #1F2933;
-        font-weight: bold;
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
-      .site-nav a:hover {
-        color: #3DA542;
-      }
-      @media (max-width: 640px) {
-        .site-nav {
-          gap: 1rem;
-          font-size: 0.95rem;
-          flex-wrap: wrap;
-        }
-      }
-
-      body {
-        min-height: 100vh;
-        background-image: url('/background.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        font-family: system-ui;
-        font-size: clamp(16px, 1rem + 0.2vw, 18px);
-        margin: clamp(12px, 4vw, 40px) auto;
-        padding: 0 1rem;
-        max-width: 75ch;
-        line-height: 1.7;
-      }
-    </style>
-  </head>
-
-  <body>
-    <nav class="site-nav">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/research/">Research</a>
-      <a href="/teaching/">Teaching</a>
-      <a href="/blog/">Blog</a>
-    </nav>
-
-    <main class="content">
-      <slot />
-    </main>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
 
 <style>
-.content {
-  padding: 0rem 1.5rem;
-  color: var(--text-color);
-  overflow-wrap: break-word;
-  hyphens: auto;
+
+:root {
+
+/* Colors */
+
+--text: #1f2933;
+--muted: #6b7280;
+--border: #e5e7eb;
+--surface: #fafafa;
+
+--link: #1f2933;
+--link-hover: #3da542;
+
+/* Layout */
+
+--content-width: 72ch;
+
+/* Fonts */
+
+--font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+--font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
-@media (min-width: 640px) {
-  .content {
-    text-align: justify;
-    text-justify: inter-word;
-  }
+
+/* Reset */
+
+*,*::before,*::after{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* Body */
+
+body{
+margin:0;
+font-family:var(--font-body);
+font-size:clamp(16px,1rem + 0.2vw,18px);
+line-height:1.7;
+color:var(--text);
+
+background-image:url('/background.svg');
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+}
+
+/* Layout */
+
+.page{
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* Header */
+
+.site-header{
+position:sticky;
+top:0;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(6px);
+border-bottom:1px solid var(--border);
+z-index:10;
+}
+
+.site-nav{
+max-width:var(--content-width);
+margin:0 auto;
+display:flex;
+justify-content:center;
+gap:2rem;
+padding:1rem;
+}
+
+.site-nav a{
+font-weight:600;
+text-decoration:none;
+color:var(--link);
+}
+
+.site-nav a:hover{
+color:var(--link-hover);
+}
+
+/* Main */
+
+main{
+flex:1;
+max-width:var(--content-width);
+margin:clamp(24px,5vw,60px) auto;
+padding:0 1.4rem;
+}
+
+/* -------------------------------------------------- */
+/* PROSE (MDX CONTENT) */
+/* -------------------------------------------------- */
+
+.prose{
+overflow-wrap:break-word;
+hyphens:auto;
+}
+
+/* Headings */
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4{
+line-height:1.25;
+margin-top:2.2rem;
+margin-bottom:0.8rem;
+letter-spacing:-0.01em;
+}
+
+.prose h1{
+font-size:clamp(1.9rem,2vw + 1rem,2.4rem);
+}
+
+.prose h2{
+font-size:1.5rem;
+}
+
+.prose h3{
+font-size:1.2rem;
+}
+
+/* Paragraphs */
+
+.prose p{
+margin-bottom:1.2rem;
+}
+
+/* Lists */
+
+.prose ul,
+.prose ol{
+margin-bottom:1.2rem;
+padding-left:1.4rem;
+}
+
+.prose li{
+margin:0.35rem 0;
 }
 
 /* Links */
-.content :where(a) {
-  color: var(--link-color);
-  text-decoration: none;
-}
-.content :where(a):hover {
-  text-decoration: underline;
+
+.prose a{
+color:var(--link);
+text-decoration:none;
+border-bottom:1px solid transparent;
+transition:border-color 0.2s ease;
 }
 
-.content :where(h1,h2,h3) {
-  line-height: 1.25;
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-.content :where(p,ul,ol) {
-  margin-bottom: 1.2rem;
+.prose a:hover{
+border-bottom-color:var(--link-hover);
 }
 
 /* Images */
-.content :where(img) {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
+
+.prose img{
+max-width:100%;
+height:auto;
+border-radius:8px;
+margin:1.5rem 0;
+}
+
+/* Blockquotes */
+
+.prose blockquote{
+border-left:4px solid var(--border);
+padding-left:1rem;
+color:var(--muted);
+margin:1.5rem 0;
+}
+
+/* Tables (MDX often uses these) */
+
+.prose table{
+width:100%;
+border-collapse:collapse;
+margin:1.5rem 0;
+font-size:0.95rem;
+}
+
+.prose th,
+.prose td{
+border:1px solid var(--border);
+padding:0.6rem 0.8rem;
+text-align:left;
+}
+
+.prose th{
+background:var(--surface);
+font-weight:600;
 }
 
 /* Code */
-.content :where(pre) {
-  background: #F4F4F4;
-  padding: 1rem;
-  overflow-x: auto;
-  border-radius: 6px;
+
+.prose pre{
+background:#f6f8fa;
+border:1px solid var(--border);
+padding:1rem;
+overflow-x:auto;
+border-radius:8px;
+font-size:0.9rem;
+margin:1.5rem 0;
 }
-.content :where(code) {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+.prose code{
+font-family:var(--font-mono);
 }
+
+.prose p code,
+.prose li code{
+background:#f3f4f6;
+padding:0.15rem 0.35rem;
+border-radius:4px;
+font-size:0.9em;
+}
+
+/* Prevent layout breaking */
+
+.prose pre,
+.prose code,
+.prose table{
+max-width:100%;
+overflow-x:auto;
+}
+
+/* Horizontal rule */
+
+.prose hr{
+border:none;
+border-top:1px solid var(--border);
+margin:2.5rem 0;
+}
+
+/* Mixed MDX components */
+
+.prose > * + * {
+  margin-top: 1.2em;
+}
+
+/* Footer */
+
+.site-footer{
+border-top:1px solid var(--border);
+margin-top:3rem;
+padding:2rem 1rem;
+text-align:center;
+color:var(--muted);
+font-size:0.9rem;
+}
+
+/* Mobile */
+
+@media (max-width:640px){
+
+.site-nav{
+gap:1rem;
+font-size:0.95rem;
+flex-wrap:wrap;
+}
+
+}
+
 </style>
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="site-header">
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/about/">About</a>
+<a href="/research/">Research</a>
+<a href="/teaching/">Teaching</a>
+<a href="/blog/">Blog</a>
+</nav>
+</header>
+
+<main class="prose">
+<slot />
+</main>
+
+<footer class="site-footer">
+© {new Date().getFullYear()} • Built with Astro
+</footer>
+
+</div>
+
+</body>
+</html>
