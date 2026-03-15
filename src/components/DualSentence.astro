@@ -1,0 +1,38 @@
+---
+const { en, nl } = Astro.props;
+---
+
+<span class="dual-sentence">
+  <span class="lang-en">{en}</span>
+  <span class="lang-nl">{nl}</span>
+</span>
+
+<style>
+.dual-sentence .lang-en { display: inline; }
+.dual-sentence .lang-nl { display: none; }
+
+</style>
+
+<script>
+function updateDualSentence() {
+  const lang = document.body.dataset.lang || 'en';
+  document.querySelectorAll('.dual-sentence').forEach(el => {
+    const enSpan = el.querySelector('.lang-en');
+    const nlSpan = el.querySelector('.lang-nl');
+    if(lang === 'en') {
+      enSpan.style.display = 'inline';
+      nlSpan.style.display = 'none';
+    } else {
+      enSpan.style.display = 'none';
+      nlSpan.style.display = 'inline';
+    }
+  });
+}
+
+// Initial render
+updateDualSentence();
+
+// Observe global language changes
+const observer = new MutationObserver(updateDualSentence);
+observer.observe(document.body, { attributes: true, attributeFilter: ['data-lang'] });
+</script>
