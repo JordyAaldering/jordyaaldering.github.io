@@ -6,14 +6,47 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout title={frontmatter.title}>
 
-  <h1>{frontmatter.title}</h1>
+<header class="post-header">
+  <h1 class="post-title">{frontmatter.title}</h1>
+  <div class="post-meta">
+    <span class="author">By {frontmatter.author}</span>
+    {frontmatter.dur && <span class="duration">•&ensp;{frontmatter.dur} read</span>}
+  </div>
+</header>
 
-  <p>
-  <i>Written by {frontmatter.author}{frontmatter.dur && <i>;&ensp;{frontmatter.dur} read</i>}</i>
-
-
-  </p>
-
+<div class="post-content">
   <slot />
+</div>
+
+<style>
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #475569;
+  font-style: italic;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.author {
+  font-weight: 500;
+}
+
+.duration {
+  font-weight: 400;
+}
+</style>
 
 </BaseLayout>
