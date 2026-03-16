@@ -1,0 +1,128 @@
+---
+title: Energieverbruik van een Experimentele Webserver
+authors: Jordy Aaldering and Folkert de Vries
+pubDate: 2024-12-18
+dur: 10 minute
+---
+
+import { Image } from 'astro:assets';
+
+import runtime from '../../../assets/nea/runtime.svg'
+import energy from '../../../assets/nea/energy.svg'
+import alloc_runtime from '../../../assets/nea/alloc_runtime.svg'
+import alloc_energy from '../../../assets/nea/alloc_energy.svg'
+
+De afgelopen paar maanden hebben we samengewerkt met Folkert de Vries bij Tweede Golf om de energie-efficiëntie van nea te meten in ons Software Energy Lab.
+
+### Nea
+
+Nea is een webserver die nooit geheugen alloceert.
+Of misschien alloceert hij één keer, afhankelijk van wat "alloceren" voor jou betekent.
+Hoe dan ook, nea is ontworpen om nooit zonder geheugen te komen te zitten, iets wat veel productie-webservers (geschreven in ruby, python, enz.) blijkbaar regelmatig doen.
+
+### Het experiment
+
+We willen nea, en vooral nea in combinatie met roc, vergelijken met andere talen om te bewijzen dat deze combinatie competitief is.
+
+Helaas zijn vergelijkingen tussen talen en frameworks lastig.
+Ons experiment meet de prestaties van vier kleine webserver-implementaties.
+De implementaties zijn niet extreem geoptimaliseerd, maar proberen allemaal ongeveer dezelfde hoeveelheid werk te verrichten.
+
+Onze vier kandidaten zijn:
+- **go:** een rechttoe-rechtaan implementatie in go.
+- **rust-tokio:** een rust-implementatie die tokio gebruikt als async executor.
+- **rust-nea:** een rust-implementatie die de nea async executor en platform gebruikt.
+- **roc-nea:** een roc-implementatie die de nea async executor en platform gebruikt.
+
+Opvallend afwezig zijn geïnterpreteerde talen zoals ruby of typescript, ook al zijn die nog steeds erg gebruikelijk in de webwereld.
+We konden geen servers in die talen schrijven die we op een eerlijke manier konden vergelijken: ze geven onvoldoende controle over hun runtime, bijvoorbeeld over hoeveel threads worden gebruikt om de workload af te handelen.
+
+Voor al onze vier implementaties hebben we dezelfde drie programma’s geïmplementeerd:
+* **csv-svg-path:** "parse" (vervloekte string-slicing) een CSV-bestand en produceer een SVG.
+* **send-static-file:** stuurt een statische string en sluit de verbinding. Dit is vooral een basismeting.
+* **varying-allocations:** alloceert en dealloceert vervolgens grote arrays.
+
+De implementaties gebruiken bewust geen externe afhankelijkheden (behalve tokio of nea).
+Het CSV-formaat is gekozen omdat het zo eenvoudig te parsen is met string-slicing: json gebruiken zou oneerlijk zijn, omdat we dan eigenlijk alleen de json-implementatie van de talen zouden benchmarken.
+
+### Meetopstelling
+
+De meetopstelling bestaat uit een Odroid-H3 single-board computer.
+De Odroid-H3 is ontworpen met energie-efficiëntie in gedachten en bevat een Intel Celeron N5105 CPU met slechts een TDP van 10 watt.
+Benchmarks worden op dit apparaat uitgevoerd via een GitLab-pipeline op het Software Energy Lab-project.
+Afgezien van Docker en een GitLab runner heeft dit apparaat een minimaal aantal achtergrondprocessen, waardoor de variatie in runtime- en energiemetingen tussen benchmarks zo klein mogelijk blijft.
+Deze meetopstelling biedt ons een uitzonderlijke reproduceerbaarheid van de resultaten.
+
+We hebben twee manieren om het energieverbruik van dit apparaat te meten.
+Ten eerste bieden de meeste moderne Intel- en AMD-processors een Running Average Power Limit (RAPL)-interface om het geaccumuleerde energieverbruik van de CPU te rapporteren. We kunnen vervolgens bepalen hoeveel energie tijdens een benchmark is verbruikt door het verschil in het geaccumuleerde energieverbruik vlak vóór en vlak ná die benchmarkrun uit te lezen. Ten tweede is de Odroid-H3 uitgerust met een INA 226-chip.
+Waar RAPL ons in staat stelt het energieverbruik van de CPU te meten, stelt de INA-chip ons in staat het energieverbruik van het hele systeem te meten (met een vergelijkbare methode).
+
+We benchmarken het energieverbruik van onze benchmarks met de energy-bench crate.
+Deze crate bevat functionaliteit om het RAPL- en INA-energieverbruik van codeblokken te meten.
+Vóór de eerste benchmarkrun bepaalt de tool het idle-energieverbruik, dat wil zeggen het energieverbruik van het besturingssysteem, achtergrondtaken en het basisvermogen dat nodig is om de hardware zelf operationeel te houden.
+Door idle-energieverbruik uit de resultaten te verwijderen proberen we het energieverbruik van het programma te isoleren van andere bronnen.
+
+### Energiemetingen
+
+We gebruiken de siege http load testing- en benchmarking-tool om netwerkverkeer te simuleren.
+Het aantal gelijktijdige gebruikers staat op vier, omdat dat het aantal threads is dat beschikbaar is op de Odroid-H3.
+Het aantal herhalingen staat op 5000 om ervoor te zorgen dat een enkele benchmarkrun lang genoeg duurt om nauwkeurige energiemetingen te verkrijgen van de INA-chip, die slechts ongeveer 8 keer per seconde wordt bijgewerkt.
+Resultaten worden gemiddeld over 100 benchmarkruns, waarbij zwarte balken de standaarddeviatie vertegenwoordigen.
+
+Eerst bepalen we globaal of er een significant verschil is tussen het energieverbruikspatroon dat wordt gerapporteerd door de RAPL- en INA-metingen.
+Hieruit blijkt dat beide meetmethoden een vergelijkbaar energieverbruikspatroon laten zien, hoewel de INA-chip ongeveer 3 keer hoger energieverbruik rapporteert, omdat deze het hele systeem meet.
+
+<p align="center">
+  <Image
+    src={runtime}
+    alt="Runtime results"
+    style="width: 50%; height: auto"
+  />
+  <Image
+    src={energy}
+    alt="Energy results"
+    style="width: 50%; height: auto"
+  />
+</p>
+
+Wanneer we energieverbruik en runtime vergelijken, zien we dat rust-tokio doorgaans de beste prestaties levert in termen van zowel runtime als energie-efficiëntie.
+Interessant genoeg presteert rust-tokio bij de benchmarks send-static-file en varying-allocations aanzienlijk beter qua energieverbruik dan de twee nea-varianten, ondanks dat de runtime vergelijkbaar is.
+Om geheugenveiligheid te garanderen, vereist nea extra geheugenbeheer voor elke inkomende request.
+En hoewel dit blijkbaar niet noodzakelijk een negatieve impact heeft op de runtimeprestaties, introduceert het wel enige extra energie-overhead.
+
+Verder zien we dat Go verrassend goed presteert in de varying-allocations benchmark.
+Dit kan komen door Go’s geheugenallocator, die aanvankelijk een blok geheugen reserveert dat een arena wordt genoemd.
+Daardoor verlopen de variërende allocaties sneller in Go.
+Hoewel Go in deze benchmark een betere runtime heeft dan rust-tokio, is het energieverbruik vergelijkbaar.
+Deze discrepantie tussen runtime en energie-efficiëntie is mogelijk het gevolg van garbage collection.
+Het energieverbruik dat door garbage collection wordt geïntroduceerd lijkt de winst in energie-efficiëntie door het vooraf reserveren van een groot geheugenblok te compenseren.
+
+Om te verifiëren dat de runtimeverbetering van Go inderdaad door de allocator komt, hebben we een andere allocator getest voor rust-tokio (rust-tokio-alloc).
+Daarbij zien we dat de runtimeprestaties van de varying-allocations benchmark van rust-tokio-alloc nu inderdaad vergelijkbaar zijn.
+Bovendien is het energieverbruik nu ook lager, wat aangeeft dat garbage collection inderdaad een extra energie-overhead introduceert.
+
+<p align="center">
+  <Image
+    src={alloc_runtime}
+    alt="Runtime results"
+    style="width: 50%; height: auto"
+  />
+  <Image
+    src={alloc_energy}
+    alt="Energy results"
+    style="width: 50%; height: auto"
+  />
+</p>
+
+Om te bepalen hoe competitief het energieverbruik van Nea in de praktijk is, vergelijken we de energieverbruiksmetingen van de INA-chip, omdat deze cijfers het volledige plaatje geven en niet alleen het energieverbruik van de CPU.
+In het slechtste geval voor rust-nea, namelijk de csv-svg-path benchmark, verbruikt rust-nea 17% meer energie dan rust-tokio voor de 5000 requests.
+Gemiddeld over de drie benchmarks verbruikt het echter slechts 11% meer energie.
+
+Hoewel Go in de varying-allocations benchmark 13% minder energie verbruikt, verbruikt het gemiddeld over alle drie benchmarks nog steeds 3% meer energie dan rust-nea.
+We zien dat roc-nea minimale overhead introduceert ten opzichte van rust-nea, met slechts een toename van 2% in energieverbruik.
+
+### Conclusie
+
+We zien dat nea zich goed staande houdt: hoewel het niet altijd de snelste is, presteert het zeer goed voor een experimenteel project.
+Verdere verbeteringen liggen waarschijnlijk in het afhandelen van IO en het verbeteren van de architectuur, niet in de manier waarop geheugen wordt beheerd.
+We zien ook dat Roc als taal zeer weinig overhead toevoegt ten opzichte van rust: dit is bijzonder indrukwekkend voor een high-level taal.
