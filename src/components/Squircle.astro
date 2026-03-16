@@ -1,8 +1,27 @@
 ---
-const { text, color = "#3DA542", width = "72px", height = "normal" } = Astro.props;
+const {
+  text,
+  date,
+  locale = 'en-GB',
+  color = "#3DA542",
+  width = "72px",
+  height = "normal"
+} = Astro.props;
+
+const isDate = date !== undefined;
+
+const dateFormatter = new Intl.DateTimeFormat(locale, {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric'
+});
+
+const displayText = isDate
+  ? (typeof date === 'string' ? date : dateFormatter.format(typeof date === 'number' ? new Date(date) : date))
+  : text;
 ---
 
-<div class="squircle">{text}</div>
+<div class:list={["squircle", { "squircle-date": isDate }]}>{displayText}</div>
 
 <style>
 .squircle {
@@ -17,13 +36,6 @@ const { text, color = "#3DA542", width = "72px", height = "normal" } = Astro.pro
   font-size: 0.8rem;
   font-weight: 600;
 
-  font-family:
-    "JetBrains Mono",
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    monospace;
-
   color: white;
   background: #3DA542;
 
@@ -31,5 +43,14 @@ const { text, color = "#3DA542", width = "72px", height = "normal" } = Astro.pro
   flex-shrink: 0;
   text-align: center;
   white-space: nowrap;
+}
+
+.squircle-date {
+  font-family:
+    "JetBrains Mono",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
 }
 </style>

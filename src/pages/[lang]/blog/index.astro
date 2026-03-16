@@ -37,7 +37,7 @@ const posts = (
 
   <Timeline>
     {posts.map((post: any) => (
-      <TimelineItem squircle={formatDate(post.data.pubDate)}>
+      <TimelineItem squircle={post.data.pubDate}>
         <a class="title" href={`${translatePath("/blog")}/${getEntryPath(post).split("/").slice(1).join("/")}`}>
           {post.data.title}
         </a>
