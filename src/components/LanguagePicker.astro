@@ -1,11 +1,15 @@
 ---
 import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname.replace(new RegExp(`^/${currentLang}`), '') || '/';
 ---
 
 <ul>
   {Object.entries(languages).map(([lang, label]) => (
     <li>
-      <a href={`/${lang}/`}>{label}</a>
+      <a href={`/${lang}${currentPath}`}>{label}</a>
     </li>
   ))}
 </ul>
