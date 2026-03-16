@@ -37,7 +37,7 @@ const posts = (
 
   <Timeline>
     {posts.map((post: any) => (
-      <TimelineItem squircle={post.data.pubDate}>
+      <TimelineItem date={post.data.pubDate}>
         <a class="title" href={`${translatePath("/blog")}/${getEntryPath(post).split("/").slice(1).join("/")}`}>
           {post.data.title}
         </a>
@@ -45,32 +45,31 @@ const posts = (
       </TimelineItem>
     ))}
   </Timeline>
-
-  <style>
-    .title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #1f2933;
-      text-decoration: none;
-      line-height: 1.35;
-    }
-
-    .title:hover {
-      color: var(--link-hover);
-      text-decoration: underline;
-    }
-
-    .description {
-      margin-top: 0.25rem;
-      font-size: 0.9rem;
-      color: #64748b;
-    }
-
-    /* Mobile adjustments */
-    @media (max-width: 640px) {
-      .title {
-        font-size: 1rem;
-      }
-    }
-  </style>
 </BaseLayout>
+
+<style>
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2933;
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.title:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.description {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 1rem;
+  }
+}
+</style>
