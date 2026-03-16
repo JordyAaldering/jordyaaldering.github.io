@@ -28,11 +28,7 @@ const { squircle, color = "#3DA542" } = Astro.props;
   min-width: 0;
 }
 
-.timeline-item .timeline-content > *:first-child {
-  margin-top: 0;
-}
-
-.timeline-item .timeline-content > :last-child {
-  margin-bottom: 0;
+.timeline-content :global(p) {
+  margin: 0;
 }
 </style>
