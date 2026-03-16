@@ -1,0 +1,93 @@
+---
+const { language } = Astro.props;
+---
+
+<div class="codeblock" data-language={language}>
+  <button class="copy">Copy</button>
+  <slot />
+</div>
+
+<style>
+.codeblock {
+  position: relative;
+  margin: 1.6rem 0;
+}
+
+/* style the pre produced by Shiki */
+.codeblock :global(pre) {
+  margin: 0;
+  padding: 1.25rem 1.4rem;
+  border-radius: 10px;
+  overflow-x: auto;
+
+  font-family:
+    "JetBrains Mono",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+
+  font-size: 0.9rem;
+  line-height: 1.55;
+
+  border: 1px solid #e5e7eb;
+}
+
+/* remove MDX spacing */
+.codeblock :global(pre code) {
+  padding: 0;
+}
+
+/* language label */
+.codeblock[data-language]::before {
+  content: attr(data-language);
+
+  position: absolute;
+  top: -0.65rem;
+  left: 0.9rem;
+
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background: white;
+  padding: 0.15rem 0.4rem;
+
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+
+  color: #64748b;
+}
+
+/* copy button */
+.copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+
+  border-radius: 5px;
+  border: 1px solid #e5e7eb;
+
+  background: white;
+  cursor: pointer;
+}
+
+.copy:hover {
+  background: #f3f4f6;
+}
+</style>
+
+<script>
+document.querySelectorAll(".codeblock .copy").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const code = btn.parentElement.querySelector("code").innerText;
+    navigator.clipboard.writeText(code);
+
+    btn.textContent = "Copied";
+    setTimeout(() => (btn.textContent = "Copy"), 1500);
+  });
+});
+</script>
