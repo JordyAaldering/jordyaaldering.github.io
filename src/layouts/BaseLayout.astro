@@ -8,6 +8,7 @@ import '../styles/prose.css';
 const { title } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
+const currentYear = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -27,8 +28,11 @@ const lang = getLangFromUrl(Astro.url);
       </main>
     </div>
 
-    <footer>
-      <LanguagePicker />
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-meta">&copy; {currentYear}</p>
+        <LanguagePicker />
+      </div>
     </footer>
   </body>
 </html>

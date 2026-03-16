@@ -9,7 +9,43 @@ const currentPath = Astro.url.pathname.replace(new RegExp(`^/${currentLang}`), '
 <ul>
   {Object.entries(languages).map(([lang, label]) => (
     <li>
-      <a href={`/${lang}${currentPath}`}>{label}</a>
+      <a href={`/${lang}${currentPath}`} class={lang === currentLang ? 'active' : ''}>{lang}</a>
     </li>
   ))}
 </ul>
+
+<style>
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  li + li::before {
+    content: '•';
+    padding: 0 0.35rem;
+    color: var(--muted);
+  }
+
+  a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.15s;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+  }
+
+  a.active {
+    color: var(--primary-green);
+  }
+</style>
