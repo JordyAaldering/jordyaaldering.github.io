@@ -1,0 +1,26 @@
+---
+import { getCollection, render } from "astro:content";
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("blog");
+
+  const getEntryPath = (entry: { slug?: string; id: string }) =>
+    (entry.slug ?? entry.id).replace(/\.(md|mdx)$/i, "");
+
+  return pages.map((page) => {
+    const [lang, ...slug] = getEntryPath(page).split("/");
+    return {
+      params: { lang, slug: slug.join("/") },
+      props: page,
+    };
+  });
+}
+
+const page = Astro.props;
+const { Content } = await render(page);
+---
+
+<BlogLayout {...page.data}>
+  <Content />
+</BlogLayout>

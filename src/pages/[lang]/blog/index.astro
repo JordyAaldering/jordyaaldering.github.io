@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+import { useTranslatedPath } from "../../../i18n/utils";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Timeline from "../../../components/Timeline.astro";
+import TimelineItem from "../../../components/TimelineItem.astro";
+
+const formatDate = (dateString: string) => {
+  const d = new Date(dateString);
+  return new Intl.DateTimeFormat("en", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(d);
+};
+
+export function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "nl" } }];
+}
+
+const { lang } = Astro.params;
+const translatePath = useTranslatedPath(lang);
+
+const getEntryPath = (entry: { slug?: string; id: string }) =>
+  (entry.slug ?? entry.id).replace(/\.(md|mdx)$/i, "");
+
+const posts = (
+  await getCollection("blog", (entry) => {
+    const [entryLang] = getEntryPath(entry).split("/");
+    return entryLang === lang && entry.data.pubDate;
+  })
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Blog">
+  <h1>Blog</h1>
+
+  <Timeline>
+    {posts.map((post: any) => (
+      <TimelineItem squircle={formatDate(post.data.pubDate)}>
+        <a class="title" href={`${translatePath("/blog")}/${getEntryPath(post).split("/").slice(1).join("/")}`}>
+          {post.data.title}
+        </a>
+        {post.data.description && <p class="description">{post.data.description}</p>}
+      </TimelineItem>
+    ))}
+  </Timeline>
+
+  <style>
+    .title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2933;
+      text-decoration: none;
+      line-height: 1.35;
+    }
+
+    .title:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    .description {
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 640px) {
+      .title {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</BaseLayout>
