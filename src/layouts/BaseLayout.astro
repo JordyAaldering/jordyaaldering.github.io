@@ -16,7 +16,7 @@ const lang = getLangFromUrl(Astro.url);
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
 
-<style>
+<style is:global>
 
 :root {
   /* Colors */
@@ -75,6 +75,13 @@ main{
   padding:0 1.4rem;
 }
 
+/* Links */
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
 /* -------------------------------------------------- */
 /* PROSE (MDX CONTENT) */
 /* -------------------------------------------------- */
@@ -128,7 +135,9 @@ main{
 
 /* Links */
 
-.prose a{
+.prose a,
+.prose a:link,
+.prose a:visited {
   color:var(--link);
   text-decoration:none;
   border-bottom:1px solid transparent;
@@ -136,6 +145,7 @@ main{
 }
 
 .prose a:hover{
+  color:var(--link-hover);
   border-bottom-color:var(--link-hover);
 }
 
