@@ -1,0 +1,60 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a href={`/${lang}/`}>
+      {t('nav.home')}
+    </a>
+
+    <a href={`/${lang}/about/`}>
+      {t('nav.about')}
+    </a>
+
+    <a href={`/${lang}/research/`}>
+      {t('nav.research')}
+    </a>
+
+    <a href={`/${lang}/teaching/`}>
+      {t('nav.teaching')}
+    </a>
+
+    <a href={`/${lang}/blog/`}>
+      {t('nav.blog')}
+    </a>
+  </nav>
+</header>
+
+<style>
+.site-header{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--border);
+  z-index:10;
+}
+
+.site-nav{
+  max-width:var(--content-width);
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  padding:1rem;
+}
+
+.site-nav a{
+  font-weight:600;
+  text-decoration:none;
+  color:var(--link);
+}
+
+.site-nav a:hover{
+  color:var(--link-hover);
+}
+</style>

@@ -1,0 +1,90 @@
+---
+import { getCollection } from "astro:content";
+import { useTranslations, useTranslatedPath } from "../i18n/utils";
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Timeline from '../components/Timeline.astro';
+import TimelineItem from '../components/TimelineItem.astro';
+
+const formatDate = (dateString: string) => {
+  const d = new Date(dateString);
+  return new Intl.DateTimeFormat("en", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  }).format(d);
+};
+
+// Get current language from URL
+export function getStaticPaths() {
+    return [
+        {
+            params: { blog: "/en/blog" },
+            props: { lang: "en" },
+        },
+        {
+            params: { blog: "/nl/blog" },
+            props: { lang: "nl" },
+        },
+    ];
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+// Get blog posts filtered by language
+const posts = (
+    await getCollection('blog', (entry) => {
+      const [entryLang] = entry.id.split("/");
+      return (entryLang === lang) && entry.data.pubDate;
+    })
+  ).sort((a, b) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+---
+
+<BaseLayout title="Blog">
+
+<h1>Blog</h1>
+
+<Timeline>
+  {posts.map((post: any) => (
+    <TimelineItem squircle={formatDate(post.data.pubDate)}>
+      <a class="title" href={`${translatePath("/blog")}/${post.id.split("/")[1]}`}>{post.data.title}</a>
+      {post.data.description && (
+        <p class="description">{post.data.description}</p>
+      )}
+    </TimelineItem>
+  ))}
+</Timeline>
+
+<style>
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2933;
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.title:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.description {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .title {
+    font-size: 1rem;
+  }
+}
+</style>
+
+</BaseLayout>

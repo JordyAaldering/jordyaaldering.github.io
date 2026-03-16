@@ -1,18 +1,28 @@
 {
-  "name": "",
+  "name": "@jordyaaldering/jordyaaldering.github.io",
   "type": "module",
   "version": "0.0.1",
   "engines": {
     "node": ">=22.12.0"
   },
+  "packageManager": "yarn@4.13.0",
   "scripts": {
     "dev": "astro dev",
+    "host": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.0",
-    "astro": "^6.0.3"
+    "@astrojs/mdx": "4.3.14",
+    "@astrojs/sitemap": "^3.7.1",
+    "@astrolicious/i18n": "^0.6.3",
+    "astro": "5.18.1",
+    "i18next": "^23.0.0"
+  },
+  "overrides": {
+    "@astrolicious/i18n": {
+      "astro-integration-kit": "^0.18.0"
+    }
   }
 }

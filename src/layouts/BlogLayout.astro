@@ -1,16 +1,20 @@
 ---
+import type { CollectionEntry } from 'astro:content';
+import Timeline from '../components/Timeline.astro';
 import BaseLayout from './BaseLayout.astro';
 
-const { frontmatter } = Astro.props;
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, authors, dur } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title}>
+<BaseLayout title={title}>
 
 <header class="post-header">
-  <h1 class="post-title">{frontmatter.title}</h1>
+  <h1 class="post-title">{title}</h1>
   <div class="post-meta">
-    <span class="author">By {frontmatter.author}</span>
-    {frontmatter.dur && <span class="duration">•&ensp;{frontmatter.dur} read</span>}
+    <span class="author">By {authors}</span>
+    {dur && <span class="duration">•&ensp;{dur} read</span>}
   </div>
 </header>
 
