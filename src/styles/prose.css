@@ -1,0 +1,120 @@
+.prose{
+  overflow-wrap:break-word;
+  hyphens:auto;
+}
+
+/* Headings */
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4{
+  line-height:1.25;
+  margin-top:2.2rem;
+  margin-bottom:0.8rem;
+  letter-spacing:-0.01em;
+}
+
+.prose h1{
+  font-size:clamp(1.9rem,2vw + 1rem,2.4rem);
+}
+
+.prose h2{
+  font-size:1.5rem;
+}
+
+.prose h3{
+  font-size:1.2rem;
+}
+
+/* Paragraphs */
+
+.prose p{
+  margin-bottom:1.2rem;
+}
+
+/* Lists */
+
+.prose ul,
+.prose ol{
+  margin-bottom:1.2rem;
+  padding-left:1.4rem;
+}
+
+.prose li{
+  margin:0.35rem 0;
+}
+
+/* Links (override: border-bottom instead of underline) */
+
+.prose a:any-link {
+  border-bottom:1px solid transparent;
+  transition:border-color 0.2s ease;
+}
+
+.prose a:any-link:hover {
+  text-decoration: none;
+  border-bottom-color:var(--link-hover);
+}
+
+/* Images */
+
+.prose img{
+  max-width:100%;
+  height:auto;
+  border-radius:8px;
+  margin:1.5rem 0;
+}
+
+/* Blockquotes */
+
+.prose blockquote{
+  border-left:4px solid var(--border);
+  padding-left:1rem;
+  color:var(--muted);
+  margin:1.5rem 0;
+}
+
+/* Tables */
+
+.prose table{
+  width:100%;
+  border-collapse:collapse;
+  margin:1.5rem 0;
+  font-size:0.95rem;
+}
+
+.prose th,
+.prose td{
+  border:1px solid var(--border);
+  padding:0.6rem 0.8rem;
+  text-align:left;
+}
+
+.prose th{
+  background:var(--surface);
+  font-weight:600;
+}
+
+/* Prevent layout breaking */
+
+.prose pre,
+.prose code,
+.prose table{
+  max-width:100%;
+  overflow-x:auto;
+}
+
+/* Horizontal rule */
+
+.prose hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:2.5rem 0;
+}
+
+/* Mixed MDX components */
+
+.prose > * + * {
+  margin-top: 1.2em;
+}
