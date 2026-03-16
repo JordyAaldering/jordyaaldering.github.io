@@ -77,9 +77,15 @@ main{
 
 /* Links */
 
-a {
+a:any-link {
+  color: var(--link);
   text-decoration: none;
   font-weight: 600;
+}
+
+a:any-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 /* -------------------------------------------------- */
@@ -133,19 +139,15 @@ a {
   margin:0.35rem 0;
 }
 
-/* Links */
+/* Links (prose override: border-bottom instead of underline) */
 
-.prose a,
-.prose a:link,
-.prose a:visited {
-  color:var(--link);
-  text-decoration:none;
+.prose a:any-link {
   border-bottom:1px solid transparent;
   transition:border-color 0.2s ease;
 }
 
-.prose a:hover{
-  color:var(--link-hover);
+.prose a:any-link:hover {
+  text-decoration: none;
   border-bottom-color:var(--link-hover);
 }
 
