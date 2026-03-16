@@ -11,31 +11,31 @@ import Expandable from '../../../components/Expandable.astro';
 import rank from '../../../assets/govsites/rank.svg'
 import rar from '../../../assets/govsites/rar.png'
 import vng from '../../../assets/govsites/vng.gif'
-import strategies_nl from '../../../assets/govsites/strategies_nl.png'
+import strategies_en from '../../../assets/govsites/strategies_en.png'
 
-Steeds meer overheidsdiensten worden digitaal aangeboden.
-Dat is prettig voor burgers en dienstverleners: informatie is snel toegankelijk en veel processen verlopen efficiënter.
-Maar elke webpagina die wordt geladen verbruikt ook energie.
-En terwijl de overheid samen met uitvoeringsorganisaties [werkt aan duurzamere IT‑voorzieningen](https://www.rijksictdashboard.nl/duurzaamheid), blijft de energie-impact van overheidswebsites grotendeels buiten beeld.
+More and more government services are being offered digitally.
+This is convenient for both citizens and service providers: information is quickly accessible and many processes become more efficient.
+But every web page that is loaded also consumes energy.
+And while the government, together with implementing organizations, is [working on more sustainable IT provisions](https://www.rijksictdashboard.nl/duurzaamheid), the energy impact of government websites largely remains out of view.
 
-Om hier beter inzicht in te krijgen hebben wij het volledige [Register van Overheidsorganisaties](https://organisaties.overheid.nl) doorzocht en het energieverbruik van 1150 Nederlandse overheidswebsites doorgemeten.
-Daarmee brengen we in kaart welke websites zuinig zijn, welke onnodig veel energie gebruiken, en waar de grootste kansen liggen om het digitale energieverbruik te verminderen.
+To gain better insight into this, we analyzed the entire [Register of Government Organizations](https://organisaties.overheid.nl) and measured the energy consumption of 1150 Dutch government websites.
+This allows us to identify which websites are efficient, which unnecessarily consume large amounts of energy, and where the greatest opportunities lie to reduce digital energy use.
 
-### Hoe we meten
+### How we measure
 
-Dit soort metingen voeren wij uit in ons [Software Energie Lab](https://gitlab.com/software-energy-lab) op de Radboud Universiteit.
-In dit lab onderzoeken we onder gecontroleerde omstandigheden het energieverbruik van software&mdash;van websites tot algoritmes en AI‑toepassingen.
-Dit doen we onder andere met gespecialiseerde meetapparatuur die nauwkeurig vastlegt hoeveel energie een computer verbruikt, bijvoorbeeld tijdens het laden van een webpagina.
-Hierdoor kunnen we websites betrouwbaar met elkaar vergelijken.
+We conduct these kinds of measurements in our [Software Energy Lab](https://gitlab.com/software-energy-lab) at the Radboud University.
+In this lab we study the energy consumption of software under controlled conditions&mdash;from websites to algorithms and AI applications.
+Among other things, we use specialized measurement equipment that accurately records how much energy a computer consumes, for example while loading a web page.
+This allows us to reliably compare websites with one another.
 
-### Wat we vonden
+### What we found
 
-De meeste overheidswebsites blijken relatief energiezuinig.
-Dat is goed nieuws: veel sites zijn eenvoudig opgebouwd en bevatten weinig zware elementen zoals multimedia, scripts, of interactieve componenten.
-Toch zien we ook forse uitschieters.
-Zo'n honderd websites verbruiken twee tot wel tien keer zo veel energie als het gemiddelde.
-Vergeleken met de zuinigste websites loopt dit verschil zelfs op tot bijna een factor 100.
-Er valt duidelijk ook nog veel te winnen.
+Most government websites turn out to be relatively energy-efficient.
+That is good news: many sites are simply structured and contain few heavy elements such as multimedia, scripts, or interactive components.
+However, we also see some significant outliers.
+Around one hundred websites consume two to as much as ten times more energy than the average.
+Compared to the most efficient websites, this difference even rises to almost a factor of 100.
+There is clearly still much to gain.
 
 <p align="center">
   <Image
@@ -45,9 +45,9 @@ Er valt duidelijk ook nog veel te winnen.
   />
 </p>
 
-Wanneer we de top‑10 van meest energie-intensieve websites bekijken, valt één ding direct op: bij het laden van deze pagina's start automatisch een video of animatie.
-Dat ziet er misschien aantrekkelijk uit, maar het vraagt veel rekenkracht van de laptop of telefoon van de bezoeker.
-Dit leidt tot onnodig hoog energieverbruik, en zorgt er ook voor dat de batterij sneller leeg raakt.
+When we look at the top 10 most energy-intensive websites, one thing immediately stands out: when these pages load, a video or animation starts automatically.
+This may look appealing, but it requires a lot of computing power from the visitor’s laptop or phone.
+This leads to unnecessarily high energy consumption and also causes the battery to drain more quickly.
 
 <p align="center">
   <Image
@@ -57,10 +57,10 @@ Dit leidt tot onnodig hoog energieverbruik, en zorgt er ook voor dat de batterij
   />
 </p>
 
-Een opvallende uitschieter is het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
-De website oogt eenvoudig en bevat op het eerste gezicht geen grote animaties of zware componenten, maar belandt toch in de top‑10.
-Als we verder door de homepagina scrollen zien we snel waarom: onderaan de pagina staan meerdere ingesloten YouTube-video's en Spotify-podcasts.
-Dit betekent dat de pagina niet alleen merkbaar trager laadt, maar dat er ook voortdurend energie wordt verbruikt aan media-elementen die veel bezoekers waarschijnlijk niet eens zien of gebruiken.
+One notable outlier is the [Regional Archive Rivierenland](https://regionaalarchiefrivierenland.nl).
+The website looks simple and at first glance does not contain large animations or heavy components, yet it still ends up in the top 10.
+When we scroll further down the homepage we quickly see why: at the bottom of the page there are several embedded YouTube videos and Spotify podcasts.
+This means the page not only loads noticeably slower, but also continuously consumes energy for media elements that many visitors probably never even see or use.
 
 <p align="center">
   <Image
@@ -70,57 +70,57 @@ Dit betekent dat de pagina niet alleen merkbaar trager laadt, maar dat er ook vo
   />
 </p>
 
-### Energie besparen
+### Saving energy
 
-Het hoge energieverbruik van deze websites is niet noodzakelijk.
-In veel gevallen kunnen eenvoudige aanpassingen al grote winst opleveren, zoals:
-* Animaties en video's niet automatisch laten afspelen.
-* Media pas laden wanneer een gebruiker er actief op klikt.
-* Overbodige scripts, plug-ins, en trackers verwijderen.
-* Afbeeldingen optimaliseren en comprimeren.
+The high energy consumption of these websites is not necessary.
+In many cases, simple adjustments can already lead to major improvements, such as:
+* Not playing animations and videos automatically.
+* Loading media only when a user actively clicks on it.
+* Removing unnecessary scripts, plug-ins, and trackers.
+* Optimizing and compressing images.
 
-In de praktijk blijven veel bezoekers maar kort op de homepagina en klikken ze snel door naar de informatie of dienst die ze zoeken.
-Zware media-elementen voegen op deze pagina daarom vaak weinig waarde toe, maar zorgen wel bij elk bezoek voor extra energieverbruik.
-In veel gevallen is een eenvoudige en lichte homepagina dan ook de beste keuze.
+In practice, many visitors stay on the homepage only briefly and quickly click through to the information or service they are looking for.
+Heavy media elements on this page therefore often add little value, but do cause additional energy consumption with every visit.
+In many cases, a simple and lightweight homepage is therefore the best choice.
 
-### Potentiële energiebesparing
+### Potential energy savings
 
-We zien dat ongeveer 400 websites een bovengemiddeld energieverbruik hebben.
-Dat roept de vraag op hoeveel energie er bespaard kan worden als deze websites efficiënter worden ingericht.
-Om daar een indruk van te krijgen maken we een schatting van het jaarlijkse energiegebruik van deze websites.
-Daarbij kijken we niet alleen naar het energieverbruik van één paginalading, maar ook naar hoe vaak en hoe lang websites worden bezocht.
-Voor een grove schatting gebruiken we daarom een aantal conservatieve aannames.
-We nemen aan dat een gemiddelde overheidswebsite ongeveer 50.000 bezoeken per jaar ontvangt en dat een bezoek gemiddeld vijf minuten duurt.
+We see that about 400 websites have above-average energy consumption.
+This raises the question of how much energy could be saved if these websites were designed more efficiently.
+To get an idea of this, we estimate the annual energy use of these websites.
+In doing so, we look not only at the energy consumption of a single page load, but also at how often and how long websites are visited.
+For a rough estimate we therefore use a number of conservative assumptions.
+We assume that an average government website receives about 50,000 visits per year and that a visit lasts five minutes on average.
 
-Met deze aannames zien we dat eenvoudige optimalisaties bij deze 400 websites gezamenlijk kunnen leiden tot een besparing die overeenkomt met zo'n 130.000 keer het opladen van een mobiele telefoon.
-In deze berekening kijken we alleen naar het energieverbruik op het apparaat van de bezoeker.
-Het energiegebruik van servers en netwerkverkeer is hierin nog niet meegenomen.
-Wanneer we de volledige levenscyclus zouden meenemen, ligt de werkelijke impact aanzienlijk hoger.
+With these assumptions, we see that simple optimizations across these 400 websites together could lead to savings equivalent to about 130,000 mobile phone charges.
+In this calculation we only look at the energy consumption on the visitor’s device.
+The energy use of servers and network traffic is not yet included.
+If we were to include the full lifecycle, the real impact would be considerably higher.
 
-<Expandable title="Hoe hebben we dit berekend?">
+<Expandable title="How did we calculate this?">
   TODO
 </Expandable>
 
-### Een gezamelijke taal
+### A shared language
 
-Om organisaties te helpen deze verbeteringen niet alleen technisch maar ook organisatorisch door te voeren, hebben we een [praatplaat](https://sustainablesoftware.info/strategies.page) ontwikkeld met concrete strategieën voor duurzame software.
-Deze praatplaat biedt een gemeenschappelijke taal die de communicatie tussen beleidsmakers, ontwikkelaars, ontwerpers, en leveranciers bevordert.
-Door strategieën overzichtelijk te presenteren wordt het eenvoudiger om interne gesprekken te voeren, prioriteiten te bepalen, en duurzame keuzes structureel onderdeel te maken van het ontwikkelproces.
-Zo kunnen organisaties sneller en effectiever stappen zetten richting een energiezuinigere digitale overheid.
+To help organizations implement these improvements not only technically but also organizationally, we developed a [visual conversation guide](https://sustainablesoftware.info/strategies.page) with concrete strategies for sustainable software.
+This guide provides a shared language that improves communication between policymakers, developers, designers, and suppliers.
+By presenting strategies in a clear overview, it becomes easier to have internal discussions, determine priorities, and structurally integrate sustainable choices into the development process.
+In this way, organizations can take faster and more effective steps toward a more energy-efficient digital government.
 
 <p align="center">
   <Image
-    src={strategies_nl}
+    src={strategies_en}
     alt="Strategies"
     style="width: 100%; height: auto"
   />
 </p>
 
-### Doe mee
+### Join us
 
-Het verduurzamen van overheidswebsites vraagt geen grote investeringen, maar vooral aandacht en bewuste keuzes op basis van metingen.
-Ben je zelf betrokken bij een overheidsorganisatie of beheer je een website? Kijk dan eens kritisch naar de pagina's die je publiceert.
-Laaghangend fruit en kleine aanpassingen kunnen al een merkbaar verschil maken in energieverbruik én gebruikservaring.
+Making government websites more sustainable does not require large investments, but rather attention and conscious choices based on measurements.
+Are you involved with a government organization yourself, or do you manage a website? Then take a critical look at the pages you publish.
+Low-hanging fruit and small adjustments can already make a noticeable difference in both energy consumption and user experience.
 
-Wil je weten hoe jouw website scoort, of wil je samen onderzoeken waar optimalisaties mogelijk zijn?
-Neem gerust contact met ons op via TODO.
+Would you like to know how your website scores, or explore together where optimizations are possible?
+Feel free to contact us via TODO.
