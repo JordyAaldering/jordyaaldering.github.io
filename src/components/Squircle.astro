@@ -1,5 +1,5 @@
 ---
-const { text, color = "#3DA542", width = "72px", height = "32px" } = Astro.props;
+const { text, color = "#3DA542", width = "72px", height = "normal" } = Astro.props;
 ---
 
 <div class="squircle">{text}</div>
@@ -16,6 +16,14 @@ const { text, color = "#3DA542", width = "72px", height = "32px" } = Astro.props
 
   font-size: 0.8rem;
   font-weight: 600;
+
+  font-family:
+    "JetBrains Mono",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+
   color: white;
   background: #3DA542;
 
@@ -24,5 +32,4 @@ const { text, color = "#3DA542", width = "72px", height = "32px" } = Astro.props
   text-align: center;
   white-space: nowrap;
 }
-
 </style>
