@@ -4,11 +4,11 @@ export const translations: { [key: string]: { [key: string]: string } } = {
     'nav.research': 'Research',
     'nav.teaching': 'Teaching',
     'nav.blog': 'Blog',
-    'plot.energy': 'Energy consumption (J)',
+    'plot.energy': 'Energy consumption',
   },
   nl: {
     'nav.research': 'Onderzoek',
     'nav.teaching': 'Onderwijs',
-    'plot.energy': 'Energieverbruik (J)',
+    'plot.energy': 'Energieverbruik',
   },
 } as const;

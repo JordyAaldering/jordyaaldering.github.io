@@ -435,7 +435,7 @@ L 697.0875 241.474667
      </g>
     </g>
     <g id="text_18">
-     <text style="font-size: 10px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: middle; fill: #262626" x="474.0125" y="378.716563" transform="rotate(-0 474.0125 378.716563)">t(plot.energy)</text>
+     <text style="font-size: 10px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', 'Bitstream Vera Sans', sans-serif; text-anchor: middle; fill: #262626" x="474.0125" y="378.716563" transform="rotate(-0 474.0125 378.716563)">t(plot.energy) (Joule)</text>
     </g>
    </g>
    <g id="matplotlib.axis_4">
