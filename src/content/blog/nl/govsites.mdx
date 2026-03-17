@@ -5,10 +5,11 @@ pubDate: 2026-03-01
 dur: 10 minuten
 ---
 
-import Expandable from '../../../components/Expandable.astro';
 import { Image } from 'astro:assets';
+import Expandable from '../../../components/Expandable.astro';
+import Svg from '../../../components/Svg.astro';
 
-import rank from '../../../assets/govsites/rank.svg'
+import rank from '../../../assets/govsites/rank.svg?raw'
 import rar from '../../../assets/govsites/rar.png'
 import vng from '../../../assets/govsites/vng.gif'
 import strategies_nl from '../../../assets/govsites/strategies_nl.png'
@@ -38,8 +39,8 @@ Vergeleken met de zuinigste websites loopt dit verschil zelfs op tot bijna een f
 Er valt duidelijk ook nog veel te winnen.
 
 <p align="center">
-  <Image
-    src={rank}
+  <Svg
+    svg={rank}
     alt="Website ranking"
     style="width: 100%; height: auto"
   />

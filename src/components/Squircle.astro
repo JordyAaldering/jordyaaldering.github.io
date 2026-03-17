@@ -2,8 +2,6 @@
 const {
   text,
   date,
-  width = '72px',
-  color = '#3DA542',
 } = Astro.props;
 
 import { getLangFromUrl } from '../i18n/utils';
@@ -31,7 +29,7 @@ const displayText = isDate
   align-items: center;
   justify-content: center;
 
-  min-width: {width};
+  min-width: 72px;
   height: 1lh;
   padding: 0 0.6rem;
 

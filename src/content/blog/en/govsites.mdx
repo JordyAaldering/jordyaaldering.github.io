@@ -7,8 +7,9 @@ dur: 10 minute
 
 import { Image } from 'astro:assets';
 import Expandable from '../../../components/Expandable.astro';
+import Svg from '../../../components/Svg.astro';
 
-import rank from '../../../assets/govsites/rank.svg'
+import rank from '../../../assets/govsites/rank.svg?raw'
 import rar from '../../../assets/govsites/rar.png'
 import vng from '../../../assets/govsites/vng.gif'
 import strategies_en from '../../../assets/govsites/strategies_en.png'
@@ -38,8 +39,8 @@ Compared to the most efficient websites, this difference even rises to almost a 
 There is clearly still much to gain.
 
 <p align="center">
-  <Image
-    src={rank}
+  <Svg
+    svg={rank}
     alt="Website ranking"
     style="width: 100%; height: auto"
   />

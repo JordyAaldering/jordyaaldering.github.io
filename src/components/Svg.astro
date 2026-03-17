@@ -1,0 +1,40 @@
+---
+import { JSDOM } from 'jsdom';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const {
+    svg,
+    alt = "",
+    style = "",
+} = Astro.props;
+
+if (!svg) {
+  throw new Error("Invalid SVG input");
+}
+
+// Parse SVG
+const dom = new JSDOM(svg, { contentType: "image/svg+xml" });
+const document = dom.window.document;
+
+// Apply translations
+document.querySelectorAll('text, tspan').forEach(node => {
+  const raw = node.textContent.trim();
+  node.textContent = raw.replace(/t\((.*?)\)/g, (_, key) => t(key));
+});
+
+// Add accessibility + styling to root <svg>
+const svgEl = document.querySelector('svg');
+
+if (svgEl) {
+  if (style) svgEl.setAttribute('style', style);
+  if (alt) svgEl.setAttribute('aria-label', alt);
+  svgEl.setAttribute('role', 'img');
+}
+
+const output = document.documentElement.outerHTML;
+---
+
+<div set:html={output} />
