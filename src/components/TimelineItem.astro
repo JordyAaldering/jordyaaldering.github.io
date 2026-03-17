@@ -5,7 +5,7 @@ const {
   text,
   date,
   width,
-  color = '#3DA542',
+  color,
 } = Astro.props;
 ---
 
@@ -19,6 +19,18 @@ const {
 <style>
 .timeline-item {
   display: block;
+}
+
+.timeline-content::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.timeline-content :global(.squircle) {
+  float: left;
+  margin-right: 0.6rem;
+  margin-top: 0.31rem;
 }
 
 .timeline-content :global(p) {
