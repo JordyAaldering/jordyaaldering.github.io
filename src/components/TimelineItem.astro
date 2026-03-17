@@ -10,23 +10,15 @@ const {
 ---
 
 <li class="timeline-item">
-  <div class="timeline-inline">
+  <div class="timeline-content">
     <Squircle text={text} date={date} width={width} color={color} />
-    <div class="timeline-content">
-      <slot />
-    </div>
+    <slot />
   </div>
 </li>
 
 <style>
 .timeline-item {
   display: block;
-}
-
-.timeline-inline {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
 }
 
 .timeline-content :global(p) {
