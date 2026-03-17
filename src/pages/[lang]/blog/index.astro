@@ -38,7 +38,7 @@ const posts = (
   <Timeline>
     {posts.map((post: any) => (
       <TimelineItem date={post.data.pubDate}>
-        <a class="title" href={`${translatePath("/blog")}/${getEntryPath(post).split("/").slice(1).join("/")}`}>
+        <a href={`${translatePath("/blog")}/${getEntryPath(post).split("/").slice(1).join("/")}`}>
           {post.data.title}
         </a>
         {post.data.description && <p class="description">{post.data.description}</p>}
@@ -48,11 +48,6 @@ const posts = (
 </BaseLayout>
 
 <style>
-.title {
-  font-size: 1.1rem;
-  line-height: 1.35;
-}
-
 .description {
   margin-top: 0.25rem;
   font-size: 0.9rem;
