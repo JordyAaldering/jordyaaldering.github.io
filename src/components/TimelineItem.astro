@@ -4,12 +4,13 @@ import Squircle from './Squircle.astro';
 const {
   text,
   date,
+  squircle = '',
 } = Astro.props;
 ---
 
 <li class="timeline-item">
   <div class="timeline-content">
-    <Squircle text={text} date={date} />
+    <Squircle text={text} date={date} style={squircle} />
     <slot />
   </div>
 </li>

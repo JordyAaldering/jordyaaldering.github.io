@@ -17,42 +17,42 @@
 /* Reset */
 
 *,*::before,*::after{
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 /* Body */
 
 body{
-  margin:0;
-  font-family:var(--font-body);
-  font-size:clamp(16px,1rem + 0.2vw,18px);
-  line-height:1.7;
-  color:var(--text);
-  background-image:url('/background.svg');
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:cover;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(16px,1rem + 0.2vw,18px);
+  line-height: 1.7;
+  color: var(--text);
+  background-image: url('/background.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Layout */
 
 .page{
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Main */
 
 main{
-  flex:1;
-  max-width:var(--content-width);
-  margin:clamp(24px,5vw,60px) auto;
-  padding:0 1.4rem;
+  flex: 1;
+  max-width: var(--content-width);
+  margin: clamp(24px,5vw,60px) auto;
+  padding: 0 1.4rem;
 }
 
 /* Links */
@@ -71,42 +71,42 @@ a:any-link:hover {
 /* Footer */
 
 .site-footer{
-  margin-top:3.5rem;
-  border-top:1px solid var(--border);
-  background:rgba(255,255,255,0.3);
-  backdrop-filter:blur(3px);
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(3px);
 }
 
 .site-footer-inner{
-  max-width:var(--content-width);
-  margin:0 auto;
-  padding:1.1rem 1.4rem 1.3rem;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.1rem 1.4rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .site-footer-meta{
-  margin:0;
-  color:var(--muted);
-  font-size:0.8rem;
-  letter-spacing:0.04em;
-  text-transform:uppercase;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 /* Mobile */
 
-@media (max-width:640px){
+@media (max-width: 640px){
   .site-nav{
-    gap:1rem;
-    font-size:0.95rem;
-    flex-wrap:wrap;
+    gap: 1rem;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
   }
 
   .site-footer__inner{
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 }

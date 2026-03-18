@@ -2,6 +2,7 @@
 const {
   text,
   date,
+  style = '',
 } = Astro.props;
 
 import { getLangFromUrl } from '../i18n/utils';
@@ -21,7 +22,7 @@ const displayText = isDate
   : text;
 ---
 
-<span class:list={["squircle", { "squircle-date": isDate }]}>{displayText}</span>
+<span class:list={["squircle", { "squircle-date": isDate }]} style={style}>{displayText}</span>
 
 <style>
 .squircle {
@@ -29,7 +30,6 @@ const displayText = isDate
   align-items: center;
   justify-content: center;
 
-  min-width: 72px;
   height: 1lh;
   padding: 0 0.6rem;
 

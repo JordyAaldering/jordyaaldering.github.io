@@ -6,6 +6,8 @@ dur: 10 minute
 ---
 
 import { Image } from 'astro:assets';
+import Timeline from '../../../components/Timeline.astro';
+import TimelineItem from '../../../components/TimelineItem.astro';
 
 import runtime from '../../../assets/nea/runtime.svg'
 import energy from '../../../assets/nea/energy.svg'
@@ -29,18 +31,41 @@ Our experiment measures the performance of four small web server implementations
 The implementations are not hyper-optimized, but try to all perform the same amount of work.
 
 Our four contenders are:
-- **go:** a straightforward implementation in go.
-- **rust-tokio:** a rust implementation that uses tokio as its async executor.
-- **rust-nea:** a rust implementation that uses the nea async executor and platform.
-- **roc-nea:** a roc implementation that uses the nea async executor and platform.
+<Timeline style="margin-top: -1em">
+  <TimelineItem text="Go" squircle="min-width: 7em">
+    A straightforward implementation in _Go_.
+  </TimelineItem>
+
+  <TimelineItem text="Rust tokio" squircle="min-width: 7em">
+    A _Rust_ implementation that uses _tokio_ as its async executor.
+  </TimelineItem>
+
+  <TimelineItem text="Rust nea" squircle="min-width: 7em">
+    A _Rust_ implementation that uses the _nea_ async executor and platform.
+  </TimelineItem>
+
+  <TimelineItem text="Roc nea" squircle="min-width: 7em">
+    A _Roc_ implementation that uses the _nea_ async executor and platform.
+  </TimelineItem>
+</Timeline>
 
 Notably absent are any interpreted languages like ruby or typescript, even though these are still very common in the web space.
 We were not able to write servers in those languages that we could compare in a fair way: they don't give sufficient control over their runtime, e.g. how many threads are used to handle the workload.
 
 For all of our four implementations, we implemented the same three programs:
-* **csv-svg-path:** "parse" (cursed string slicing) a CSV file and produce an SVG.
-* **send-static-file:** sends a static string and closes the connection. This is mostly a baseline measurement.
-* **varying-allocations:** allocates and then deallocates large arrays.
+<Timeline style="margin-top: -1em">
+  <TimelineItem text="csv-svg-path" squircle="min-width: 11em">
+    Parse a CSV file and produce an SVG.
+  </TimelineItem>
+
+  <TimelineItem text="send-static-file" squircle="min-width: 11em">
+    Sends a static string and closes the connection.
+  </TimelineItem>
+
+  <TimelineItem text="varying-allocations" squircle="min-width: 11em">
+    Allocates and then deallocates large arrays.
+  </TimelineItem>
+</Timeline>
 
 The implementations deliberately don't use any external dependencies (beside tokio or nea).
 The CSV format was chosen because it is so easy to parse with string slicing: using json instead would be unfair because then we'd just be benchmarking the languages' json implementation.

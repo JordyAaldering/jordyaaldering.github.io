@@ -6,6 +6,8 @@ dur: 10 minuten
 ---
 
 import { Image } from 'astro:assets';
+import Timeline from '../../../components/Timeline.astro';
+import TimelineItem from '../../../components/TimelineItem.astro';
 
 import runtime from '../../../assets/nea/runtime.svg'
 import energy from '../../../assets/nea/energy.svg'
@@ -29,18 +31,41 @@ Ons experiment meet de prestaties van vier kleine webserver-implementaties.
 De implementaties zijn niet extreem geoptimaliseerd, maar proberen allemaal ongeveer dezelfde hoeveelheid werk te verrichten.
 
 Onze vier kandidaten zijn:
-- **go:** een rechttoe-rechtaan implementatie in go.
-- **rust-tokio:** een rust-implementatie die tokio gebruikt als async executor.
-- **rust-nea:** een rust-implementatie die de nea async executor en platform gebruikt.
-- **roc-nea:** een roc-implementatie die de nea async executor en platform gebruikt.
+<Timeline style="margin-top: -1em">
+  <TimelineItem text="Go" squircle="min-width: 7em">
+    Een simpele implementatie in _Go_.
+  </TimelineItem>
+
+  <TimelineItem text="Rust tokio" squircle="min-width: 7em">
+    Een _Rust_ implementatie die _tokio_ gebruikt als async executor.
+  </TimelineItem>
+
+  <TimelineItem text="Rust nea" squircle="min-width: 7em">
+    Een _Rust_ implementatie die de _nea_ async executor en platform gebruikt.
+  </TimelineItem>
+
+  <TimelineItem text="Roc nea" squircle="min-width: 7em">
+    een _Roc_ implementatie die de _nea_ async executor en platform gebruikt.
+  </TimelineItem>
+</Timeline>
 
 Opvallend afwezig zijn geïnterpreteerde talen zoals ruby of typescript, ook al zijn die nog steeds erg gebruikelijk in de webwereld.
 We konden geen servers in die talen schrijven die we op een eerlijke manier konden vergelijken: ze geven onvoldoende controle over hun runtime, bijvoorbeeld over hoeveel threads worden gebruikt om de workload af te handelen.
 
 Voor al onze vier implementaties hebben we dezelfde drie programma’s geïmplementeerd:
-* **csv-svg-path:** "parse" (vervloekte string-slicing) een CSV-bestand en produceer een SVG.
-* **send-static-file:** stuurt een statische string en sluit de verbinding. Dit is vooral een basismeting.
-* **varying-allocations:** alloceert en dealloceert vervolgens grote arrays.
+<Timeline style="margin-top: -1em">
+  <TimelineItem text="csv-svg-path" squircle="min-width: 11em">
+    Parseer een CSV-bestand en produceer een SVG.
+  </TimelineItem>
+
+  <TimelineItem text="send-static-file" squircle="min-width: 11em">
+    Stuurt een statische string en sluit de verbinding.
+  </TimelineItem>
+
+  <TimelineItem text="varying-allocations" squircle="min-width: 11em">
+    Alloceert en dealloceert vervolgens grote arrays.
+  </TimelineItem>
+</Timeline>
 
 De implementaties gebruiken bewust geen externe afhankelijkheden (behalve tokio of nea).
 Het CSV-formaat is gekozen omdat het zo eenvoudig te parsen is met string-slicing: json gebruiken zou oneerlijk zijn, omdat we dan eigenlijk alleen de json-implementatie van de talen zouden benchmarken.

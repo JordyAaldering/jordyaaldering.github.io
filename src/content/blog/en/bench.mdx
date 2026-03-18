@@ -1,0 +1,56 @@
+---
+title: The design of energy-bench
+authors: Jordy Aaldering
+---
+
+import CodeBlock from "../../../components/CodeBlock.astro";
+
+### Benchmark duration
+
+Energy measurements can only be done at a much lower interval than runtime measurements.
+Typically, you would want at least a benchmark run to take at least 100ms for accurate measurements.
+Previous versions of the tool had built-in functionality to repeat the given function multiple times, until at least 100ms had passed.
+It turns out that, perhaps unsurprisingly, this is unclear to users of the library.
+
+Additionally, it makes the code much more complicated.
+Benchmarks might also have a data generation function (for example, data needs to be generated or read from a file when benchmarking a sorting function) which needs to be repeated as well.
+Then, after the measurements the data generation function needs to be repeated again, to determine what fraction of total energy was actually used by data generation instead of the actual benchmarks, to then subtract that from the total.
+And again, this was unclear to users.
+
+Both to make the intent clear, and to drastically simplify the codebase, users now get a warning if a benchmark completed to quickly, suggesting to them that they need to repeat the benchmark multiple times.
+
+<CodeBlock language="rust">
+```rust
+bench.benchmark("name", || (0..100).for_each(|_| short_running_function()))
+```
+</CodeBlock>
+
+This does mean that `short_running_function` cannot take ownership of, for example, a `Vec`.
+In most cases, this will likely be fine, as probably if the data cannot be copied, the function is likely to take some time.
+(E.g., sorting)
+Users could always clone if needed, but then at least it is clear that this is included in the benchmark.
+
+### Tail energy
+
+Sometimes, program-induced energy consumption actually occurs after the program has completed.
+For example, through garbage collection or file system operations.
+To support this, we provide an additional option to measure for tail energy after the benchmark.
+
+One important consideration is warmup.
+If we measure tail energy in between each benchmark run, essentially sleeping, another warmup run would be required.
+Besided the sleep already taking quite some time in most cases, this means we must do many more warmup runs.
+
+I still need to think carefully about the best way to support this functionality.
+
+### Why we don't report aggregate data
+
+In previous versions of the tool, we reported averages and standard deviations in addition to the full data set.
+This has been deliberately removed in later versions.
+The reason for this being that, by supplying users with averages and errors, we give the impression that these are a one-size-fits-all solution.
+In practise, however, it might make more sense to use the median for example, or to use a different error score.
+
+_The job of the tool is to run benchmarks, not to analyse the data._
+
+Of course, users might want to be able to do this from within their benchmarking code.
+To this end, in addition to writing to a file, the benchmark results are returned.
+Then, using libraries like `statistical`, users can manually calculate averages and errors.
