@@ -104,7 +104,7 @@ a:any-link:hover {
     flex-wrap: wrap;
   }
 
-  .site-footer__inner{
+  .site-footer-inner{
     flex-direction: column;
     justify-content: center;
     text-align: center;

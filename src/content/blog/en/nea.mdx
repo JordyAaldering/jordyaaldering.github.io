@@ -8,11 +8,12 @@ dur: 10 minute
 import { Image } from 'astro:assets';
 import Timeline from '../../../components/Timeline.astro';
 import TimelineItem from '../../../components/TimelineItem.astro';
+import Svg from '../../../components/Svg.astro';
 
-import runtime from '../../../assets/nea/runtime.svg'
-import energy from '../../../assets/nea/energy.svg'
-import alloc_runtime from '../../../assets/nea/alloc_runtime.svg'
-import alloc_energy from '../../../assets/nea/alloc_energy.svg'
+import runtime from '../../../assets/nea/runtime.svg?raw'
+import energy from '../../../assets/nea/energy.svg?raw'
+import alloc_runtime from '../../../assets/nea/alloc_runtime.svg?raw'
+import alloc_energy from '../../../assets/nea/alloc_energy.svg?raw'
 
 Over the past couple of months, we teamed up with Folkert de Vries at Tweede Golf to measure nea's energy efficiency in our Software Energy Lab.
 
@@ -98,15 +99,15 @@ First we determine at a glance whether there is any significant difference in th
 Doing so we find that both measuring methods provide a similar energy consumption pattern, albeit with the INA chip reporting about 3 times higher energy consumption, because it measures the system as a whole.
 
 <p align="center">
-  <Image
+  <Svg
     src={runtime}
     alt="Runtime results"
-    style="width: 50%; height: auto"
+    style="width: 50%"
   />
-  <Image
+  <Svg
     src={energy}
     alt="Energy results"
-    style="width: 50%; height: auto"
+    style="width: 50%"
   />
 </p>
 
@@ -127,15 +128,15 @@ Doing so we see that the runtime performance of the varying-allocations benchmar
 Furthermore the energy consumption is now also lower, indicating that indeed the garbage collection introduces some energy consumption overhead.
 
 <p align="center">
-  <Image
+  <Svg
     src={alloc_runtime}
     alt="Runtime results"
-    style="width: 50%; height: auto"
+    style="width: 50%"
   />
-  <Image
+  <Svg
     src={alloc_energy}
     alt="Energy results"
-    style="width: 50%; height: auto"
+    style="width: 50%"
   />
 </p>
 

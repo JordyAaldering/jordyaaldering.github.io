@@ -6,17 +6,18 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const {
-    svg,
-    alt = "",
-    style = "",
+  src,
+  alt = "",
+  style = "",
+  frosted = true,
 } = Astro.props;
 
-if (!svg) {
+if (!src) {
   throw new Error("Invalid SVG input");
 }
 
 // Parse SVG
-const dom = new JSDOM(svg, { contentType: "image/svg+xml" });
+const dom = new JSDOM(src, { contentType: "image/svg+xml" });
 const document = dom.window.document;
 
 // Apply translations
@@ -29,7 +30,6 @@ document.querySelectorAll('text, tspan').forEach(node => {
 const svgEl = document.querySelector('svg');
 
 if (svgEl) {
-  if (style) svgEl.setAttribute('style', style);
   if (alt) svgEl.setAttribute('aria-label', alt);
   svgEl.setAttribute('role', 'img');
 }
@@ -37,4 +37,29 @@ if (svgEl) {
 const output = document.documentElement.outerHTML;
 ---
 
-<div set:html={output} />
+<span style={style} class:list={["svg-wrapper", { "svg-wrapper-frosted": frosted }]}>
+  <span class="svg-content" set:html={output} />
+</span>
+
+<style>
+  .svg-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .svg-wrapper-frosted {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(3px);
+  }
+
+  .svg-content :global(svg) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
