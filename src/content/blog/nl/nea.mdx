@@ -99,16 +99,8 @@ Eerst bepalen we globaal of er een significant verschil is tussen het energiever
 Hieruit blijkt dat beide meetmethoden een vergelijkbaar energieverbruikspatroon laten zien, hoewel de INA-chip ongeveer 3 keer hoger energieverbruik rapporteert, omdat deze het hele systeem meet.
 
 <p align="center">
-  <Svg
-    src={runtime}
-    alt="Runtime results"
-    style="width: 50%"
-  />
-  <Svg
-    src={energy}
-    alt="Energy results"
-    style="width: 50%"
-  />
+  <Svg src={runtime} alt="Runtime results" style="width: 50%" />
+  <Svg src={energy} alt="Energy results" style="width: 50%" />
 </p>
 
 Wanneer we energieverbruik en runtime vergelijken, zien we dat rust-tokio doorgaans de beste prestaties levert in termen van zowel runtime als energie-efficiëntie.
@@ -128,16 +120,8 @@ Daarbij zien we dat de runtimeprestaties van de varying-allocations benchmark va
 Bovendien is het energieverbruik nu ook lager, wat aangeeft dat garbage collection inderdaad een extra energie-overhead introduceert.
 
 <p align="center">
-  <Svg
-    src={alloc_runtime}
-    alt="Runtime results"
-    style="width: 50%"
-  />
-  <Svg
-    src={alloc_energy}
-    alt="Energy results"
-    style="width: 50%"
-  />
+  <Svg src={alloc_runtime} alt="Runtime results" style="width: 50%" />
+  <Svg src={alloc_energy} alt="Energy results" style="width: 50%" />
 </p>
 
 Om te bepalen hoe competitief het energieverbruik van Nea in de praktijk is, vergelijken we de energieverbruiksmetingen van de INA-chip, omdat deze cijfers het volledige plaatje geven en niet alleen het energieverbruik van de CPU.
