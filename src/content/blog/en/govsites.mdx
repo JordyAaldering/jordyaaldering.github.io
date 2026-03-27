@@ -7,9 +7,8 @@ dur: 10 minute
 
 import { Image } from 'astro:assets';
 import Expandable from '../../../components/Expandable.astro';
-import Svg from '../../../components/Svg.astro';
 
-import rank from '../../../assets/govsites/rank.svg?raw'
+import rank from '../../../assets/govsites/rank.svg'
 import rar from '../../../assets/govsites/rar.png'
 import vng from '../../../assets/govsites/vng.gif'
 import strategies_en from '../../../assets/govsites/strategies_en.png'
@@ -39,7 +38,7 @@ Compared to the most efficient websites, this difference even rises to almost a 
 There is clearly still much to gain.
 
 <p align="center">
-  <Svg src={rank} alt="Website ranking" />
+  <Image src={rank} alt="Website ranking" />
 </p>
 
 When we look at the top 10 most energy-intensive websites, one thing immediately stands out: when these pages load, a video or animation starts automatically.
@@ -47,7 +46,7 @@ This may look appealing, but it requires a lot of computing power from the visit
 This leads to unnecessarily high energy consumption and also causes the battery to drain more quickly.
 
 <p align="center">
-  <Image src={vng} alt="VNG" style="width: 100%; height: auto" />
+  <Image src={vng} alt="VNG" />
 </p>
 
 One notable outlier is the [Regional Archive Rivierenland](https://regionaalarchiefrivierenland.nl).
@@ -56,7 +55,7 @@ When we scroll further down the homepage we quickly see why: at the bottom of th
 This means the page not only loads noticeably slower, but also continuously consumes energy for media elements that many visitors probably never even see or use.
 
 <p align="center">
-  <Image src={rar} alt="RAR" style="width: 100%; height: auto" />
+  <Image src={rar} alt="RAR" />
 </p>
 
 ### Saving energy
@@ -98,7 +97,7 @@ By presenting strategies in a clear overview, it becomes easier to have internal
 In this way, organizations can take faster and more effective steps toward a more energy-efficient digital government.
 
 <p align="center">
-  <Image src={strategies_en} alt="Strategies" style="width: 100%; height: auto" />
+  <Image src={strategies_en} alt="Strategies" />
 </p>
 
 ### Join us

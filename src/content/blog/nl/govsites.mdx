@@ -7,9 +7,8 @@ dur: 10 minuten
 
 import { Image } from 'astro:assets';
 import Expandable from '../../../components/Expandable.astro';
-import Svg from '../../../components/Svg.astro';
 
-import rank from '../../../assets/govsites/rank.svg?raw'
+import rank from '../../../assets/govsites/rank.svg'
 import rar from '../../../assets/govsites/rar.png'
 import vng from '../../../assets/govsites/vng.gif'
 import strategies_nl from '../../../assets/govsites/strategies_nl.png'
@@ -39,7 +38,7 @@ Vergeleken met de zuinigste websites loopt dit verschil zelfs op tot bijna een f
 Er valt duidelijk ook nog veel te winnen.
 
 <p align="center">
-  <Svg src={rank} alt="Website ranking" />
+  <Image src={rank} alt="Website ranking" />
 </p>
 
 Wanneer we de top‑10 van meest energie-intensieve websites bekijken, valt één ding direct op: bij het laden van deze pagina's start automatisch een video of animatie.
@@ -47,7 +46,7 @@ Dat ziet er misschien aantrekkelijk uit, maar het vraagt veel rekenkracht van de
 Dit leidt tot onnodig hoog energieverbruik, en zorgt er ook voor dat de batterij sneller leeg raakt.
 
 <p align="center">
-  <Image src={vng} alt="VNG" style="width: 100%; height: auto" />
+  <Image src={vng} alt="VNG" />
 </p>
 
 Een opvallende uitschieter is het [Regionaal Archief Rivierenland](https://regionaalarchiefrivierenland.nl).
@@ -56,7 +55,7 @@ Als we verder door de homepagina scrollen zien we snel waarom: onderaan de pagin
 Dit betekent dat de pagina niet alleen merkbaar trager laadt, maar dat er ook voortdurend energie wordt verbruikt aan media-elementen die veel bezoekers waarschijnlijk niet eens zien of gebruiken.
 
 <p align="center">
-  <Image src={rar} alt="RAR" style="width: 100%; height: auto" />
+  <Image src={rar} alt="RAR" />
 </p>
 
 ### Energie besparen
@@ -98,7 +97,7 @@ Door strategieën overzichtelijk te presenteren wordt het eenvoudiger om interne
 Zo kunnen organisaties sneller en effectiever stappen zetten richting een energiezuinigere digitale overheid.
 
 <p align="center">
-  <Image src={strategies_nl} alt="Strategies" style="width: 100%; height: auto" />
+  <Image src={strategies_nl} alt="Strategieën" />
 </p>
 
 ### Doe mee

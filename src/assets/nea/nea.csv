@@ -1,4 +1,4 @@
-Language,Benchmark,Runtime (s),RAPL package-0 (J),RAPL package-0-core (J),RAPL psys (J),INA system energy (J)
+Language,Benchmark,Runtime (s),RAPL package-0 (J),RAPL package-0-core (J),RAPL psys (J),System energy consumption (J)
 Go,csv-svg-path,2.46109438,8.72358513,6.69173288,0.16193968,26.72476768
 Go,csv-svg-path,2.37324762,8.27226830,6.49065351,0.15627527,28.94433212
 Go,csv-svg-path,2.34243059,8.13061905,6.40290308,0.15479648,26.71817970

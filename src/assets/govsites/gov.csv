@@ -1,4 +1,4 @@
-url,transferSize,decodedBodySize,resourceCount,scriptCount,imageCount,divCount,Runtime,RAPL package-0 (J),RAPL package-0-core (J),RAPL package-0-uncore (J),INA system energy (J)
+url,transferSize,decodedBodySize,resourceCount,scriptCount,imageCount,divCount,Runtime,RAPL package-0 (J),RAPL package-0-core (J),RAPL package-0-uncore (J),System energy consumption (J)
 midden-groningen.nl,14122,64958,22,7,5,84,4.157077,1.5593832,0.7872099,0,4.633649
 midden-groningen.nl,14122,64958,22,7,5,84,4.146518,1.3085601,0.4832033,0.000061,3.0353756
 midden-groningen.nl,14122,64958,22,7,5,84,4.144925,0.77117586,0.42106038,0,1.6019087
