@@ -3,34 +3,45 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import promptsText from "../../assets/prompt/prompts.txt?raw";
 
+import { getLangFromUrl } from '../../i18n/utils';
+
 const prompts = promptsText
-    .split("\n")
-    .map(s => s.trim())
-    .filter(Boolean);
+  .split("\n")
+  .map(s => s.trim())
+  .filter(Boolean);
 
-const START_DATE = new Date("2026-08-18T00:00:00");
-
-const today = new Date();
-today.setHours(0, 0, 0, 0);
-
-const daysSinceStart = Math.floor(
-    (today.getTime() - START_DATE.getTime()) /
-    (1000 * 60 * 60 * 24)
-);
-
-const prompt = prompts[daysSinceStart % prompts.length];
+const lang = getLangFromUrl(Astro.url);
 
 ---
 
 <BaseLayout title="Daily Writing Prompt">
 
-    <h1>Daily Writing Prompt</h1>
+  <h1>Daily Writing Prompt</h1>
 
-    <p>
-    <strong>{today.toLocaleDateString()}</strong>
-    </p>
+  <p><strong id="today"></strong></p>
 
-    <blockquote>
-    {prompt}
-    </blockquote>
+  <blockquote id="prompt"></blockquote>
+
+  <script define:vars={{ prompts, lang }}>
+    const START_DATE = new Date("2026-08-18T00:00:00");
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const daysSinceStart = Math.floor(
+      (today.getTime() - START_DATE.getTime()) /
+      (1000 * 60 * 60 * 24)
+    );
+
+    const dateFormatter = new Intl.DateTimeFormat(lang, {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+
+    document.querySelector("#today").textContent = dateFormatter.format(today);
+
+    document.querySelector("#prompt").textContent = prompts[daysSinceStart % prompts.length];
+  </script>
+
 </BaseLayout>
